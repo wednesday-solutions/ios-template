@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		6DBACF9024F7B076008918EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF8F24F7B076008918EE /* AppDelegate.swift */; };
 		6DBACF9224F7B076008918EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF9124F7B076008918EE /* SceneDelegate.swift */; };
-		6DBACF9424F7B076008918EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF9324F7B076008918EE /* ContentView.swift */; };
+		6DBACF9424F7B076008918EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF9324F7B076008918EE /* LoginView.swift */; };
 		6DBACF9624F7B07D008918EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBACF9524F7B07D008918EE /* Assets.xcassets */; };
 		6DBACF9924F7B07D008918EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBACF9824F7B07D008918EE /* Preview Assets.xcassets */; };
 		6DBACF9C24F7B07D008918EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DBACF9A24F7B07D008918EE /* LaunchScreen.storyboard */; };
 		6DBACFA724F7B07D008918EE /* BankShiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFA624F7B07D008918EE /* BankShiftTests.swift */; };
 		6DBACFB224F7B07E008918EE /* BankShiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFB124F7B07E008918EE /* BankShiftUITests.swift */; };
+		6DBACFD324F7D39C008918EE /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFCA24F7D39C008918EE /* LoginServiceProtocol.swift */; };
+		6DBACFD424F7D39C008918EE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFCC24F7D39C008918EE /* LoginModel.swift */; };
+		6DBACFD624F7D39C008918EE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD024F7D39C008918EE /* LoginService.swift */; };
+		6DBACFD724F7D39C008918EE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD224F7D39C008918EE /* LoginViewModel.swift */; };
+		6DBACFD924F7DD9F008918EE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		6DBACF8C24F7B076008918EE /* BankShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBACF8F24F7B076008918EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DBACF9124F7B076008918EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6DBACF9324F7B076008918EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6DBACF9324F7B076008918EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6DBACF9524F7B07D008918EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DBACF9824F7B07D008918EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DBACF9B24F7B07D008918EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		6DBACFAD24F7B07E008918EE /* BankShiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankShiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBACFB124F7B07E008918EE /* BankShiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankShiftUITests.swift; sourceTree = "<group>"; };
 		6DBACFB324F7B07E008918EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DBACFCA24F7D39C008918EE /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
+		6DBACFCC24F7D39C008918EE /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		6DBACFD024F7D39C008918EE /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		6DBACFD224F7D39C008918EE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,10 @@
 		6DBACF8E24F7B076008918EE /* BankShift */ = {
 			isa = PBXGroup;
 			children = (
+				6DBACFDA24F7DDB6008918EE /* Helper */,
+				6DBACFC824F7D39C008918EE /* Login */,
 				6DBACF8F24F7B076008918EE /* AppDelegate.swift */,
 				6DBACF9124F7B076008918EE /* SceneDelegate.swift */,
-				6DBACF9324F7B076008918EE /* ContentView.swift */,
 				6DBACF9524F7B07D008918EE /* Assets.xcassets */,
 				6DBACF9A24F7B07D008918EE /* LaunchScreen.storyboard */,
 				6DBACF9D24F7B07D008918EE /* Info.plist */,
@@ -134,6 +145,66 @@
 				6DBACFB324F7B07E008918EE /* Info.plist */,
 			);
 			path = BankShiftUITests;
+			sourceTree = "<group>";
+		};
+		6DBACFC524F7C2FF008918EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6DBACF9324F7B076008918EE /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6DBACFC824F7D39C008918EE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6DBACFC524F7C2FF008918EE /* Views */,
+				6DBACFC924F7D39C008918EE /* Protocol */,
+				6DBACFCB24F7D39C008918EE /* Model */,
+				6DBACFCF24F7D39C008918EE /* Service */,
+				6DBACFD124F7D39C008918EE /* View Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6DBACFC924F7D39C008918EE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6DBACFCA24F7D39C008918EE /* LoginServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6DBACFCB24F7D39C008918EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DBACFCC24F7D39C008918EE /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6DBACFCF24F7D39C008918EE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6DBACFD024F7D39C008918EE /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6DBACFD124F7D39C008918EE /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DBACFD224F7D39C008918EE /* LoginViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		6DBACFDA24F7DDB6008918EE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBACFD424F7D39C008918EE /* LoginModel.swift in Sources */,
+				6DBACFD324F7D39C008918EE /* LoginServiceProtocol.swift in Sources */,
 				6DBACF9024F7B076008918EE /* AppDelegate.swift in Sources */,
+				6DBACFD624F7D39C008918EE /* LoginService.swift in Sources */,
+				6DBACFD924F7DD9F008918EE /* ActivityIndicator.swift in Sources */,
 				6DBACF9224F7B076008918EE /* SceneDelegate.swift in Sources */,
-				6DBACF9424F7B076008918EE /* ContentView.swift in Sources */,
+				6DBACFD724F7D39C008918EE /* LoginViewModel.swift in Sources */,
+				6DBACF9424F7B076008918EE /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
