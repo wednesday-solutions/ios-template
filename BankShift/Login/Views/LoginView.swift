@@ -13,50 +13,60 @@ struct LoginView: View {
     @State var userName: String = ""
     @State var passWord: String = ""
     @State var showingAlert = false
-
+    @State var showingLoading = false
     
     var logingVm = LoginViewModel.init()
     
     var body: some View {
-        VStack {
-            NavigationView {
-                VStack(alignment: .center, spacing: 15.0) {
-                    TextField("Enter Username", text: $userName)
-                        .padding(.horizontal, 30.0)
-                        .frame(height: 30,alignment: .center)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
-                    TextField("Enter Password", text: $passWord)
-                        .padding([.top, .leading, .trailing], 30.0)
-                        .frame(height: 30,alignment: .center)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
-                    Button(action: {
-                        ///Api request
-                        self.logingVm.loginRequest()
+        ZStack {
+            VStack {
+                NavigationView {
+                    VStack(alignment: .center, spacing: 15.0) {
+                        TextField("Enter Username", text: $userName)
+                            .padding(.horizontal, 30.0)
+                            .frame(height: 30,alignment: .center)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                         
-                    }) {
-                        Text("Submit")
+                        TextField("Enter Password", text: $passWord)
+                            .padding([.top, .leading, .trailing], 30.0)
+                            .frame(height: 30,alignment: .center)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                        Button(action: {
+                            ///Api request
+                            self.logingVm.loginRequest()
+                            
+                        }) {
+                            Text("Submit")
+                        }
+                        .padding(.top, 30.0)
+                            
+                        .alert(isPresented: $showingAlert) {
+                            Alert(title: Text("Bankshift"), message: Text("\(self.logingVm.alertMessage ?? "")"), dismissButton: .default(Text("Ok")))
+                        }
                     }
-                    .alert(isPresented: $showingAlert) {
-                        Alert(title: Text("Error"), message: Text("\(self.logingVm.alertMessage ?? "")"), dismissButton: .default(Text("Ok")))
+                        
+                    .navigationBarTitle("Login")
+                }.onAppear {
+                    self.logingVm.didGetData = { user in
+                        self.showingAlert = true
+                        self.logingVm.alertMessage = "Login Successfully"
                     }
-                    ActivityIndicator(isAnimating: .constant(true), style: .large)
-                    .padding(.top, 30.0)
-                }
+                    self.logingVm.updateLoadingStatus = { isLoading in
+                        self.showingLoading = isLoading
+                    }
                     
-                .navigationBarTitle("Login")
-            }.onAppear {
-                self.logingVm.didGetData = { user in
+                    self.logingVm.showAlertClosure = { _ in
+                        self.showingAlert = true
+                    }
+                }.onDisappear {
                     
                 }
-                
-                self.logingVm.showAlertClosure = {
-                    self.showingAlert = true
-                }
-            }.onDisappear {
                 
             }
+            
+            
+            ActivityIndicator(isAnimating: .constant(showingLoading), style: .large)
             
         }
     }

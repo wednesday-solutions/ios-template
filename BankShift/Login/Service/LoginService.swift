@@ -11,9 +11,12 @@ import Foundation
 class LoginService: LoginServiceProtocol {
 
     func login(success: @escaping(_ data: User) -> (), failure: @escaping() -> ()) {
-        failure()
-        
-//        success(User.init(userName: "Test", password: "***", email: "abc@gmail.com", userImage: nil))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            failure()
+
+            success(User.init(userName: "Test", password: "***", email: "abc@gmail.com", userImage: nil))
+            
+        }
     }
 
 }

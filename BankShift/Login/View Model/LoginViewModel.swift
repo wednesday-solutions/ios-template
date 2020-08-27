@@ -12,23 +12,11 @@ class LoginViewModel {
 
     private let service: LoginServiceProtocol
 
-    /// Update the loading status, use HUD or Activity Indicator UI
-    var isLoading: Bool = false {
-        didSet {
-            self.updateLoadingStatus?()
-        }
-    }
-
-    /// Showing alert message, use UIAlertController or other Library
-    var alertMessage: String? {
-        didSet {
-            self.showAlertClosure?()
-        }
-    }
-
+    var alertMessage: String?
+    
     //MARK: -- Closure Collection
-    var showAlertClosure: (() -> ())?
-    var updateLoadingStatus: (() -> ())?
+    var showAlertClosure: ((_ alertMessage:String) -> ())?
+    var updateLoadingStatus: ((_ isLoading:Bool) -> ())?
     var didGetData: ((User) -> ())?
 
     init(withLogin serviceProtocol: LoginServiceProtocol = LoginService() ) {
@@ -37,13 +25,13 @@ class LoginViewModel {
 
     //MARK: -- Example Func
     func loginRequest() {
-        self.isLoading = true
+        updateLoadingStatus?(true)
         self.service.login(success: { (user) in
-            self.isLoading = false
+            self.updateLoadingStatus?(false)
             self.didGetData?(user)
         }) {
             ///API failed
-            self.alertMessage = "Please enter valid username and password"
+            self.updateLoadingStatus?(true)
         }
     }
 
