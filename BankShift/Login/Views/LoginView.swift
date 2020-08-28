@@ -14,6 +14,7 @@ struct LoginView: View {
     @State var passWord: String = ""
     @State var showingAlert = false
     @State var showingLoading = false
+    @State var alert = ""
     
     var logingVm = LoginViewModel.init()
     
@@ -34,7 +35,7 @@ struct LoginView: View {
                         
                         Button(action: {
                             ///Api request
-                            self.logingVm.loginRequest()
+                            self.logingVm.loginRequest(userName: self.userName, password: self.passWord)
                             
                         }) {
                             Text("Submit")
@@ -42,7 +43,7 @@ struct LoginView: View {
                         .padding(.top, 30.0)
                             
                         .alert(isPresented: $showingAlert) {
-                            Alert(title: Text("Bankshift"), message: Text("\(self.logingVm.alertMessage ?? "")"), dismissButton: .default(Text("Ok")))
+                            Alert(title: Text("Bankshift"), message: Text(alert), dismissButton: .default(Text("Ok")))
                         }
                     }
                         
@@ -50,13 +51,14 @@ struct LoginView: View {
                 }.onAppear {
                     self.logingVm.didGetData = { user in
                         self.showingAlert = true
-                        self.logingVm.alertMessage = "Login Successfully"
+                        self.logingVm.alertMessage = "\(user.name ?? "") successfully logged in"
                     }
                     self.logingVm.updateLoadingStatus = { isLoading in
                         self.showingLoading = isLoading
                     }
                     
-                    self.logingVm.showAlertClosure = { _ in
+                    self.logingVm.showAlertClosure = { alert in
+                        self.alert = alert
                         self.showingAlert = true
                     }
                 }.onDisappear {

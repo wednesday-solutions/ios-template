@@ -9,8 +9,7 @@
 import Foundation
 
 struct User {
-    var userName:String!
-    var password:String!
-    var email:String!
-    var userImage:URL!
+    let username:String!
+    let name:String!
+    let dateCreated:String!
 }

@@ -9,14 +9,23 @@
 import Foundation
 
 class LoginService: LoginServiceProtocol {
-
-    func login(success: @escaping(_ data: User) -> (), failure: @escaping() -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            failure()
-
-            success(User.init(userName: "Test", password: "***", email: "abc@gmail.com", userImage: nil))
-            
+    
+    func login(userName:String!,password:String,success: @escaping(_ data: User) -> (), failure: @escaping(_ errorString:String) -> ()) {
+        Network.shared.apollo.perform(mutation: LoginRequestMutation.init(username: userName, password: password)){
+            result in
+            switch result {
+            case .success(let graphQLResult):
+                if let error = graphQLResult.errors?.first?.description {
+                    failure(error)
+                    return;
+                }
+                guard let customer = try? result.get().data?.logIn.customer else { return }
+                success(User(username: customer.username, name: customer.name, dateCreated: customer.dateCreated))
+            case .failure(let error):
+                print("Failure! Error: \(error)")
+                failure(error.localizedDescription)
+            }
         }
     }
-
+    
 }

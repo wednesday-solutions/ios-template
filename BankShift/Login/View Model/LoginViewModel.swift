@@ -22,21 +22,23 @@ class LoginViewModel {
 
     init(withLogin serviceProtocol: LoginServiceProtocol = LoginService() ) {
         self.service = serviceProtocol
-        //MARK: TEST
-        ///Static path remove once test finish
-//        let graphQLEndpoint = "https://pet-library.moonhighway.com "
-//        let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
     }
 
     //MARK: -- Example Func
-    func loginRequest() {
+    func loginRequest(userName:String,password:String) {
+        guard userName != "" || password != "" else {
+            showAlertClosure?(Constant.error.ENTER_VALID_INFORMATION.rawValue)
+            return;
+        }
+        
         updateLoadingStatus?(true)
-        self.service.login(success: { (user) in
+        self.service.login(userName:userName,password:password,success: { (user) in
             self.updateLoadingStatus?(false)
             self.didGetData?(user)
-        }) {
+        }) { error in
             ///API failed
-            self.updateLoadingStatus?(true)
+            self.showAlertClosure?(error)
+            self.updateLoadingStatus?(false)
         }
     }
 

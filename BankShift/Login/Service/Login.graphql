@@ -1,0 +1,37 @@
+mutation loginRequest($username: ID!, $password:String!) {
+  logIn(username:$username, password:$password){
+    customer {
+      username
+      name
+      dateCreated
+      currentPets{
+        id
+        name
+        weight
+        category
+        inCareOf{
+          name
+          username
+        }
+        
+      }
+      checkoutHistory{
+        pet{
+          id
+            name
+            weight
+            category
+            inCareOf{
+          name
+          username
+        }
+        }
+        checkInDate
+        checkOutDate
+        late
+      }
+    }
+    token
+  }
+}
+
