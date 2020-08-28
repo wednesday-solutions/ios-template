@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Apollo
 
 class LoginViewModel {
 
@@ -21,6 +22,10 @@ class LoginViewModel {
 
     init(withLogin serviceProtocol: LoginServiceProtocol = LoginService() ) {
         self.service = serviceProtocol
+        //MARK: TEST
+        ///Static path remove once test finish
+//        let graphQLEndpoint = "https://pet-library.moonhighway.com "
+//        let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
     }
 
     //MARK: -- Example Func
