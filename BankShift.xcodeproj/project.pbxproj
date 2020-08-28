@@ -12,6 +12,7 @@
 		6D99151A24F911A9006A7410 /* Login.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D99151924F911A9006A7410 /* Login.graphql */; };
 		6D99151F24F9175B006A7410 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99151E24F9175A006A7410 /* API.swift */; };
 		6D99152124F92429006A7410 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99152024F92429006A7410 /* Constant.swift */; };
+		6D99152324F92B7A006A7410 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99152224F92B7A006A7410 /* RegisterView.swift */; };
 		6DBACF9024F7B076008918EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF8F24F7B076008918EE /* AppDelegate.swift */; };
 		6DBACF9224F7B076008918EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF9124F7B076008918EE /* SceneDelegate.swift */; };
 		6DBACF9424F7B076008918EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF9324F7B076008918EE /* LoginView.swift */; };
@@ -54,6 +55,7 @@
 		6D99151924F911A9006A7410 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
 		6D99151E24F9175A006A7410 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		6D99152024F92429006A7410 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		6D99152224F92B7A006A7410 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		6DBACF8C24F7B076008918EE /* BankShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBACF8F24F7B076008918EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DBACF9124F7B076008918EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				6DBACF9324F7B076008918EE /* LoginView.swift */,
+				6D99152224F92B7A006A7410 /* RegisterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				6DBACFD924F7DD9F008918EE /* ActivityIndicator.swift in Sources */,
 				6DBACF9224F7B076008918EE /* SceneDelegate.swift in Sources */,
 				6D99152124F92429006A7410 /* Constant.swift in Sources */,
+				6D99152324F92B7A006A7410 /* RegisterView.swift in Sources */,
 				6DBACFD724F7D39C008918EE /* LoginViewModel.swift in Sources */,
 				6DBACF9424F7B076008918EE /* LoginView.swift in Sources */,
 			);
