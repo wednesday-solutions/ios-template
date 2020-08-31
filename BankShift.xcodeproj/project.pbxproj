@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0103567ADF90D29E3464EBD4 /* Pods_BankShift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A741AE2261F93CD6F298F2D /* Pods_BankShift.framework */; };
 		6D3DF48F24FCB4B200D2C478 /* CreateAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */; };
+		6D3DF4A124FCC17F00D2C478 /* PetListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */; };
+		6D3DF4A224FCC17F00D2C478 /* PetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */; };
+		6D3DF4A424FCC17F00D2C478 /* PetListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49E24FCC17F00D2C478 /* PetListService.swift */; };
+		6D3DF4A524FCC17F00D2C478 /* PetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF4A024FCC17F00D2C478 /* PetListViewModel.swift */; };
+		6D3DF4A724FCC22300D2C478 /* getPets.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D3DF4A624FCC22300D2C478 /* getPets.graphql */; };
+		6D3DF4A924FCC2EC00D2C478 /* PetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF4A824FCC2EC00D2C478 /* PetList.swift */; };
 		6D99151724F90509006A7410 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99151624F90509006A7410 /* ApolloClient.swift */; };
 		6D99151A24F911A9006A7410 /* Login.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D99151924F911A9006A7410 /* Login.graphql */; };
 		6D99151F24F9175B006A7410 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99151E24F9175A006A7410 /* API.swift */; };
@@ -53,6 +59,12 @@
 		42DC34EBD2BB1104608FEEF9 /* Pods-BankShift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift.debug.xcconfig"; path = "Target Support Files/Pods-BankShift/Pods-BankShift.debug.xcconfig"; sourceTree = "<group>"; };
 		603C8F9141491A58045CBA56 /* Pods-BankShift-BankShiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift-BankShiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BankShift-BankShiftUITests/Pods-BankShift-BankShiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateAccount.graphql; sourceTree = "<group>"; };
+		6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListServiceProtocol.swift; sourceTree = "<group>"; };
+		6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListModel.swift; sourceTree = "<group>"; };
+		6D3DF49E24FCC17F00D2C478 /* PetListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListService.swift; sourceTree = "<group>"; };
+		6D3DF4A024FCC17F00D2C478 /* PetListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListViewModel.swift; sourceTree = "<group>"; };
+		6D3DF4A624FCC22300D2C478 /* getPets.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getPets.graphql; sourceTree = "<group>"; };
+		6D3DF4A824FCC2EC00D2C478 /* PetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetList.swift; sourceTree = "<group>"; };
 		6D99151624F90509006A7410 /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
 		6D99151924F911A9006A7410 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
 		6D99151E24F9175A006A7410 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -113,6 +125,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D3DF49624FCC17F00D2C478 /* PetList */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DF49724FCC17F00D2C478 /* Protocol */,
+				6D3DF49924FCC17F00D2C478 /* Model */,
+				6D3DF49B24FCC17F00D2C478 /* View */,
+				6D3DF49D24FCC17F00D2C478 /* Service */,
+				6D3DF49F24FCC17F00D2C478 /* View Model */,
+			);
+			path = PetList;
+			sourceTree = "<group>";
+		};
+		6D3DF49724FCC17F00D2C478 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6D3DF49924FCC17F00D2C478 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D3DF49B24FCC17F00D2C478 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DF4A824FCC2EC00D2C478 /* PetList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D3DF49D24FCC17F00D2C478 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DF49E24FCC17F00D2C478 /* PetListService.swift */,
+				6D3DF4A624FCC22300D2C478 /* getPets.graphql */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6D3DF49F24FCC17F00D2C478 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DF4A024FCC17F00D2C478 /* PetListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		6D99151824F90742006A7410 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +216,7 @@
 				6D99151824F90742006A7410 /* Network */,
 				6DBACFDA24F7DDB6008918EE /* Helper */,
 				6DBACFC824F7D39C008918EE /* Login */,
+				6D3DF49624FCC17F00D2C478 /* PetList */,
 				6DBACF8F24F7B076008918EE /* AppDelegate.swift */,
 				6DBACF9124F7B076008918EE /* SceneDelegate.swift */,
 				6DBACF9524F7B07D008918EE /* Assets.xcassets */,
@@ -385,6 +451,7 @@
 			files = (
 				6DBACF9C24F7B07D008918EE /* LaunchScreen.storyboard in Resources */,
 				6DBACF9924F7B07D008918EE /* Preview Assets.xcassets in Resources */,
+				6D3DF4A724FCC22300D2C478 /* getPets.graphql in Resources */,
 				6DBACF9624F7B07D008918EE /* Assets.xcassets in Resources */,
 				6D3DF48F24FCB4B200D2C478 /* CreateAccount.graphql in Resources */,
 				6D99151A24F911A9006A7410 /* Login.graphql in Resources */,
@@ -535,13 +602,18 @@
 				6DBACFD424F7D39C008918EE /* LoginModel.swift in Sources */,
 				6DBACFD324F7D39C008918EE /* LoginServiceProtocol.swift in Sources */,
 				6D99151724F90509006A7410 /* ApolloClient.swift in Sources */,
+				6D3DF4A124FCC17F00D2C478 /* PetListServiceProtocol.swift in Sources */,
 				6DBACF9024F7B076008918EE /* AppDelegate.swift in Sources */,
+				6D3DF4A424FCC17F00D2C478 /* PetListService.swift in Sources */,
 				6D99151F24F9175B006A7410 /* API.swift in Sources */,
 				6DBACFD624F7D39C008918EE /* LoginService.swift in Sources */,
 				6DBACFD924F7DD9F008918EE /* ActivityIndicator.swift in Sources */,
 				6DBACF9224F7B076008918EE /* SceneDelegate.swift in Sources */,
 				6D99152124F92429006A7410 /* Constant.swift in Sources */,
+				6D3DF4A524FCC17F00D2C478 /* PetListViewModel.swift in Sources */,
 				6D99152324F92B7A006A7410 /* RegisterView.swift in Sources */,
+				6D3DF4A924FCC2EC00D2C478 /* PetList.swift in Sources */,
+				6D3DF4A224FCC17F00D2C478 /* PetListModel.swift in Sources */,
 				6DBACFD724F7D39C008918EE /* LoginViewModel.swift in Sources */,
 				6DBACF9424F7B076008918EE /* LoginView.swift in Sources */,
 			);

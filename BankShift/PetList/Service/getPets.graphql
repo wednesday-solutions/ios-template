@@ -1,0 +1,13 @@
+query getAllPets($status:PetStatus) {
+  allPets(status:$status){
+     id
+      name
+      weight
+      category
+      status
+      photo{
+        full
+        thumb
+      }
+  }
+}

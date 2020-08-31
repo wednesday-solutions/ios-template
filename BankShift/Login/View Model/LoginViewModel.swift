@@ -18,7 +18,7 @@ class LoginViewModel {
     //MARK: -- Closure Collection
     var showAlertClosure: ((_ alertMessage:String) -> ())?
     var updateLoadingStatus: ((_ isLoading:Bool) -> ())?
-    var didGetData: ((User) -> ())?
+    var didGetData: ((User?) -> ())?
 
     init(withLogin serviceProtocol: LoginServiceProtocol = LoginService() ) {
         self.service = serviceProtocol
@@ -37,6 +37,7 @@ class LoginViewModel {
             self.didGetData?(user)
         }) { error in
             ///API failed
+            self.didGetData?(nil)
             self.showAlertClosure?(error)
             self.updateLoadingStatus?(false)
         }

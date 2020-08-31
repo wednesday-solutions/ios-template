@@ -15,6 +15,7 @@ struct LoginView: View {
     @State var showingAlert = false
     @State var showingLoading = false
     @State var alert = ""
+    @State var successFullyLogin = false
     
     var logingVm = LoginViewModel.init()
     
@@ -27,11 +28,14 @@ struct LoginView: View {
                             .padding(.horizontal, 30.0)
                             .frame(height: 30,alignment: .center)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .accessibility(identifier: "loginUserName")
+            
                         
-                        TextField("Enter Password", text: $passWord)
+                        SecureField("Enter Password", text: $passWord)
                             .padding([.top, .leading, .trailing], 30.0)
                             .frame(height: 30,alignment: .center)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .accessibility(identifier: "loginPassword")
                         
                         VStack(alignment: .center, spacing: 30.0) {
                             Button(action: {
@@ -41,6 +45,8 @@ struct LoginView: View {
                             }) {
                                 Text("Submit")
                             }
+                            .accessibility(identifier: "btnLoginSubmit")
+
                             NavigationLink(destination: RegisterView()) {
                                 Text("Create Account")
                             }
@@ -52,15 +58,18 @@ struct LoginView: View {
                         .alert(isPresented: $showingAlert) {
                             Alert(title: Text("Bankshift"), message: Text(alert), dismissButton: .default(Text("Ok")))
                         }
+                        
+                        NavigationLink(destination: PetList(), isActive: self.$successFullyLogin) {
+                           EmptyView()
+                         }.hidden()
                     }
                         
                     .navigationBarTitle("Login",displayMode: .inline)
                     
                 }.onAppear {
                     self.logingVm.didGetData = { user in
-                        self.showingAlert = true
-                        self.logingVm.alertMessage = "\(user.name ?? "") successfully logged in"
-                       
+                        guard let _ = user else { return }
+                        self.successFullyLogin = true
                     }
                     self.logingVm.updateLoadingStatus = { isLoading in
                         self.showingLoading = isLoading
