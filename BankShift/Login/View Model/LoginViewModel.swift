@@ -37,7 +37,6 @@ class LoginViewModel {
             self.didGetData?(user)
         }) { error in
             ///API failed
-            self.didGetData?(nil)
             self.showAlertClosure?(error)
             self.updateLoadingStatus?(false)
         }
