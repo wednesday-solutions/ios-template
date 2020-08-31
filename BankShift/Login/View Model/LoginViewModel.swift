@@ -24,7 +24,7 @@ class LoginViewModel {
         self.service = serviceProtocol
     }
 
-    //MARK: -- Example Func
+    //MARK: -- Login Func
     func loginRequest(userName:String,password:String) {
         guard userName != "" || password != "" else {
             showAlertClosure?(Constant.error.ENTER_VALID_INFORMATION.rawValue)
@@ -42,4 +42,20 @@ class LoginViewModel {
         }
     }
 
+    //MARK: -- Register Func
+    func createAccountRequest(userName:String,password:String,name:String) {
+        guard userName != "" || password != "" || name != "" else {
+            showAlertClosure?(Constant.error.ENTER_VALID_INFORMATION.rawValue)
+            return;
+        }
+        updateLoadingStatus?(true)
+        self.service.registerAccount(name: name, username: userName, password: password, success: { (user) in
+            self.updateLoadingStatus?(false)
+            self.didGetData?(user)
+        }) { (error) in
+            ///API failed
+            self.showAlertClosure?(error)
+            self.updateLoadingStatus?(false)
+        }
+    }
 }

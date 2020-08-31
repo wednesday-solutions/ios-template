@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0103567ADF90D29E3464EBD4 /* Pods_BankShift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A741AE2261F93CD6F298F2D /* Pods_BankShift.framework */; };
+		6D3DF48F24FCB4B200D2C478 /* CreateAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */; };
 		6D99151724F90509006A7410 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99151624F90509006A7410 /* ApolloClient.swift */; };
 		6D99151A24F911A9006A7410 /* Login.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D99151924F911A9006A7410 /* Login.graphql */; };
 		6D99151F24F9175B006A7410 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99151E24F9175A006A7410 /* API.swift */; };
@@ -51,6 +52,7 @@
 		02378BAE75CE61A744905712 /* Pods-BankShiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShiftTests.debug.xcconfig"; path = "Target Support Files/Pods-BankShiftTests/Pods-BankShiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42DC34EBD2BB1104608FEEF9 /* Pods-BankShift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift.debug.xcconfig"; path = "Target Support Files/Pods-BankShift/Pods-BankShift.debug.xcconfig"; sourceTree = "<group>"; };
 		603C8F9141491A58045CBA56 /* Pods-BankShift-BankShiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift-BankShiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BankShift-BankShiftUITests/Pods-BankShift-BankShiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateAccount.graphql; sourceTree = "<group>"; };
 		6D99151624F90509006A7410 /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
 		6D99151924F911A9006A7410 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
 		6D99151E24F9175A006A7410 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				6DBACFD024F7D39C008918EE /* LoginService.swift */,
 				6D99151924F911A9006A7410 /* Login.graphql */,
+				6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				6DBACF9C24F7B07D008918EE /* LaunchScreen.storyboard in Resources */,
 				6DBACF9924F7B07D008918EE /* Preview Assets.xcassets in Resources */,
 				6DBACF9624F7B07D008918EE /* Assets.xcassets in Resources */,
+				6D3DF48F24FCB4B200D2C478 /* CreateAccount.graphql in Resources */,
 				6D99151A24F911A9006A7410 /* Login.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

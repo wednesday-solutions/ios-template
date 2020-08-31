@@ -40,6 +40,7 @@ struct RegisterView: View {
                         
                         Button(action: {
                             ///Api request
+                            self.logingVm.createAccountRequest(userName: self.userName, password: self.passWord, name: self.name)
                             
                         }) {
                             Text("Submit")
@@ -54,8 +55,7 @@ struct RegisterView: View {
                         
                 }.onAppear {
                     self.logingVm.didGetData = { user in
-                        self.showingAlert = true
-                        self.logingVm.alertMessage = "\(user.name ?? "") successfully logged in"
+                        
                     }
                     self.logingVm.updateLoadingStatus = { isLoading in
                         self.showingLoading = isLoading

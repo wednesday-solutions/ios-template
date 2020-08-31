@@ -12,4 +12,17 @@ struct User {
     let username:String!
     let name:String!
     let dateCreated:String!
+    var currentPets:[Pet]?
 }
+
+struct Pet {
+    let id: String!
+    let name: String!
+    let weight: Double!
+    let category: PetCategory!
+    let status: PetStatus!
+    let photo: (full:String,thumb:String)
+    
+}
+
+

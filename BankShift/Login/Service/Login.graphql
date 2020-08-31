@@ -9,11 +9,11 @@ mutation loginRequest($username: ID!, $password:String!) {
         name
         weight
         category
-        inCareOf{
-          name
-          username
+        status
+        photo{
+        full
+        thumb
         }
-        
       }
       checkoutHistory{
         pet{
