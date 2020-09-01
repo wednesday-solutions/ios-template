@@ -9,7 +9,7 @@
 import Foundation
 
 struct Constant {
-    enum error:String {
-        case ENTER_VALID_INFORMATION = "Enter valid information"
+    enum Error: String {
+        case ENTERVALIDINFORMATION = "Enter valid information"
     }
 }

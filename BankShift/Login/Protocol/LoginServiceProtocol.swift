@@ -10,7 +10,7 @@ import Foundation
 
 protocol LoginServiceProtocol {
 
-    func login(userName:String!,password:String,success: @escaping(_ data: User) -> (), failure: @escaping(_ errorString:String) -> ())
-    func registerAccount(name:String,username:String,password:String,success: @escaping(_ data: User) -> (), failure: @escaping(_ errorString:String) -> ()) 
-    
+    func login(userName: String!, password: String, success: @escaping(_ data: LoginRequestMutation.Data?) -> Void, failure: @escaping(_ errorString: String) -> Void)
+    func registerAccount(name: String, username: String, password: String, success: @escaping(_ data: User) -> Void, failure: @escaping(_ errorString: String) -> Void)
+
 }

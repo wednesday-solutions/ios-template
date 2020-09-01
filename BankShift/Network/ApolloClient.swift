@@ -13,14 +13,14 @@ import Apollo
 
 class Network {
   static let shared = Network()
-  
+
   // Configure the network transport to use the singleton as the delegate.
   private lazy var networkTransport: HTTPNetworkTransport = {
     let transport = HTTPNetworkTransport(url: URL(string: "https://pet-library.moonhighway.com")!)
 //    transport.delegate = self
     return transport
   }()
-    
+
   // Use the configured network transport in your Apollo client.
   private(set) lazy var apollo = ApolloClient(networkTransport: self.networkTransport)
 }

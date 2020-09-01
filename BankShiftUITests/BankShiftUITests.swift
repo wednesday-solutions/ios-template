@@ -22,10 +22,10 @@ class BankShiftUITests: XCTestCase {
     func testLogin() throws {
         let app = XCUIApplication()
         app.launch()
-    
-        
+        XCUIApplication()/*@START_MENU_TOKEN@*/.buttons["btnLoginSubmit"]/*[[".buttons[\"Submit\"]",".buttons[\"btnLoginSubmit\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+
     }
-    
+
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }

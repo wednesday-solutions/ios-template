@@ -9,17 +9,17 @@
 import Foundation
 
 class PetListService: PetListServiceProtocol {
-    func getAllPets(success: @escaping ([Pet]) -> (), failure: @escaping (_ errorString:String) -> ()) {
-        
+    func getAllPets(success: @escaping ([Pet]) -> Void, failure: @escaping (_ errorString: String) -> Void) {
+
         Network.shared.apollo.fetch(query: GetAllPetsQuery.init(status: .available)) { (result) in
             switch result {
             case .success(let graphQLResult):
                 if let error = graphQLResult.errors?.first?.description {
                     failure(error)
-                    return;
+                    return
                 }
                 guard let pets = try? result.get().data?.allPets else { return }
-                let petArray = pets.compactMap{ Pet(id: $0.id, name: $0.name, weight: $0.weight, category: $0.category, status: $0.status, photo: (full: $0.photo?.full ?? "", thumb: $0.photo?.thumb ?? ""))}
+                let petArray = pets.compactMap { Pet(id: $0.id, name: $0.name, weight: $0.weight, category: $0.category, status: $0.status, photo: (full: $0.photo?.full ?? "", thumb: $0.photo?.thumb ?? ""))}
                 success(petArray)
             case .failure(let error):
                 print("Failure! Error: \(error)")
@@ -27,5 +27,5 @@ class PetListService: PetListServiceProtocol {
             }
         }
     }
-    
+
 }

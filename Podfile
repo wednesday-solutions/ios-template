@@ -7,7 +7,8 @@ target 'BankShift' do
 
   # Pods for BankShift
   pod "Apollo" 
-
+  pod 'SwiftLint'
+  
   target 'BankShiftTests' do
     inherit! :search_paths
     # Pods for testing

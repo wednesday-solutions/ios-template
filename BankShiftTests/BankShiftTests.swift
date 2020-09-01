@@ -7,16 +7,16 @@
 //
 
 import XCTest
+import UIKit
+import Apollo
 @testable import BankShift
 
 class BankShiftTests: XCTestCase {
-    
+
     let loginVm = LoginViewModel.init()
-    var currentUser:User!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        currentUser = nil
     }
 
     override func tearDownWithError() throws {
@@ -24,64 +24,80 @@ class BankShiftTests: XCTestCase {
     }
 
     func testLoginViewModel() throws {
-        //        loginFlow(username: "test", password: "123456")
-        loginFlow(username: "Test", password: "test")
-    }
-    
-    func testRegisterViewModel() throws {
-        register(username: "Parth1234", password: "123456", name: "test")
-    }
-   
-    
-    func getAllPets() {
-        var pets:[Pet]!
-        let petExpectation = expectation(description: "pets")
-        let petVm = PetListViewModel.init()
-        petVm.getAllAvaiblePets()
-        petVm.didGetAllPets = { petArray in
-            pets = petArray
-            petExpectation.fulfill()
+        let responseString =
+        """
+        {
+            "data": {
+                "logIn": {
+                    "__typename": "logIn",
+                    "customer": {
+                        "__typename": "Customer",
+                        "username": "Test",
+                        "name": "Test",
+                        "dateCreated": "2020-08-31T05:10:53.303Z",
+                        "currentPets": [],
+                        "checkoutHistory": []
+                    },
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QiLCJpYXQiOjE1OTg5NDY4NjV9.isPyHYOUKEJVfo1UghSQDZDqmB2nqTH896-dQUYVncg"
+                }
+            }
         }
-        petVm.showAlertClosure = { error in
-            petVm.alertMessage = error
-            petExpectation.fulfill()
-        }
-        waitForExpectations(timeout: 10) { (error) in
-            XCTAssertNotNil(pets,self.loginVm.alertMessage ?? "")
-        }
-    }
-    
-    func register(username:String,password:String,name:String) {
-        let userExpectation = expectation(description: "user")
-        loginVm.createAccountRequest(userName: username, password: password, name: name)
-        loginVm.didGetData = { user in
-            self.currentUser = user
-            userExpectation.fulfill()
-        }
-        loginVm.showAlertClosure = { error in
-            self.loginVm.alertMessage = error
-            userExpectation.fulfill()
-        }
-        waitForExpectations(timeout: 10) { (error) in
-            XCTAssertNotNil(self.currentUser,self.loginVm.alertMessage ?? "")
-        }
-    }
-   
-    func loginFlow(username:String,password:String) {
-        let userExpectation = expectation(description: "user")
-        loginVm.loginRequest(userName: username, password: password)
-        loginVm.didGetData = { user in
-            self.currentUser = user
-            userExpectation.fulfill()
-        }
-        loginVm.showAlertClosure = { error in
-            self.loginVm.alertMessage = error
-            userExpectation.fulfill()
-        }
-        waitForExpectations(timeout: 10) { (error) in
-            XCTAssertNotNil(self.currentUser,self.loginVm.alertMessage ?? "")
-        }
-    }
-    
+        """
 
+        guard let data = responseString.data(using: .utf8), let obj = try? JSONSerialization.jsonObject(with: data,
+                                                                                                         options: []) as? JSONObject else { return XCTFail("Failed to convert object to jsonObject") }
+
+        withCache(initialRecords: [:]) { cache in
+
+            let store = ApolloStore(cache: cache)
+            let client = ApolloClient(networkTransport: MockNetworkTransport(body: obj),
+                                      store: store)
+
+            let expectation = self.expectation(description: "Fetching query")
+            client.perform(mutation: LoginRequestMutation.init(username: "test", password: "test")) { result in
+                switch result {
+                case let .failure(error):
+                    XCTFail(error.localizedDescription)
+                    expectation.fulfill()
+                    return
+                case .success:
+                    guard let data = try? result.get().data else { return }
+                    let user =  self.loginVm.initWithLoginMutuation(data)
+                    XCTAssert(user?.name == "Test", "Test finish")
+                    expectation.fulfill()
+                }
+
+            }
+            self.waitForExpectations(timeout: 5, handler: nil)
+
+        }
+    }
+
+    func testRegisterViewModel() throws {
+    }
+
+}
+
+extension XCTestCase {
+    func withCache(initialRecords: RecordSet? = nil,
+                   execute test: (NormalizedCache) throws -> Void) rethrows {
+
+        return try InMemoryTestCacheProvider.withCache(initialRecords: initialRecords,
+                                                       execute: test)
+    }
+}
+
+protocol TestCacheProvider: AnyObject {
+    static func withCache(initialRecords: RecordSet?,
+                          execute test: (NormalizedCache) throws -> Void) rethrows
+}
+
+final class InMemoryTestCacheProvider: TestCacheProvider {
+    /// Execute a test block rather than return a cache synchronously, since cache setup may be
+    /// asynchronous at some point.
+    static func withCache(initialRecords: RecordSet? = nil,
+                          execute test: (NormalizedCache) throws -> Void) rethrows {
+        let cache = InMemoryNormalizedCache(records: initialRecords ?? [:])
+        try test(cache)
+    }
 }

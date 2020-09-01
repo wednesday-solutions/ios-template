@@ -10,5 +10,5 @@ import Foundation
 
 protocol PetListServiceProtocol {
 
-    func getAllPets(success: @escaping ([Pet]) -> (), failure: @escaping (_ errorString:String) -> ()) 
+    func getAllPets(success: @escaping ([Pet]) -> Void, failure: @escaping (_ errorString: String) -> Void)
 }

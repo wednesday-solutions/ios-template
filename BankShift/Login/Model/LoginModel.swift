@@ -9,10 +9,10 @@
 import Foundation
 
 struct User {
-    let username:String!
-    let name:String!
-    let dateCreated:String!
-    var currentPets:[Pet]?
+    let username: String!
+    let name: String!
+    let dateCreated: String!
+    var currentPets: [Pet]?
 }
 
 struct Pet {
@@ -21,8 +21,6 @@ struct Pet {
     let weight: Double!
     let category: PetCategory!
     let status: PetStatus!
-    let photo: (full:String,thumb:String)
-    
+    let photo: (full: String, thumb: String)
+
 }
-
-

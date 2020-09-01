@@ -8,34 +8,32 @@
 
 import Foundation
 
-class PetListViewModel:ObservableObject {
-    
+class PetListViewModel: ObservableObject {
+
     private let service: PetListServiceProtocol
-    
+
     @Published var pets = [Pet]()
-    
+
     var alertMessage: String?
-    
-    //MARK: -- Closure Collection
-    var showAlertClosure: ((_ alertMessage:String) -> ())?
-    var updateLoadingStatus: ((_ isLoading:Bool) -> ())?
-    var didGetAllPets: (([Pet]) -> ())?
-    
+
+    // MARK: - - Closure Collection
+    var showAlertClosure: ((_ alertMessage: String) -> Void)?
+    var updateLoadingStatus: ((_ isLoading: Bool) -> Void)?
+    var didGetAllPets: (([Pet]) -> Void)?
+
     init(withLogin serviceProtocol: PetListServiceProtocol = PetListService() ) {
         self.service = serviceProtocol
     }
-    
+
     func getAllAvaiblePets() {
         self.service.getAllPets(success: { (pets) in
             self.updateLoadingStatus?(false)
             self.pets = pets
         }) { (error) in
-            ///API failed
+
             self.showAlertClosure?(error)
             self.updateLoadingStatus?(false)
         }
     }
-    
-    
-}
 
+}
