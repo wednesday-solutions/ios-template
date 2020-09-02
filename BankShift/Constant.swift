@@ -10,6 +10,6 @@ import Foundation
 
 struct Constant {
     enum Error: String {
-        case ENTERVALIDINFORMATION = "Enter valid information"
+        case ENTER_VALID_INFORMATION = "Enter valid information"
     }
 }

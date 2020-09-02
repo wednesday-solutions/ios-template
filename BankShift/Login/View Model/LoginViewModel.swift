@@ -27,7 +27,7 @@ class LoginViewModel {
     // MARK: - - Login Func
     func loginRequest(userName: String, password: String) {
         guard userName != "" || password != "" else {
-            showAlertClosure?(Constant.Error.ENTERVALIDINFORMATION.rawValue)
+            showAlertClosure?(Constant.Error.ENTER_VALID_INFORMATION.rawValue)
             return
         }
 
@@ -44,7 +44,7 @@ class LoginViewModel {
     // MARK: - - Register Func
     func createAccountRequest(userName: String, password: String, name: String) {
         guard userName != "" || password != "" || name != "" else {
-            showAlertClosure?(Constant.Error.ENTERVALIDINFORMATION.rawValue)
+            showAlertClosure?(Constant.Error.ENTER_VALID_INFORMATION.rawValue)
             return
         }
         updateLoadingStatus?(true)
