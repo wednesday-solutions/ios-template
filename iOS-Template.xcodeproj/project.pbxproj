@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0103567ADF90D29E3464EBD4 /* Pods_BankShift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A741AE2261F93CD6F298F2D /* Pods_BankShift.framework */; };
+		4DA38DBD81F7E8F298B4AAB8 /* Pods_iOS_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AEE7D740FFD70529082A72 /* Pods_iOS_Template.framework */; };
 		6D3DF48F24FCB4B200D2C478 /* CreateAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */; };
 		6D3DF4A124FCC17F00D2C478 /* PetListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */; };
 		6D3DF4A224FCC17F00D2C478 /* PetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */; };
@@ -34,8 +34,6 @@
 		6DBACFD624F7D39C008918EE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD024F7D39C008918EE /* LoginService.swift */; };
 		6DBACFD724F7D39C008918EE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD224F7D39C008918EE /* LoginViewModel.swift */; };
 		6DBACFD924F7DD9F008918EE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */; };
-		7712A5C0A366D5C058E9A780 /* Pods_BankShift_BankShiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D856BC85D3EF2B3A305A47CD /* Pods_BankShift_BankShiftUITests.framework */; };
-		778711D55411E4D65CAB6AC5 /* Pods_BankShiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B5A68BA8C41A36BB18150C /* Pods_BankShiftTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02378BAE75CE61A744905712 /* Pods-BankShiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShiftTests.debug.xcconfig"; path = "Target Support Files/Pods-BankShiftTests/Pods-BankShiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B3A625D5EA634BC6F9BFE46 /* Pods-iOS-Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.debug.xcconfig"; sourceTree = "<group>"; };
 		42DC34EBD2BB1104608FEEF9 /* Pods-BankShift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift.debug.xcconfig"; path = "Target Support Files/Pods-BankShift/Pods-BankShift.debug.xcconfig"; sourceTree = "<group>"; };
-		603C8F9141491A58045CBA56 /* Pods-BankShift-BankShiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift-BankShiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BankShift-BankShiftUITests/Pods-BankShift-BankShiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		59AEE7D740FFD70529082A72 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE23F1A2FDC876627000896 /* Pods-iOS-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.release.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.release.xcconfig"; sourceTree = "<group>"; };
 		6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateAccount.graphql; sourceTree = "<group>"; };
 		6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListServiceProtocol.swift; sourceTree = "<group>"; };
 		6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListModel.swift; sourceTree = "<group>"; };
@@ -72,7 +71,7 @@
 		6D99152024F92429006A7410 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6D99152224F92B7A006A7410 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		6DAAF7D924FE15330084E768 /* MockNetworkTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkTransport.swift; sourceTree = "<group>"; };
-		6DBACF8C24F7B076008918EE /* BankShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DBACF8C24F7B076008918EE /* iOS-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBACF8F24F7B076008918EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DBACF9124F7B076008918EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6DBACF9324F7B076008918EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -80,10 +79,10 @@
 		6DBACF9824F7B07D008918EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6DBACF9B24F7B07D008918EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DBACF9D24F7B07D008918EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DBACFA224F7B07D008918EE /* BankShiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankShiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DBACFA224F7B07D008918EE /* iOS-TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-TemplateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBACFA624F7B07D008918EE /* BankShiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankShiftTests.swift; sourceTree = "<group>"; };
 		6DBACFA824F7B07D008918EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DBACFAD24F7B07E008918EE /* BankShiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankShiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DBACFAD24F7B07E008918EE /* iOS-TemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-TemplateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBACFB124F7B07E008918EE /* BankShiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankShiftUITests.swift; sourceTree = "<group>"; };
 		6DBACFB324F7B07E008918EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DBACFCA24F7D39C008918EE /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
@@ -91,12 +90,7 @@
 		6DBACFD024F7D39C008918EE /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		6DBACFD224F7D39C008918EE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		98B5A68BA8C41A36BB18150C /* Pods_BankShiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankShiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A741AE2261F93CD6F298F2D /* Pods_BankShift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankShift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB48ECDF3CA62450C4E99438 /* Pods-BankShift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift.release.xcconfig"; path = "Target Support Files/Pods-BankShift/Pods-BankShift.release.xcconfig"; sourceTree = "<group>"; };
-		D856BC85D3EF2B3A305A47CD /* Pods_BankShift_BankShiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankShift_BankShiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E62A01142E7181F749D17410 /* Pods-BankShiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShiftTests.release.xcconfig"; path = "Target Support Files/Pods-BankShiftTests/Pods-BankShiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		EA5E7290A2ADA7496CF4D500 /* Pods-BankShift-BankShiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift-BankShiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BankShift-BankShiftUITests/Pods-BankShift-BankShiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0103567ADF90D29E3464EBD4 /* Pods_BankShift.framework in Frameworks */,
+				4DA38DBD81F7E8F298B4AAB8 /* Pods_iOS_Template.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				778711D55411E4D65CAB6AC5 /* Pods_BankShiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7712A5C0A366D5C058E9A780 /* Pods_BankShift_BankShiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,9 +195,9 @@
 		6DBACF8D24F7B076008918EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DBACF8C24F7B076008918EE /* BankShift.app */,
-				6DBACFA224F7B07D008918EE /* BankShiftTests.xctest */,
-				6DBACFAD24F7B07E008918EE /* BankShiftUITests.xctest */,
+				6DBACF8C24F7B076008918EE /* iOS-Template.app */,
+				6DBACFA224F7B07D008918EE /* iOS-TemplateTests.xctest */,
+				6DBACFAD24F7B07E008918EE /* iOS-TemplateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,10 +316,8 @@
 			children = (
 				42DC34EBD2BB1104608FEEF9 /* Pods-BankShift.debug.xcconfig */,
 				AB48ECDF3CA62450C4E99438 /* Pods-BankShift.release.xcconfig */,
-				603C8F9141491A58045CBA56 /* Pods-BankShift-BankShiftUITests.debug.xcconfig */,
-				EA5E7290A2ADA7496CF4D500 /* Pods-BankShift-BankShiftUITests.release.xcconfig */,
-				02378BAE75CE61A744905712 /* Pods-BankShiftTests.debug.xcconfig */,
-				E62A01142E7181F749D17410 /* Pods-BankShiftTests.release.xcconfig */,
+				1B3A625D5EA634BC6F9BFE46 /* Pods-iOS-Template.debug.xcconfig */,
+				6AE23F1A2FDC876627000896 /* Pods-iOS-Template.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -335,9 +325,7 @@
 		AEE665AC91DAD49649AEB403 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A741AE2261F93CD6F298F2D /* Pods_BankShift.framework */,
-				D856BC85D3EF2B3A305A47CD /* Pods_BankShift_BankShiftUITests.framework */,
-				98B5A68BA8C41A36BB18150C /* Pods_BankShiftTests.framework */,
+				59AEE7D740FFD70529082A72 /* Pods_iOS_Template.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -345,9 +333,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DBACF8B24F7B076008918EE /* BankShift */ = {
+		6DBACF8B24F7B076008918EE /* iOS-Template */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DBACFB624F7B07E008918EE /* Build configuration list for PBXNativeTarget "BankShift" */;
+			buildConfigurationList = 6DBACFB624F7B07E008918EE /* Build configuration list for PBXNativeTarget "iOS-Template" */;
 			buildPhases = (
 				D06239A6714CC79765108844 /* [CP] Check Pods Manifest.lock */,
 				6D99151D24F915B7006A7410 /* ShellScript */,
@@ -361,16 +349,15 @@
 			);
 			dependencies = (
 			);
-			name = BankShift;
+			name = "iOS-Template";
 			productName = BankShift;
-			productReference = 6DBACF8C24F7B076008918EE /* BankShift.app */;
+			productReference = 6DBACF8C24F7B076008918EE /* iOS-Template.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6DBACFA124F7B07D008918EE /* BankShiftTests */ = {
+		6DBACFA124F7B07D008918EE /* iOS-TemplateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DBACFB924F7B07E008918EE /* Build configuration list for PBXNativeTarget "BankShiftTests" */;
+			buildConfigurationList = 6DBACFB924F7B07E008918EE /* Build configuration list for PBXNativeTarget "iOS-TemplateTests" */;
 			buildPhases = (
-				D33A505B1F063ABFDFBE8D68 /* [CP] Check Pods Manifest.lock */,
 				6DBACF9E24F7B07D008918EE /* Sources */,
 				6DBACF9F24F7B07D008918EE /* Frameworks */,
 				6DBACFA024F7B07D008918EE /* Resources */,
@@ -380,29 +367,27 @@
 			dependencies = (
 				6DBACFA424F7B07D008918EE /* PBXTargetDependency */,
 			);
-			name = BankShiftTests;
+			name = "iOS-TemplateTests";
 			productName = BankShiftTests;
-			productReference = 6DBACFA224F7B07D008918EE /* BankShiftTests.xctest */;
+			productReference = 6DBACFA224F7B07D008918EE /* iOS-TemplateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6DBACFAC24F7B07E008918EE /* BankShiftUITests */ = {
+		6DBACFAC24F7B07E008918EE /* iOS-TemplateUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DBACFBC24F7B07E008918EE /* Build configuration list for PBXNativeTarget "BankShiftUITests" */;
+			buildConfigurationList = 6DBACFBC24F7B07E008918EE /* Build configuration list for PBXNativeTarget "iOS-TemplateUITests" */;
 			buildPhases = (
-				E6E9E5A5A196197A7EC18850 /* [CP] Check Pods Manifest.lock */,
 				6DBACFA924F7B07E008918EE /* Sources */,
 				6DBACFAA24F7B07E008918EE /* Frameworks */,
 				6DBACFAB24F7B07E008918EE /* Resources */,
-				4E862AE882DEAC943C433D05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				6DBACFAF24F7B07E008918EE /* PBXTargetDependency */,
 			);
-			name = BankShiftUITests;
+			name = "iOS-TemplateUITests";
 			productName = BankShiftUITests;
-			productReference = 6DBACFAD24F7B07E008918EE /* BankShiftUITests.xctest */;
+			productReference = 6DBACFAD24F7B07E008918EE /* iOS-TemplateUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -428,7 +413,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DBACF8724F7B076008918EE /* Build configuration list for PBXProject "BankShift" */;
+			buildConfigurationList = 6DBACF8724F7B076008918EE /* Build configuration list for PBXProject "iOS-Template" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -441,9 +426,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DBACF8B24F7B076008918EE /* BankShift */,
-				6DBACFA124F7B07D008918EE /* BankShiftTests */,
-				6DBACFAC24F7B07E008918EE /* BankShiftUITests */,
+				6DBACF8B24F7B076008918EE /* iOS-Template */,
+				6DBACFA124F7B07D008918EE /* iOS-TemplateTests */,
+				6DBACFAC24F7B07E008918EE /* iOS-TemplateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -479,23 +464,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E862AE882DEAC943C433D05 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BankShift-BankShiftUITests/Pods-BankShift-BankShiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BankShift-BankShiftUITests/Pods-BankShift-BankShiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankShift-BankShiftUITests/Pods-BankShift-BankShiftUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D97B9D024FE4BB00062AC91 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,15 +504,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BankShift/Pods-BankShift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-Template/Pods-iOS-Template-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BankShift/Pods-BankShift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-Template/Pods-iOS-Template-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankShift/Pods-BankShift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-Template/Pods-iOS-Template-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D06239A6714CC79765108844 /* [CP] Check Pods Manifest.lock */ = {
@@ -562,51 +530,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BankShift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D33A505B1F063ABFDFBE8D68 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BankShiftTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6E9E5A5A196197A7EC18850 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BankShift-BankShiftUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-iOS-Template-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -662,12 +586,12 @@
 /* Begin PBXTargetDependency section */
 		6DBACFA424F7B07D008918EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6DBACF8B24F7B076008918EE /* BankShift */;
+			target = 6DBACF8B24F7B076008918EE /* iOS-Template */;
 			targetProxy = 6DBACFA324F7B07D008918EE /* PBXContainerItemProxy */;
 		};
 		6DBACFAF24F7B07E008918EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6DBACF8B24F7B076008918EE /* BankShift */;
+			target = 6DBACF8B24F7B076008918EE /* iOS-Template */;
 			targetProxy = 6DBACFAE24F7B07E008918EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -800,7 +724,7 @@
 		};
 		6DBACFB724F7B07E008918EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42DC34EBD2BB1104608FEEF9 /* Pods-BankShift.debug.xcconfig */;
+			baseConfigurationReference = 1B3A625D5EA634BC6F9BFE46 /* Pods-iOS-Template.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -820,7 +744,7 @@
 		};
 		6DBACFB824F7B07E008918EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB48ECDF3CA62450C4E99438 /* Pods-BankShift.release.xcconfig */;
+			baseConfigurationReference = 6AE23F1A2FDC876627000896 /* Pods-iOS-Template.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -840,7 +764,6 @@
 		};
 		6DBACFBA24F7B07E008918EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02378BAE75CE61A744905712 /* Pods-BankShiftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -856,13 +779,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankShift.app/BankShift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Template.app/iOS-Template";
 			};
 			name = Debug;
 		};
 		6DBACFBB24F7B07E008918EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E62A01142E7181F749D17410 /* Pods-BankShiftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -878,13 +800,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankShift.app/BankShift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Template.app/iOS-Template";
 			};
 			name = Release;
 		};
 		6DBACFBD24F7B07E008918EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 603C8F9141491A58045CBA56 /* Pods-BankShift-BankShiftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -904,7 +825,6 @@
 		};
 		6DBACFBE24F7B07E008918EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA5E7290A2ADA7496CF4D500 /* Pods-BankShift-BankShiftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -925,7 +845,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DBACF8724F7B076008918EE /* Build configuration list for PBXProject "BankShift" */ = {
+		6DBACF8724F7B076008918EE /* Build configuration list for PBXProject "iOS-Template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DBACFB424F7B07E008918EE /* Debug */,
@@ -934,7 +854,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DBACFB624F7B07E008918EE /* Build configuration list for PBXNativeTarget "BankShift" */ = {
+		6DBACFB624F7B07E008918EE /* Build configuration list for PBXNativeTarget "iOS-Template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DBACFB724F7B07E008918EE /* Debug */,
@@ -943,7 +863,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DBACFB924F7B07E008918EE /* Build configuration list for PBXNativeTarget "BankShiftTests" */ = {
+		6DBACFB924F7B07E008918EE /* Build configuration list for PBXNativeTarget "iOS-TemplateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DBACFBA24F7B07E008918EE /* Debug */,
@@ -952,7 +872,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DBACFBC24F7B07E008918EE /* Build configuration list for PBXNativeTarget "BankShiftUITests" */ = {
+		6DBACFBC24F7B07E008918EE /* Build configuration list for PBXNativeTarget "iOS-TemplateUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DBACFBD24F7B07E008918EE /* Debug */,
