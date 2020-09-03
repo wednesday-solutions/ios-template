@@ -8,32 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		4DA38DBD81F7E8F298B4AAB8 /* Pods_iOS_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AEE7D740FFD70529082A72 /* Pods_iOS_Template.framework */; };
-		6D3DF48F24FCB4B200D2C478 /* CreateAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */; };
-		6D3DF4A124FCC17F00D2C478 /* PetListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */; };
-		6D3DF4A224FCC17F00D2C478 /* PetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */; };
-		6D3DF4A424FCC17F00D2C478 /* PetListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF49E24FCC17F00D2C478 /* PetListService.swift */; };
-		6D3DF4A524FCC17F00D2C478 /* PetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF4A024FCC17F00D2C478 /* PetListViewModel.swift */; };
-		6D3DF4A724FCC22300D2C478 /* getPets.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D3DF4A624FCC22300D2C478 /* getPets.graphql */; };
-		6D3DF4A924FCC2EC00D2C478 /* PetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3DF4A824FCC2EC00D2C478 /* PetList.swift */; };
-		6D99151724F90509006A7410 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99151624F90509006A7410 /* ApolloClient.swift */; };
-		6D99151A24F911A9006A7410 /* Login.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D99151924F911A9006A7410 /* Login.graphql */; };
-		6D99151F24F9175B006A7410 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99151E24F9175A006A7410 /* API.swift */; };
-		6D99152124F92429006A7410 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99152024F92429006A7410 /* Constant.swift */; };
-		6D99152324F92B7A006A7410 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99152224F92B7A006A7410 /* RegisterView.swift */; };
-		6DAAF7DA24FE15330084E768 /* MockNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAAF7D924FE15330084E768 /* MockNetworkTransport.swift */; };
-		6DBACF9024F7B076008918EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF8F24F7B076008918EE /* AppDelegate.swift */; };
-		6DBACF9224F7B076008918EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF9124F7B076008918EE /* SceneDelegate.swift */; };
-		6DBACF9424F7B076008918EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACF9324F7B076008918EE /* LoginView.swift */; };
-		6DBACF9624F7B07D008918EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBACF9524F7B07D008918EE /* Assets.xcassets */; };
-		6DBACF9924F7B07D008918EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBACF9824F7B07D008918EE /* Preview Assets.xcassets */; };
-		6DBACF9C24F7B07D008918EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DBACF9A24F7B07D008918EE /* LaunchScreen.storyboard */; };
-		6DBACFA724F7B07D008918EE /* BankShiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFA624F7B07D008918EE /* BankShiftTests.swift */; };
-		6DBACFB224F7B07E008918EE /* BankShiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFB124F7B07E008918EE /* BankShiftUITests.swift */; };
-		6DBACFD324F7D39C008918EE /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFCA24F7D39C008918EE /* LoginServiceProtocol.swift */; };
-		6DBACFD424F7D39C008918EE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFCC24F7D39C008918EE /* LoginModel.swift */; };
-		6DBACFD624F7D39C008918EE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD024F7D39C008918EE /* LoginService.swift */; };
-		6DBACFD724F7D39C008918EE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD224F7D39C008918EE /* LoginViewModel.swift */; };
-		6DBACFD924F7DD9F008918EE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */; };
+		6D53FED62500B742008DCFA8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEAD2500B742008DCFA8 /* Constant.swift */; };
+		6D53FED72500B742008DCFA8 /* PetListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEB02500B742008DCFA8 /* PetListServiceProtocol.swift */; };
+		6D53FED82500B743008DCFA8 /* PetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEB22500B742008DCFA8 /* PetListModel.swift */; };
+		6D53FED92500B743008DCFA8 /* PetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEB42500B742008DCFA8 /* PetList.swift */; };
+		6D53FEDA2500B743008DCFA8 /* PetListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEB62500B742008DCFA8 /* PetListService.swift */; };
+		6D53FEDB2500B743008DCFA8 /* getPets.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FEB72500B742008DCFA8 /* getPets.graphql */; };
+		6D53FEDC2500B743008DCFA8 /* PetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEB92500B742008DCFA8 /* PetListViewModel.swift */; };
+		6D53FEDD2500B743008DCFA8 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEBB2500B742008DCFA8 /* ApolloClient.swift */; };
+		6D53FEDE2500B743008DCFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FEBC2500B742008DCFA8 /* Assets.xcassets */; };
+		6D53FEDF2500B743008DCFA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FEBE2500B742008DCFA8 /* Preview Assets.xcassets */; };
+		6D53FEE02500B743008DCFA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FEBF2500B742008DCFA8 /* LaunchScreen.storyboard */; };
+		6D53FEE12500B743008DCFA8 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FEC12500B742008DCFA8 /* schema.json */; };
+		6D53FEE22500B743008DCFA8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEC22500B742008DCFA8 /* API.swift */; };
+		6D53FEE32500B743008DCFA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEC32500B742008DCFA8 /* AppDelegate.swift */; };
+		6D53FEE42500B743008DCFA8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEC52500B742008DCFA8 /* ActivityIndicator.swift */; };
+		6D53FEE52500B743008DCFA8 /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEC82500B742008DCFA8 /* LoginServiceProtocol.swift */; };
+		6D53FEE62500B743008DCFA8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FECA2500B742008DCFA8 /* LoginModel.swift */; };
+		6D53FEE72500B743008DCFA8 /* Login.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FECC2500B742008DCFA8 /* Login.graphql */; };
+		6D53FEE82500B743008DCFA8 /* CreateAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FECD2500B742008DCFA8 /* CreateAccount.graphql */; };
+		6D53FEE92500B743008DCFA8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FECE2500B742008DCFA8 /* LoginService.swift */; };
+		6D53FEEA2500B743008DCFA8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FED02500B742008DCFA8 /* LoginViewModel.swift */; };
+		6D53FEEB2500B743008DCFA8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FED22500B742008DCFA8 /* LoginView.swift */; };
+		6D53FEEC2500B743008DCFA8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FED32500B742008DCFA8 /* RegisterView.swift */; };
+		6D53FEEE2500B743008DCFA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FED52500B742008DCFA8 /* SceneDelegate.swift */; };
+		6D53FEFF2500B7CE008DCFA8 /* BankShiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEF12500B74C008DCFA8 /* BankShiftTests.swift */; };
+		6D53FF002500B7CE008DCFA8 /* MockNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEF22500B74C008DCFA8 /* MockNetworkTransport.swift */; };
+		6D53FF012500B7D2008DCFA8 /* BankShiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53FEF42500B74C008DCFA8 /* BankShiftUITests.swift */; };
+		6D53FF022500B7D2008DCFA8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D53FEF52500B74C008DCFA8 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,38 +60,38 @@
 		42DC34EBD2BB1104608FEEF9 /* Pods-BankShift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift.debug.xcconfig"; path = "Target Support Files/Pods-BankShift/Pods-BankShift.debug.xcconfig"; sourceTree = "<group>"; };
 		59AEE7D740FFD70529082A72 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE23F1A2FDC876627000896 /* Pods-iOS-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.release.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.release.xcconfig"; sourceTree = "<group>"; };
-		6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreateAccount.graphql; sourceTree = "<group>"; };
-		6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListServiceProtocol.swift; sourceTree = "<group>"; };
-		6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListModel.swift; sourceTree = "<group>"; };
-		6D3DF49E24FCC17F00D2C478 /* PetListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListService.swift; sourceTree = "<group>"; };
-		6D3DF4A024FCC17F00D2C478 /* PetListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListViewModel.swift; sourceTree = "<group>"; };
-		6D3DF4A624FCC22300D2C478 /* getPets.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = getPets.graphql; sourceTree = "<group>"; };
-		6D3DF4A824FCC2EC00D2C478 /* PetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetList.swift; sourceTree = "<group>"; };
-		6D99151624F90509006A7410 /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
-		6D99151924F911A9006A7410 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
-		6D99151E24F9175A006A7410 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		6D99152024F92429006A7410 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		6D99152224F92B7A006A7410 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		6DAAF7D924FE15330084E768 /* MockNetworkTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkTransport.swift; sourceTree = "<group>"; };
+		6D53FEAD2500B742008DCFA8 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		6D53FEB02500B742008DCFA8 /* PetListServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListServiceProtocol.swift; sourceTree = "<group>"; };
+		6D53FEB22500B742008DCFA8 /* PetListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListModel.swift; sourceTree = "<group>"; };
+		6D53FEB42500B742008DCFA8 /* PetList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetList.swift; sourceTree = "<group>"; };
+		6D53FEB62500B742008DCFA8 /* PetListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListService.swift; sourceTree = "<group>"; };
+		6D53FEB72500B742008DCFA8 /* getPets.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = getPets.graphql; sourceTree = "<group>"; };
+		6D53FEB92500B742008DCFA8 /* PetListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListViewModel.swift; sourceTree = "<group>"; };
+		6D53FEBB2500B742008DCFA8 /* ApolloClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
+		6D53FEBC2500B742008DCFA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D53FEBE2500B742008DCFA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6D53FEC02500B742008DCFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D53FEC12500B742008DCFA8 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		6D53FEC22500B742008DCFA8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		6D53FEC32500B742008DCFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D53FEC52500B742008DCFA8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		6D53FEC82500B742008DCFA8 /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
+		6D53FECA2500B742008DCFA8 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		6D53FECC2500B742008DCFA8 /* Login.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
+		6D53FECD2500B742008DCFA8 /* CreateAccount.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CreateAccount.graphql; sourceTree = "<group>"; };
+		6D53FECE2500B742008DCFA8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		6D53FED02500B742008DCFA8 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6D53FED22500B742008DCFA8 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6D53FED32500B742008DCFA8 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		6D53FED42500B742008DCFA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D53FED52500B742008DCFA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6D53FEF12500B74C008DCFA8 /* BankShiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankShiftTests.swift; sourceTree = "<group>"; };
+		6D53FEF22500B74C008DCFA8 /* MockNetworkTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkTransport.swift; sourceTree = "<group>"; };
+		6D53FEF42500B74C008DCFA8 /* BankShiftUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankShiftUITests.swift; sourceTree = "<group>"; };
+		6D53FEF52500B74C008DCFA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DBACF8C24F7B076008918EE /* iOS-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DBACF8F24F7B076008918EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6DBACF9124F7B076008918EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6DBACF9324F7B076008918EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		6DBACF9524F7B07D008918EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6DBACF9824F7B07D008918EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6DBACF9B24F7B07D008918EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6DBACF9D24F7B07D008918EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DBACFA224F7B07D008918EE /* iOS-TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-TemplateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DBACFA624F7B07D008918EE /* BankShiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankShiftTests.swift; sourceTree = "<group>"; };
-		6DBACFA824F7B07D008918EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DBACFAD24F7B07E008918EE /* iOS-TemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-TemplateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DBACFB124F7B07E008918EE /* BankShiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankShiftUITests.swift; sourceTree = "<group>"; };
-		6DBACFB324F7B07E008918EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DBACFCA24F7D39C008918EE /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
-		6DBACFCC24F7D39C008918EE /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		6DBACFD024F7D39C008918EE /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		6DBACFD224F7D39C008918EE /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		AB48ECDF3CA62450C4E99438 /* Pods-BankShift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankShift.release.xcconfig"; path = "Target Support Files/Pods-BankShift/Pods-BankShift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,73 +121,182 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D3DF49624FCC17F00D2C478 /* PetList */ = {
+		6D53FEAC2500B742008DCFA8 /* iOS-Template */ = {
 			isa = PBXGroup;
 			children = (
-				6D3DF49724FCC17F00D2C478 /* Protocol */,
-				6D3DF49924FCC17F00D2C478 /* Model */,
-				6D3DF49B24FCC17F00D2C478 /* View */,
-				6D3DF49D24FCC17F00D2C478 /* Service */,
-				6D3DF49F24FCC17F00D2C478 /* View Model */,
+				6D53FEAD2500B742008DCFA8 /* Constant.swift */,
+				6D53FEAE2500B742008DCFA8 /* PetList */,
+				6D53FEBA2500B742008DCFA8 /* Network */,
+				6D53FEBC2500B742008DCFA8 /* Assets.xcassets */,
+				6D53FEBD2500B742008DCFA8 /* Preview Content */,
+				6D53FEBF2500B742008DCFA8 /* LaunchScreen.storyboard */,
+				6D53FEC12500B742008DCFA8 /* schema.json */,
+				6D53FEC22500B742008DCFA8 /* API.swift */,
+				6D53FEC32500B742008DCFA8 /* AppDelegate.swift */,
+				6D53FEC42500B742008DCFA8 /* Helper */,
+				6D53FEC62500B742008DCFA8 /* Login */,
+				6D53FED42500B742008DCFA8 /* Info.plist */,
+				6D53FED52500B742008DCFA8 /* SceneDelegate.swift */,
+			);
+			path = "iOS-Template";
+			sourceTree = "<group>";
+		};
+		6D53FEAE2500B742008DCFA8 /* PetList */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FEAF2500B742008DCFA8 /* Protocol */,
+				6D53FEB12500B742008DCFA8 /* Model */,
+				6D53FEB32500B742008DCFA8 /* View */,
+				6D53FEB52500B742008DCFA8 /* Service */,
+				6D53FEB82500B742008DCFA8 /* View Model */,
 			);
 			path = PetList;
 			sourceTree = "<group>";
 		};
-		6D3DF49724FCC17F00D2C478 /* Protocol */ = {
+		6D53FEAF2500B742008DCFA8 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				6D3DF49824FCC17F00D2C478 /* PetListServiceProtocol.swift */,
+				6D53FEB02500B742008DCFA8 /* PetListServiceProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		6D3DF49924FCC17F00D2C478 /* Model */ = {
+		6D53FEB12500B742008DCFA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6D3DF49A24FCC17F00D2C478 /* PetListModel.swift */,
+				6D53FEB22500B742008DCFA8 /* PetListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6D3DF49B24FCC17F00D2C478 /* View */ = {
+		6D53FEB32500B742008DCFA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6D3DF4A824FCC2EC00D2C478 /* PetList.swift */,
+				6D53FEB42500B742008DCFA8 /* PetList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		6D3DF49D24FCC17F00D2C478 /* Service */ = {
+		6D53FEB52500B742008DCFA8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				6D3DF49E24FCC17F00D2C478 /* PetListService.swift */,
-				6D3DF4A624FCC22300D2C478 /* getPets.graphql */,
+				6D53FEB62500B742008DCFA8 /* PetListService.swift */,
+				6D53FEB72500B742008DCFA8 /* getPets.graphql */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		6D3DF49F24FCC17F00D2C478 /* View Model */ = {
+		6D53FEB82500B742008DCFA8 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				6D3DF4A024FCC17F00D2C478 /* PetListViewModel.swift */,
+				6D53FEB92500B742008DCFA8 /* PetListViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		6D99151824F90742006A7410 /* Network */ = {
+		6D53FEBA2500B742008DCFA8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6D99151624F90509006A7410 /* ApolloClient.swift */,
+				6D53FEBB2500B742008DCFA8 /* ApolloClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		6D53FEBD2500B742008DCFA8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FEBE2500B742008DCFA8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6D53FEC42500B742008DCFA8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FEC52500B742008DCFA8 /* ActivityIndicator.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6D53FEC62500B742008DCFA8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FEC72500B742008DCFA8 /* Protocol */,
+				6D53FEC92500B742008DCFA8 /* Model */,
+				6D53FECB2500B742008DCFA8 /* Service */,
+				6D53FECF2500B742008DCFA8 /* View Model */,
+				6D53FED12500B742008DCFA8 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6D53FEC72500B742008DCFA8 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FEC82500B742008DCFA8 /* LoginServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6D53FEC92500B742008DCFA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FECA2500B742008DCFA8 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D53FECB2500B742008DCFA8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FECC2500B742008DCFA8 /* Login.graphql */,
+				6D53FECD2500B742008DCFA8 /* CreateAccount.graphql */,
+				6D53FECE2500B742008DCFA8 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6D53FECF2500B742008DCFA8 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FED02500B742008DCFA8 /* LoginViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		6D53FED12500B742008DCFA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FED22500B742008DCFA8 /* LoginView.swift */,
+				6D53FED32500B742008DCFA8 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6D53FEEF2500B74C008DCFA8 /* iOS-TemplateTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FEF12500B74C008DCFA8 /* BankShiftTests.swift */,
+				6D53FEF22500B74C008DCFA8 /* MockNetworkTransport.swift */,
+			);
+			path = "iOS-TemplateTests";
+			sourceTree = "<group>";
+		};
+		6D53FEF32500B74C008DCFA8 /* iOS-TemplateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6D53FEF42500B74C008DCFA8 /* BankShiftUITests.swift */,
+				6D53FEF52500B74C008DCFA8 /* Info.plist */,
+			);
+			path = "iOS-TemplateUITests";
 			sourceTree = "<group>";
 		};
 		6DBACF8324F7B076008918EE = {
 			isa = PBXGroup;
 			children = (
-				6DBACF8E24F7B076008918EE /* BankShift */,
-				6DBACFA524F7B07D008918EE /* BankShiftTests */,
-				6DBACFB024F7B07E008918EE /* BankShiftUITests */,
+				6D53FEAC2500B742008DCFA8 /* iOS-Template */,
+				6D53FEEF2500B74C008DCFA8 /* iOS-TemplateTests */,
+				6D53FEF32500B74C008DCFA8 /* iOS-TemplateUITests */,
 				6DBACF8D24F7B076008918EE /* Products */,
 				80117A9BCA4B5304E7385110 /* Pods */,
 				AEE665AC91DAD49649AEB403 /* Frameworks */,
@@ -200,115 +311,6 @@
 				6DBACFAD24F7B07E008918EE /* iOS-TemplateUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6DBACF8E24F7B076008918EE /* BankShift */ = {
-			isa = PBXGroup;
-			children = (
-				6D99151E24F9175A006A7410 /* API.swift */,
-				6D99152024F92429006A7410 /* Constant.swift */,
-				6D99151824F90742006A7410 /* Network */,
-				6DBACFDA24F7DDB6008918EE /* Helper */,
-				6DBACFC824F7D39C008918EE /* Login */,
-				6D3DF49624FCC17F00D2C478 /* PetList */,
-				6DBACF8F24F7B076008918EE /* AppDelegate.swift */,
-				6DBACF9124F7B076008918EE /* SceneDelegate.swift */,
-				6DBACF9524F7B07D008918EE /* Assets.xcassets */,
-				6DBACF9A24F7B07D008918EE /* LaunchScreen.storyboard */,
-				6DBACF9D24F7B07D008918EE /* Info.plist */,
-				6DBACF9724F7B07D008918EE /* Preview Content */,
-			);
-			path = BankShift;
-			sourceTree = "<group>";
-		};
-		6DBACF9724F7B07D008918EE /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACF9824F7B07D008918EE /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6DBACFA524F7B07D008918EE /* BankShiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				6DAAF7D924FE15330084E768 /* MockNetworkTransport.swift */,
-				6DBACFA624F7B07D008918EE /* BankShiftTests.swift */,
-				6DBACFA824F7B07D008918EE /* Info.plist */,
-			);
-			path = BankShiftTests;
-			sourceTree = "<group>";
-		};
-		6DBACFB024F7B07E008918EE /* BankShiftUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACFB124F7B07E008918EE /* BankShiftUITests.swift */,
-				6DBACFB324F7B07E008918EE /* Info.plist */,
-			);
-			path = BankShiftUITests;
-			sourceTree = "<group>";
-		};
-		6DBACFC524F7C2FF008918EE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACF9324F7B076008918EE /* LoginView.swift */,
-				6D99152224F92B7A006A7410 /* RegisterView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		6DBACFC824F7D39C008918EE /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACFC524F7C2FF008918EE /* Views */,
-				6DBACFC924F7D39C008918EE /* Protocol */,
-				6DBACFCB24F7D39C008918EE /* Model */,
-				6DBACFCF24F7D39C008918EE /* Service */,
-				6DBACFD124F7D39C008918EE /* View Model */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		6DBACFC924F7D39C008918EE /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACFCA24F7D39C008918EE /* LoginServiceProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		6DBACFCB24F7D39C008918EE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACFCC24F7D39C008918EE /* LoginModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6DBACFCF24F7D39C008918EE /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACFD024F7D39C008918EE /* LoginService.swift */,
-				6D99151924F911A9006A7410 /* Login.graphql */,
-				6D3DF48E24FCB4B200D2C478 /* CreateAccount.graphql */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		6DBACFD124F7D39C008918EE /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACFD224F7D39C008918EE /* LoginViewModel.swift */,
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		6DBACFDA24F7DDB6008918EE /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				6DBACFD824F7DD9F008918EE /* ActivityIndicator.swift */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		80117A9BCA4B5304E7385110 /* Pods */ = {
@@ -438,12 +440,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBACF9C24F7B07D008918EE /* LaunchScreen.storyboard in Resources */,
-				6DBACF9924F7B07D008918EE /* Preview Assets.xcassets in Resources */,
-				6D3DF4A724FCC22300D2C478 /* getPets.graphql in Resources */,
-				6DBACF9624F7B07D008918EE /* Assets.xcassets in Resources */,
-				6D3DF48F24FCB4B200D2C478 /* CreateAccount.graphql in Resources */,
-				6D99151A24F911A9006A7410 /* Login.graphql in Resources */,
+				6D53FEDE2500B743008DCFA8 /* Assets.xcassets in Resources */,
+				6D53FEE72500B743008DCFA8 /* Login.graphql in Resources */,
+				6D53FEE12500B743008DCFA8 /* schema.json in Resources */,
+				6D53FEE02500B743008DCFA8 /* LaunchScreen.storyboard in Resources */,
+				6D53FEE82500B743008DCFA8 /* CreateAccount.graphql in Resources */,
+				6D53FEDF2500B743008DCFA8 /* Preview Assets.xcassets in Resources */,
+				6D53FEDB2500B743008DCFA8 /* getPets.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D53FF022500B7D2008DCFA8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,23 +548,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBACFD424F7D39C008918EE /* LoginModel.swift in Sources */,
-				6DBACFD324F7D39C008918EE /* LoginServiceProtocol.swift in Sources */,
-				6D99151724F90509006A7410 /* ApolloClient.swift in Sources */,
-				6D3DF4A124FCC17F00D2C478 /* PetListServiceProtocol.swift in Sources */,
-				6DBACF9024F7B076008918EE /* AppDelegate.swift in Sources */,
-				6D3DF4A424FCC17F00D2C478 /* PetListService.swift in Sources */,
-				6D99151F24F9175B006A7410 /* API.swift in Sources */,
-				6DBACFD624F7D39C008918EE /* LoginService.swift in Sources */,
-				6DBACFD924F7DD9F008918EE /* ActivityIndicator.swift in Sources */,
-				6DBACF9224F7B076008918EE /* SceneDelegate.swift in Sources */,
-				6D99152124F92429006A7410 /* Constant.swift in Sources */,
-				6D3DF4A524FCC17F00D2C478 /* PetListViewModel.swift in Sources */,
-				6D99152324F92B7A006A7410 /* RegisterView.swift in Sources */,
-				6D3DF4A924FCC2EC00D2C478 /* PetList.swift in Sources */,
-				6D3DF4A224FCC17F00D2C478 /* PetListModel.swift in Sources */,
-				6DBACFD724F7D39C008918EE /* LoginViewModel.swift in Sources */,
-				6DBACF9424F7B076008918EE /* LoginView.swift in Sources */,
+				6D53FEDA2500B743008DCFA8 /* PetListService.swift in Sources */,
+				6D53FEE92500B743008DCFA8 /* LoginService.swift in Sources */,
+				6D53FEE62500B743008DCFA8 /* LoginModel.swift in Sources */,
+				6D53FEEB2500B743008DCFA8 /* LoginView.swift in Sources */,
+				6D53FED62500B742008DCFA8 /* Constant.swift in Sources */,
+				6D53FEE52500B743008DCFA8 /* LoginServiceProtocol.swift in Sources */,
+				6D53FED92500B743008DCFA8 /* PetList.swift in Sources */,
+				6D53FEEE2500B743008DCFA8 /* SceneDelegate.swift in Sources */,
+				6D53FEEA2500B743008DCFA8 /* LoginViewModel.swift in Sources */,
+				6D53FEE32500B743008DCFA8 /* AppDelegate.swift in Sources */,
+				6D53FEDD2500B743008DCFA8 /* ApolloClient.swift in Sources */,
+				6D53FED82500B743008DCFA8 /* PetListModel.swift in Sources */,
+				6D53FEE42500B743008DCFA8 /* ActivityIndicator.swift in Sources */,
+				6D53FEDC2500B743008DCFA8 /* PetListViewModel.swift in Sources */,
+				6D53FEEC2500B743008DCFA8 /* RegisterView.swift in Sources */,
+				6D53FEE22500B743008DCFA8 /* API.swift in Sources */,
+				6D53FED72500B742008DCFA8 /* PetListServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,8 +572,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DAAF7DA24FE15330084E768 /* MockNetworkTransport.swift in Sources */,
-				6DBACFA724F7B07D008918EE /* BankShiftTests.swift in Sources */,
+				6D53FF002500B7CE008DCFA8 /* MockNetworkTransport.swift in Sources */,
+				6D53FEFF2500B7CE008DCFA8 /* BankShiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBACFB224F7B07E008918EE /* BankShiftUITests.swift in Sources */,
+				6D53FF012500B7D2008DCFA8 /* BankShiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,10 +601,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6DBACF9A24F7B07D008918EE /* LaunchScreen.storyboard */ = {
+		6D53FEBF2500B742008DCFA8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6DBACF9B24F7B07D008918EE /* Base */,
+				6D53FEC02500B742008DCFA8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -728,9 +732,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BankShift/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS-Template/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BankShift/Info.plist;
+				INFOPLIST_FILE = "iOS-Template/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -748,9 +752,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BankShift/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS-Template/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BankShift/Info.plist;
+				INFOPLIST_FILE = "iOS-Template/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -768,7 +772,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BankShiftTests/Info.plist;
+				INFOPLIST_FILE = "iOS-TemplateTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -789,7 +793,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BankShiftTests/Info.plist;
+				INFOPLIST_FILE = "iOS-TemplateTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -809,7 +813,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BankShiftUITests/Info.plist;
+				INFOPLIST_FILE = "iOS-TemplateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -828,7 +832,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BankShiftUITests/Info.plist;
+				INFOPLIST_FILE = "iOS-TemplateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
