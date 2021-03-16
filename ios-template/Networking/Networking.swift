@@ -11,7 +11,7 @@ struct Networking {
   
   enum GithubEndpoints {
     static let searchUser = "/search/users"
-    static let getRepos: (String) -> String = { return "/users\($0)/repos" }
+    static let getRepos: (String) -> String = { return "/users/\($0)/repos" }
   }
   
   func genericURLSession<A: Decodable>(urlComponent: URLComponents, closure: @escaping (Result<A, NetworkingError>) -> Void) {

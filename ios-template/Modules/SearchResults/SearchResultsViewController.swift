@@ -42,8 +42,11 @@ class UsersViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let user = viewModel.userList[indexPath.row].login
+    let repoViewModel = RepoListViewModel(user: user)
+    let repoListViewController = RepoListViewController(viewModel: repoViewModel)
     
+    navigationController?.pushViewController(repoListViewController, animated: true)
   }
   
 }
-

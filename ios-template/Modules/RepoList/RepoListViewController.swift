@@ -9,23 +9,35 @@ import UIKit
 
 class RepoListViewController: UITableViewController {
   
+  let viewModel: RepoListViewModel
+  
+  init(viewModel: RepoListViewModel) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    title = "Repos for \(viewModel.user)"
+    tableView.registerCell(UITableViewCell.self)
+    viewModel.getRepos { [weak self] in
+      DispatchQueue.main.async {
+        self?.tableView.reloadData()
+      }
+    }
   }
   
-}
-
-class RepoListViewModel {
-  let user: String
-  var repositories: [Repository] = []
-  
-  init(user: String) {
-    self.user = user
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return viewModel.repositories.count
   }
   
-  func getRepos() {
-    
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+    cell.textLabel?.text = viewModel.repositories[indexPath.row].name
+    return cell
   }
-  
 }
