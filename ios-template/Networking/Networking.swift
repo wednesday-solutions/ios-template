@@ -14,50 +14,50 @@ struct Networking {
     static let getRepos: (String) -> String = { return "/users/\($0)/repos" }
   }
   
-  func genericURLSession<A: Decodable>(urlComponent: URLComponents, closure: @escaping (Result<A, NetworkingError>) -> Void) {
+  func genericURLSession<A: Decodable>(urlComponent: URLComponents, completion: @escaping (Result<A, NetworkingError>) -> Void) {
     guard let url = urlComponent.url else {
-      closure(.failure(.urlcomponentError))
+      completion(.failure(.urlcomponentError))
       return
     }
     URLSession.shared.dataTask(with: url) { (data, _, error) in
       guard error == nil else {
-        closure(.failure(.apiError(error!)))
+        completion(.failure(.apiError(error!)))
         return
       }
       guard let data = data else {
-        closure(.failure(.noDataError))
+        completion(.failure(.noDataError))
         return
       }
       let decoder = JSONDecoder()
       let model: A? = try? decoder.decode(A.self, from: data)
       
       guard let modelExists = model else {
-        closure(.failure(.jsonDecodingError))
+        completion(.failure(.jsonDecodingError))
         return
       }
-      closure(.success(modelExists))
+      completion(.success(modelExists))
     }.resume()
     
   }
   
-  func getRepos(user: String, closure: @escaping (Result<[Repository], NetworkingError>) -> Void) {
+  func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) {
     var searchComponent = githubUrlComp
     searchComponent.path = GithubEndpoints.getRepos(user)
 
     genericURLSession(urlComponent: searchComponent) { result in
-      closure(result)
+      completion(result)
     }
     
   }
   
-  func searchUsers(query: String, page: Int = 1, closure: @escaping (Result<GithubModel, NetworkingError>) -> Void) {
+  func searchUsers(query: String, page: Int = 1, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void) {
     var searchComponent = githubUrlComp
     searchComponent.path = GithubEndpoints.searchUser
     let query = "q=\"\(query)\"&page=\(String(page))"
     searchComponent.query = query
     
     genericURLSession(urlComponent: searchComponent) { result in
-      closure(result)
+      completion(result)
     }
   }
   
