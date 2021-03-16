@@ -1,5 +1,5 @@
 //
-//  SearchResultsViewController.swift
+//  UserSearchViewController.swift
 //  ios-template
 //
 //  Created by Viranchee on 15/03/21.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol UserSearchResultsDelegate: class {
+protocol UserSearchDelegate: class {
   func userSearchResultsDidSelectUser(_ user: String)
 }
 
-class UsersViewController: UITableViewController {
-  weak var delegate: UserSearchResultsDelegate!
+class UserSearchViewController: UITableViewController {
+  weak var delegate: UserSearchDelegate!
   
   let viewModel: UsersViewModel
   
@@ -27,7 +27,6 @@ class UsersViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Users"
     tableView.registerCell(UITableViewCell.self)
     viewModel.searchUsers {
       DispatchQueue.main.async {
@@ -47,6 +46,11 @@ class UsersViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    defer {
+      tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     let user = viewModel.getNameFor(userAt: indexPath.row)
     delegate.userSearchResultsDidSelectUser(user)
   }

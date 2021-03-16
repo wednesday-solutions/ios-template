@@ -25,8 +25,6 @@ class HomeViewController: UIViewController {
   
   func layoutViews() {
     view.backgroundColor = .systemGreen
-//    title = "Github User Search"
-    
     view.addSubview(searchBar)
     // Search Bar Layout
     searchBar.snp.makeConstraints { (make) in

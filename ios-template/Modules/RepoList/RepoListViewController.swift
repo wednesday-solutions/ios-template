@@ -22,7 +22,6 @@ class RepoListViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Repos for \(viewModel.user)"
     tableView.registerCell(UITableViewCell.self)
     viewModel.getRepos { [weak self] in
       DispatchQueue.main.async {
