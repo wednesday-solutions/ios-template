@@ -30,7 +30,6 @@ struct GithubUser: Codable {
   let subscriptionsURL, organizationsURL, reposURL: String
   let eventsURL: String
   let receivedEventsURL: String
-  let type: TypeEnum
   let siteAdmin: Bool
   let score: Int
   
@@ -50,13 +49,8 @@ struct GithubUser: Codable {
     case reposURL = "repos_url"
     case eventsURL = "events_url"
     case receivedEventsURL = "received_events_url"
-    case type
     case siteAdmin = "site_admin"
     case score
   }
   
-}
-
-enum TypeEnum: String, Codable {
-  case user = "User"
 }
