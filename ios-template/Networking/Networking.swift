@@ -14,7 +14,7 @@ struct Networking {
     static let getRepos: (String) -> String = { return "/users/\($0)/repos" }
   }
   
-  func genericURLSession<A: Decodable>(urlComponent: URLComponents, completion: @escaping (Result<A, NetworkingError>) -> Void) {
+  func genericURLSession<A>(urlComponent: URLComponents, decoder: @escaping (Data) -> A?, completion: @escaping (Result<A, NetworkingError>) -> Void) {
     guard let url = urlComponent.url else {
       completion(.failure(.urlcomponentError))
       return
@@ -28,8 +28,8 @@ struct Networking {
         completion(.failure(.noDataError))
         return
       }
-      let decoder = JSONDecoder()
-      let model: A? = try? decoder.decode(A.self, from: data)
+      
+      let model: A? = decoder(data)
       
       guard let modelExists = model else {
         completion(.failure(.jsonDecodingError))
@@ -40,10 +40,19 @@ struct Networking {
     
   }
   
+  func genericURLSession<A: Decodable>(urlComponent: URLComponents, completion: @escaping (Result<A, NetworkingError>) -> Void) {
+    genericURLSession(urlComponent: urlComponent) { (data) -> A? in
+      return try? JSONDecoder().decode(A.self, from: data)
+    } completion: { (result) in
+      completion(result)
+    }
+
+  }
+  
   func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) {
     var searchComponent = githubUrlComp
     searchComponent.path = GithubEndpoints.getRepos(user)
-
+    
     genericURLSession(urlComponent: searchComponent) { result in
       completion(result)
     }
@@ -61,7 +70,13 @@ struct Networking {
     }
   }
   
-  func getImage(url: URL, callback: @escaping (UIImage) -> Void) {
-    fatalError()
+  func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void) {
+    let urlComponents = URLComponents(string: url.absoluteString)!
+    genericURLSession(urlComponent: urlComponents) { (data) -> UIImage? in
+      return UIImage(data: data)
+    } completion: { (result) in
+      completion(result)
+    }
+
   }
 }
