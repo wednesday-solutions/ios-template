@@ -8,11 +8,11 @@
 import UIKit
 
 class HomeCoordinator: Coordinator {
-  private let presenter: UINavigationController
+  private weak var presenter: UINavigationController?
   private var homeViewController: HomeViewController?
   private var userSearchCoordinator: UserSearchCoordinator?
   
-  init(presenter: UINavigationController) {
+  init(presenter: UINavigationController?) {
     self.presenter = presenter
   }
   
@@ -20,7 +20,7 @@ class HomeCoordinator: Coordinator {
     let homeViewController = HomeViewController(nibName: nil, bundle: nil)
     homeViewController.delegate = self
     homeViewController.title = "Github User Search"
-    presenter.pushViewController(homeViewController, animated: true)
+    presenter?.pushViewController(homeViewController, animated: true)
     self.homeViewController = homeViewController
   }
   
