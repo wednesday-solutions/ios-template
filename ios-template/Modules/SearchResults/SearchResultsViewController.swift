@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol UserSearchResultsDelegate: class {
+  func userSearchResultsDidSelectUser(_ user: String)
+}
+
 class UsersViewController: UITableViewController {
+  weak var delegate: UserSearchResultsDelegate!
   
   let viewModel: UsersViewModel
   
@@ -43,10 +48,7 @@ class UsersViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let user = viewModel.getNameFor(userAt: indexPath.row)
-    let repoViewModel = RepoListViewModel(user: user)
-    let repoListViewController = RepoListViewController(viewModel: repoViewModel)
-    
-    navigationController?.pushViewController(repoListViewController, animated: true)
+    delegate.userSearchResultsDidSelectUser(user)
   }
   
 }

@@ -206,10 +206,10 @@
 		618A324225FF5DF5007CEEDF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				61A57CAB2600C4E50021A615 /* Coordinators */,
 				618FEDD525FF7095003C1F6E /* Home */,
 				613A191525FF74D600B0D0A0 /* SearchResults */,
 				61CCEF0D2600A3FE00334E0B /* RepoList */,
-				61A57CA52600BF610021A615 /* Coordinator.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -253,6 +253,14 @@
 				618A31F925FF55E9007CEEDF /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		61A57CAB2600C4E50021A615 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				61A57CA52600BF610021A615 /* Coordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		61CCEF0D2600A3FE00334E0B /* RepoList */ = {

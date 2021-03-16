@@ -8,7 +8,12 @@
 import UIKit
 import SnapKit
 
+protocol HomeViewControllerDelegate: class {
+  func homeViewControllerDidSearch(_ searchTerm: String)
+}
+
 class HomeViewController: UIViewController {
+  weak var delegate: HomeViewControllerDelegate!
   
   var searchBar = UISearchBar()
   
@@ -20,7 +25,7 @@ class HomeViewController: UIViewController {
   
   func layoutViews() {
     view.backgroundColor = .systemGreen
-    title = "Github User Search"
+//    title = "Github User Search"
     
     view.addSubview(searchBar)
     // Search Bar Layout
@@ -40,10 +45,7 @@ extension HomeViewController: UISearchBarDelegate {
       // Maybe show an error
       return
     }
-    let usersViewModel = UsersViewModel(searchText: searchText)
-    let searchResultsViewController = UsersViewController(viewModel: usersViewModel)
-    
-    navigationController?.pushViewController(searchResultsViewController, animated: true)
-    
+    delegate.homeViewControllerDidSearch(searchText)
+
   }
 }
