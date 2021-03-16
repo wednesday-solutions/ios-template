@@ -37,12 +37,12 @@ class UsersViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-    cell.textLabel?.text = viewModel.userList[indexPath.row].login
+    cell.textLabel?.text = viewModel.getNameFor(userAt: indexPath.row)
     return cell
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let user = viewModel.userList[indexPath.row].login
+    let user = viewModel.getNameFor(userAt: indexPath.row)
     let repoViewModel = RepoListViewModel(user: user)
     let repoListViewController = RepoListViewController(viewModel: repoViewModel)
     

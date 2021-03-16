@@ -27,7 +27,7 @@ class UsersViewModel {
     }
   }
   
-  func getNameFor(user atIndex: Int) -> String {
-    return userList[atIndex].login
+  func getNameFor(userAt position: Int) -> String {
+    return userList[position].login
   }
 }
