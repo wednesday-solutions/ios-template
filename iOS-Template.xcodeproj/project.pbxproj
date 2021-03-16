@@ -183,7 +183,6 @@
 				613A191C25FF795B00B0D0A0 /* Networking */,
 				618FEDD025FF6FBD003C1F6E /* Storyboard */,
 				618FEDCA25FF6F8A003C1F6E /* Helpers */,
-				618A327725FF68C2007CEEDF /* SwiftGen */,
 				618A31FE25FF55EC007CEEDF /* Assets.xcassets */,
 				618A327225FF6575007CEEDF /* swiftgen.yml */,
 				618A328425FF69E0007CEEDF /* .swiftlint.yml */,
@@ -219,13 +218,6 @@
 				61CCEF0D2600A3FE00334E0B /* RepoList */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		618A327725FF68C2007CEEDF /* SwiftGen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		618FEDCA25FF6F8A003C1F6E /* Helpers */ = {
