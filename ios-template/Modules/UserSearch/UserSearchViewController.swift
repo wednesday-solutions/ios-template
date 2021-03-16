@@ -14,9 +14,9 @@ protocol UserSearchDelegate: class {
 class UserSearchViewController: UITableViewController {
   weak var delegate: UserSearchDelegate!
   
-  let viewModel: UsersViewModel
+  let viewModel: UserSearchViewModel
   
-  init(viewModel: UsersViewModel) {
+  init(viewModel: UserSearchViewModel) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }

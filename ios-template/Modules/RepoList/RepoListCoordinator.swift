@@ -18,8 +18,8 @@ class ReposListCoordinator: Coordinator {
   }
   
   func start() {
-    let repoViewModel = RepoListViewModel(user: user)
-    let repoListViewController = RepoListViewController(viewModel: repoViewModel)
+    let repoListViewModel = RepoListViewModel(user: user)
+    let repoListViewController = RepoListViewController(viewModel: repoListViewModel)
     repoListViewController.title = "Repos for \(user)"
     self.reposListViewController = repoListViewController
     presenter?.pushViewController(repoListViewController, animated: true)

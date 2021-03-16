@@ -19,8 +19,8 @@ class UserSearchCoordinator: Coordinator {
   }
   
   func start() {
-    let usersViewModel = UsersViewModel(searchText: searchText)
-    let userSearchViewController = UserSearchViewController(viewModel: usersViewModel)
+    let userSearchViewModel = UserSearchViewModel(searchText: searchText)
+    let userSearchViewController = UserSearchViewController(viewModel: userSearchViewModel)
     userSearchViewController.delegate = self
     userSearchViewController.title = "Users"
     presenter?.pushViewController(userSearchViewController, animated: true)

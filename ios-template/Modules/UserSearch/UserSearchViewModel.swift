@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UsersViewModel {
+class UserSearchViewModel {
   let searchText: String
   var userList: [GithubUser] = []
   

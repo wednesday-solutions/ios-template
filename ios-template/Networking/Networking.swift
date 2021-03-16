@@ -43,9 +43,7 @@ struct Networking {
   func genericURLSession<A: Decodable>(urlComponent: URLComponents, completion: @escaping (Result<A, NetworkingError>) -> Void) {
     genericURLSession(urlComponent: urlComponent) { (data) -> A? in
       return try? JSONDecoder().decode(A.self, from: data)
-    } completion: { (result) in
-      completion(result)
-    }
+    } completion: { completion($0) }
 
   }
   
@@ -53,9 +51,7 @@ struct Networking {
     var searchComponent = githubUrlComp
     searchComponent.path = GithubEndpoints.getRepos(user)
     
-    genericURLSession(urlComponent: searchComponent) { result in
-      completion(result)
-    }
+    genericURLSession(urlComponent: searchComponent, completion: completion)
     
   }
   
@@ -65,18 +61,14 @@ struct Networking {
     let query = "q=\"\(query)\"&page=\(String(page))"
     searchComponent.query = query
     
-    genericURLSession(urlComponent: searchComponent) { result in
-      completion(result)
-    }
+    genericURLSession(urlComponent: searchComponent, completion: completion)
   }
   
   func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void) {
     let urlComponents = URLComponents(string: url.absoluteString)!
     genericURLSession(urlComponent: urlComponents) { (data) -> UIImage? in
       return UIImage(data: data)
-    } completion: { (result) in
-      completion(result)
-    }
+    } completion: { completion($0) }
 
   }
 }
