@@ -38,6 +38,7 @@ DerivedData/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+*.xcworkspace/xcuserdata
 
 # Created by https://www.toptal.com/developers/gitignore/api/Swift
 # Edit at https://www.toptal.com/developers/gitignore?templates=Swift
@@ -128,3 +129,4 @@ iOSInjectionProject/
 
 # End of https://www.toptal.com/developers/gitignore/api/Swift
 
+*.xcuserstate
