@@ -7,7 +7,7 @@
 
 import UIKit
 struct Networking {
-  private var githubUrlComp = URLComponents(string: "https://api.github.com")!
+  private var githubUrlComp = URLComponents(string: Constants.githubURL)!
   
   enum GithubEndpoints {
     static let searchUser = "/search/users"

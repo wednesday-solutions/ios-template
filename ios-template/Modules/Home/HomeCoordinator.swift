@@ -17,7 +17,7 @@ class HomeCoordinator: Coordinator {
   }
   
   func start() {
-    let homeViewController = HomeViewController(nibName: nil, bundle: nil)
+    let homeViewController = HomeViewController()
     homeViewController.delegate = self
     homeViewController.title = "Github User Search"
     presenter?.pushViewController(homeViewController, animated: true)
