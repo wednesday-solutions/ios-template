@@ -38,7 +38,6 @@ struct Networking {
       
       guard let modelExists = model else {
         completion(.failure(.jsonDecodingError))
-        dump(String(data: data, encoding: .utf8))
         return
       }
       completion(.success(modelExists))
