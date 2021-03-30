@@ -10,6 +10,8 @@ import Foundation
 enum NetworkingError: Error {
   case urlcomponentError
   case apiError(Error)
+  case urlError(URLError)
   case noDataError
   case jsonDecodingError
+  case requestCancelled
 }
