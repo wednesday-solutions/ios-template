@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReposListCoordinator: Coordinator {
+final class ReposListCoordinator: Coordinator {
   private weak var presenter: UINavigationController?
   private let user: String
   private var reposListViewController: RepoListViewController?

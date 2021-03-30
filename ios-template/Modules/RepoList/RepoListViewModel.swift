@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RepoListViewModel {
+final class RepoListViewModel {
   let user: String
   private (set) var repositories: [Repository] = []
   private var nextPage: Int = 1

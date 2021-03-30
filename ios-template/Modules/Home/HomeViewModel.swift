@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeViewModel {
+final class HomeViewModel {
   /// The network call that is happening in async currently
   var onDataLoad: (() -> Void)?
   private (set) var model: [GithubUser] = []

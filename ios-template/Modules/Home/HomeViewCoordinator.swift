@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewCoordinator: Coordinator {
+final class HomeViewCoordinator: Coordinator {
   private weak var presenter: UINavigationController?
   private var homeViewController: HomeViewController?
   private var repoListCoordinator: ReposListCoordinator?

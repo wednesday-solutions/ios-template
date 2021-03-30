@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RepoListViewController: UITableViewController {
+final class RepoListViewController: UITableViewController {
   
   let viewModel: RepoListViewModel
   

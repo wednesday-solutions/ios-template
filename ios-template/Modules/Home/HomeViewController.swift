@@ -12,7 +12,7 @@ protocol HomeViewControllerDelegate: class {
   func homeViewControllerDidSelect(_ user: String)
 }
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
   weak var delegate: HomeViewControllerDelegate!
   var viewModel: HomeViewModel
   
