@@ -14,19 +14,14 @@ protocol HomeViewControllerDelegate: class {
 
 class HomeViewController: UIViewController {
   weak var delegate: HomeViewControllerDelegate!
-  var viewModel: HomeViewModel?
+  var viewModel: HomeViewModel
   
   var searchBar = UISearchBar()
   var tableView = UITableView()
   
-  init(viewModel: HomeViewModel?) {
-    self.viewModel = viewModel ?? .init()
+  init(viewModel: HomeViewModel) {
+    self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
-  }
-  
-  convenience init() {
-    let vm = HomeViewModel()
-    self.init(viewModel: vm)
   }
   
   required init?(coder: NSCoder) {
@@ -34,8 +29,7 @@ class HomeViewController: UIViewController {
   }
   
   deinit {
-    viewModel?.onDataLoad = nil
-    viewModel = nil
+    viewModel.onDataLoad = nil
   }
   
   override func viewDidLoad() {
@@ -46,7 +40,7 @@ class HomeViewController: UIViewController {
     tableView.dataSource = self
     tableView.registerCell(UITableViewCell.self)
     layoutViews()
-    viewModel?.onDataLoad = { [weak self] () -> Void in
+    viewModel.onDataLoad = { [weak self] () -> Void in
       DispatchQueue.main.async {
         self?.tableView.reloadData()
       }
@@ -79,22 +73,22 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     guard let searchText = searchBar.text, searchText != "" else { return }
-    viewModel?.searchStringChanged(newString: searchText)
+    viewModel.searchStringChanged(newString: searchText)
   }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    viewModel?.searchStringChanged(newString: searchText)
+    viewModel.searchStringChanged(newString: searchText)
   }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel?.model.count ?? 0
+    return viewModel.model.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-    cell.textLabel?.text = viewModel?.model[indexPath.row].login
+    cell.textLabel?.text = viewModel.model[indexPath.row].login
     return cell
   }
   
@@ -102,9 +96,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     defer {
       tableView.deselectRow(at: indexPath, animated: true)
     }
-    guard let user = viewModel?.model[indexPath.row] else {
-      return
-    }
+    let user = viewModel.model[indexPath.row]
     delegate.homeViewControllerDidSelect(user.login)
   }
 }

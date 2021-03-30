@@ -23,6 +23,7 @@ class RepoListViewModel {
   }
   
   func searchForUserRepositories() {
+    self.nextPage = 1
     makeNetworkCall()
   }
   
@@ -34,6 +35,7 @@ class RepoListViewModel {
         self.onDataLoad?()
         self.nextPage += 1
       case .failure(let error):
+        // FIXME: Handle Error
         dump(error)
       }
     }
