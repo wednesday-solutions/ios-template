@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol HomeViewControllerDelegate: class {
-  func homeViewControllerDidSearch(_ searchTerm: String)
+  func homeViewControllerDidSelect(_ user: String)
 }
 
 class HomeViewController: UIViewController {
@@ -105,10 +105,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     guard let user = viewModel?.model[indexPath.row] else {
       return
     }
-    let repoListVM = RepoListViewModel(user: user.login)
-    let repoListVC = RepoListViewController(viewModel: repoListVM)
-    navigationController?.pushViewController(repoListVC, animated: true)
-    
-    // TODO: Pass this user's login forwards
+    delegate.homeViewControllerDidSelect(user.login)
   }
 }
