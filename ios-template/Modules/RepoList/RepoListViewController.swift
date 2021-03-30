@@ -33,6 +33,7 @@ class RepoListViewController: UITableViewController {
         self?.tableView.reloadData()
       }
     }
+    viewModel.searchForUserRepositories()
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
