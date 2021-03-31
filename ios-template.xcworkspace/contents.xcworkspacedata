@@ -5,9 +5,6 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:/Users/viranchee/Desktop/CODE/swift/ios-template/iOS-Template.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
