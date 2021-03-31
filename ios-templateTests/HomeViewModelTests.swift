@@ -9,6 +9,7 @@ import XCTest
 @testable import iOS_Template
 
 class HomeViewModelTests: XCTestCase {
+
   override func setUpWithError() throws {
     
   }
@@ -19,7 +20,22 @@ class HomeViewModelTests: XCTestCase {
   
   func testSearchingUser() {
     let expectation = XCTestExpectation()
-    let waiter = XCTWaiter()
+    let viewModel = HomeViewModel()
+
+    XCTAssert(viewModel.model.count == 0)
+    viewModel.onDataLoad = { () -> Void in
+      expectation.fulfill()
+    }
+    viewModel.searchStringChanged(newString: "Viranchee")
+    
+    wait(for: [expectation], timeout: 2)
+    
+    XCTAssert(viewModel.model.count > 1)
+
+  }
+  
+  func testSearchingUserModifiedString() {
+    let expectation = XCTestExpectation()
     let viewModel = HomeViewModel()
     
     XCTAssert(viewModel.model.count == 0)
@@ -28,13 +44,12 @@ class HomeViewModelTests: XCTestCase {
     }
     
     viewModel.searchStringChanged(newString: "Viranchee")
-    waiter.wait(for: [expectation], timeout: 5)
-    XCTAssert(viewModel.model.count > 1)
     
     viewModel.searchStringChanged(newString: "V")
-    waiter.wait(for: [expectation], timeout: 5)
+    wait(for: [expectation], timeout: 2)
     XCTAssert(viewModel.model.count > 3)
 
   }
+  
   
 }
