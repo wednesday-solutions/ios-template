@@ -27,6 +27,8 @@
 		61CCEEEF260087CA00334E0B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCEEEE260087CA00334E0B /* UITableView+Extension.swift */; };
 		61CCEF0F2600A46A00334E0B /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCEF0E2600A46A00334E0B /* RepoListViewController.swift */; };
 		61CCEF192600A72500334E0B /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCEF182600A72500334E0B /* RepoModel.swift */; };
+		61D2DB5626147B4E00192F9F /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D2DB4E26147B1000192F9F /* HomeViewModelTests.swift */; };
+		61D2DB5F26147D1D00192F9F /* RepoListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D2DB5A26147C8900192F9F /* RepoListViewModelTests.swift */; };
 		61D6554D25FF92FE003C5C6E /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D6554C25FF92FE003C5C6E /* NetworkingError.swift */; };
 		61D96974260B30CD0044C0FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D96973260B30CD0044C0FF /* Constants.swift */; };
 		CDEC6B256E5F30D7AC5DA049 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 155EC61876F89AFFC2432DBE /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
@@ -84,6 +86,8 @@
 		61CCEEEE260087CA00334E0B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		61CCEF0E2600A46A00334E0B /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		61CCEF182600A72500334E0B /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
+		61D2DB4E26147B1000192F9F /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		61D2DB5A26147C8900192F9F /* RepoListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModelTests.swift; sourceTree = "<group>"; };
 		61D6554C25FF92FE003C5C6E /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		61D96973260B30CD0044C0FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		79C292CB0FF7A7C59372FD2A /* Pods-iOS-Template-iOS-TemplateUITests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.dev.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.dev.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				618A320C25FF55EC007CEEDF /* ios_templateTests.swift */,
+				61D2DB4E26147B1000192F9F /* HomeViewModelTests.swift */,
+				61D2DB5A26147C8900192F9F /* RepoListViewModelTests.swift */,
 				618A320E25FF55EC007CEEDF /* Info.plist */,
 			);
 			path = "ios-templateTests";
@@ -588,6 +594,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D2DB5F26147D1D00192F9F /* RepoListViewModelTests.swift in Sources */,
+				61D2DB5626147B4E00192F9F /* HomeViewModelTests.swift in Sources */,
 				618A320D25FF55EC007CEEDF /* ios_templateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,7 +735,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-template.app/ios-template";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Template.app/iOS-Template";
 			};
 			name = QA;
 		};
@@ -927,7 +935,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-template.app/ios-template";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Template.app/iOS-Template";
 			};
 			name = Dev;
 		};
@@ -950,7 +958,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-template.app/ios-template";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Template.app/iOS-Template";
 			};
 			name = Release;
 		};
