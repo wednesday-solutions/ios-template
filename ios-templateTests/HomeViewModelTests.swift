@@ -20,7 +20,8 @@ class HomeViewModelTests: XCTestCase {
   
   func testSearchingUser() {
     let expectation = XCTestExpectation()
-    let viewModel = HomeViewModel()
+    let waiter = XCTWaiter()
+    let viewModel = HomeViewModel(networking: NetworkingMock())
 
     XCTAssert(viewModel.model.count == 0)
     viewModel.onDataLoad = { () -> Void in
@@ -28,15 +29,14 @@ class HomeViewModelTests: XCTestCase {
     }
     viewModel.searchStringChanged(newString: "Viranchee")
     
-    wait(for: [expectation], timeout: 2)
-    
+    waiter.wait(for: [expectation], timeout: 2)
     XCTAssert(viewModel.model.count > 1)
 
   }
   
   func testSearchingUserModifiedString() {
     let expectation = XCTestExpectation()
-    let viewModel = HomeViewModel()
+    let viewModel = HomeViewModel(networking: NetworkingMock())
     
     XCTAssert(viewModel.model.count == 0)
     viewModel.onDataLoad = { () -> Void in
@@ -47,9 +47,8 @@ class HomeViewModelTests: XCTestCase {
     
     viewModel.searchStringChanged(newString: "V")
     wait(for: [expectation], timeout: 2)
-    XCTAssert(viewModel.model.count > 3)
+    XCTAssert(viewModel.model.count != 0)
 
   }
-  
   
 }

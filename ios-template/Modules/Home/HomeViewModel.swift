@@ -13,7 +13,11 @@ final class HomeViewModel {
   private (set) var model: [GithubUser] = []
   private var searchString: String = ""
   private var nextPage = 1
-  private var inFlightRequest: URLSessionDataTask?
+  var networking: Endpoints
+  
+  init(networking: Endpoints) {
+    self.networking = networking
+  }
   
   func searchStringChanged(newString: String) {
     self.searchString = newString
@@ -28,11 +32,7 @@ final class HomeViewModel {
   }
   
   private func makeNetworkCall() {
-    if self.inFlightRequest?.state == .some(.running) {
-      self.inFlightRequest?.cancel()
-    }
-    
-    let dataTask = Networking().searchUsers(query: searchString, page: nextPage) { [weak self] (resultModel) in
+    networking.searchUsers(query: searchString, page: nextPage) { [weak self] (resultModel) in
       guard let self = self else { return }
       switch resultModel {
       case .success(let model):
@@ -44,7 +44,6 @@ final class HomeViewModel {
         dump(error)
       }
     }
-    self.inFlightRequest = dataTask
   }
 
 }

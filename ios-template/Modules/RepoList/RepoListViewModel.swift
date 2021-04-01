@@ -11,11 +11,12 @@ final class RepoListViewModel {
   let user: String
   private (set) var repositories: [Repository] = []
   private var nextPage: Int = 1
-  private var inFlightRequest: URLSessionDataTask? // This variable is not being used
+  var networking: Endpoints
   var onDataLoad: (() -> Void)?
   
-  init(user: String) {
+  init(user: String, networking: Endpoints) {
     self.user = user
+    self.networking = networking
   }
   
   func endOfPageReached() {
@@ -28,7 +29,7 @@ final class RepoListViewModel {
   }
   
   private func makeNetworkCall() {
-    let dataTask = Networking().getRepos(user: user) { (result) in
+    networking.getRepos(user: user) { (result) in
       switch result {
       case .success(let repos):
         self.repositories += repos
@@ -39,7 +40,6 @@ final class RepoListViewModel {
         dump(error)
       }
     }
-    self.inFlightRequest = dataTask
   }
     
 }

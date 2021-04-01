@@ -8,7 +8,7 @@ target 'iOS-Template' do
   # Pods for ios-template
   pod 'SwiftLint'
   pod 'SwiftGen', '~> 6.1'
-  pod 'SnapKit', '~> 4.0'
+  pod 'SnapKit', '~> 5.0'
 
   target 'iOS-TemplateTests' do
     inherit! :search_paths

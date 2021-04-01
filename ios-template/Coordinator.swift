@@ -15,12 +15,15 @@ final class ApplicationCoordinator: Coordinator {
   let window: UIWindow
   let rootViewController: UINavigationController
   let homeViewCoordinator: HomeViewCoordinator
+  let environment: Environment
   
-  init(window: UIWindow) {
+  init(window: UIWindow, environment: Environment) {
     self.window = window
+    self.environment = environment
+    
     rootViewController = UINavigationController()
     rootViewController.navigationBar.prefersLargeTitles = true
-    homeViewCoordinator = HomeViewCoordinator(presenter: rootViewController)
+    homeViewCoordinator = HomeViewCoordinator(presenter: rootViewController, environment: self.environment)
   }
   
   func start() {
@@ -28,4 +31,12 @@ final class ApplicationCoordinator: Coordinator {
     homeViewCoordinator.start()
     window.makeKeyAndVisible()
   }
+}
+
+struct Environment {
+  var networking: Endpoints
+}
+
+extension Environment {
+  static let live: Self = .init(networking: Networking())
 }

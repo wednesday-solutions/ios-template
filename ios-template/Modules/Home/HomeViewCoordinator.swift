@@ -11,13 +11,15 @@ final class HomeViewCoordinator: Coordinator {
   private weak var presenter: UINavigationController?
   private var homeViewController: HomeViewController?
   private var repoListCoordinator: ReposListCoordinator?
+  private let environment: Environment
   
-  init(presenter: UINavigationController?) {
+  init(presenter: UINavigationController?, environment: Environment) {
     self.presenter = presenter
+    self.environment = environment
   }
   
   func start() {
-    let homeViewModel = HomeViewModel()
+    let homeViewModel = HomeViewModel(networking: environment.networking.copy())
     let homeViewController = HomeViewController(viewModel: homeViewModel)
     homeViewController.delegate = self
     presenter?.pushViewController(homeViewController, animated: true)
@@ -29,7 +31,7 @@ final class HomeViewCoordinator: Coordinator {
 extension HomeViewCoordinator: HomeViewControllerDelegate {
   
   func homeViewControllerDidSelect(_ user: String) {
-    let repoListCoordinator = ReposListCoordinator(presenter: self.presenter, user: user)
+    let repoListCoordinator = ReposListCoordinator(presenter: self.presenter, user: user, environment: self.environment)
     repoListCoordinator.start()
     self.repoListCoordinator = repoListCoordinator
   }

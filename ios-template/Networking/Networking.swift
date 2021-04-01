@@ -6,16 +6,30 @@
 //
 
 import UIKit
+
+protocol Endpoints {
+  func copy() -> Self
+  mutating func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void)
+  mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void)
+  mutating func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void)
+}
+
+enum GithubEndpoints {
+  static let searchUser = "/search/users"
+  static let getRepos: (String) -> String = { return "/users/\($0)/repos" }
+  static let urlComp = URLComponents(string: Constants.githubURL)!
+}
+
 struct Networking {
-  private var githubUrlComp = URLComponents(string: Constants.githubURL)!
   
-  enum GithubEndpoints {
-    static let searchUser = "/search/users"
-    static let getRepos: (String) -> String = { return "/users/\($0)/repos" }
+  private var currentNetworkRequest: URLSessionDataTask?
+  
+  init() {
+    currentNetworkRequest = nil
   }
   
   @discardableResult
-  func genericURLSession<A>(urlComponent: URLComponents, decoder: @escaping (Data) -> A?, completion: @escaping (Result<A, NetworkingError>) -> Void) -> URLSessionDataTask? {
+  private func genericURLSession<A>(urlComponent: URLComponents, decoder: @escaping (Data) -> A?, completion: @escaping (Result<A, NetworkingError>) -> Void) -> URLSessionDataTask? {
     guard let url = urlComponent.url else {
       completion(.failure(.urlcomponentError))
       return nil
@@ -45,35 +59,93 @@ struct Networking {
     dataTask.resume()
     return dataTask
   }
-   
-  func genericURLSession<A: Decodable>(urlComponent: URLComponents, completion: @escaping (Result<A, NetworkingError>) -> Void) -> URLSessionDataTask? {
-    return genericURLSession(urlComponent: urlComponent) { (data) -> A? in
+  
+  private func genericURLSession<A: Decodable>(urlComponent: URLComponents, completion: @escaping (Result<A, NetworkingError>) -> Void) -> URLSessionDataTask? {
+    let dataTask = genericURLSession(urlComponent: urlComponent) { (data) -> A? in
       return try? JSONDecoder().decode(A.self, from: data)
     } completion: { completion($0) }
+    return dataTask
   }
   
-  func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) -> URLSessionDataTask? {
-    var searchComponent = githubUrlComp
+  private func cancelCurrentRequest() {
+    if self.currentNetworkRequest?.state == .some(.running) {
+      self.currentNetworkRequest?.cancel()
+    }
+  }
+  
+}
+
+extension Networking: Endpoints {
+  func copy() -> Networking {
+    return Self()
+  }
+  
+  mutating func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) {
+    cancelCurrentRequest()
+    var searchComponent = GithubEndpoints.urlComp
     searchComponent.path = GithubEndpoints.getRepos(user)
     
-    return genericURLSession(urlComponent: searchComponent, completion: completion)
+    let task = genericURLSession(urlComponent: searchComponent, completion: completion)
+    currentNetworkRequest = task
     
   }
   
-  func searchUsers(query: String, page: Int = 1, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void) -> URLSessionDataTask? {
-    var searchComponent = githubUrlComp
+  mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void) {
+    cancelCurrentRequest()
+    var searchComponent = GithubEndpoints.urlComp
     searchComponent.path = GithubEndpoints.searchUser
     let query = "q=\"\(query)\"&page=\(String(page))"
     searchComponent.query = query
     
-    return genericURLSession(urlComponent: searchComponent, completion: completion)
+    currentNetworkRequest = genericURLSession(urlComponent: searchComponent, completion: completion)
   }
   
-  func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void) {
+  mutating func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void) {
+    cancelCurrentRequest()
     let urlComponents = URLComponents(string: url.absoluteString)!
     genericURLSession(urlComponent: urlComponents) { (data) -> UIImage? in
       return UIImage(data: data)
     } completion: { completion($0) }
-
+    
   }
+}
+
+struct NetworkingMock: Endpoints {
+  
+  func copy() -> NetworkingMock {
+    return Self()
+  }
+  
+  mutating func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) {
+    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.0001) {
+      let repos: [Repository] = [
+        Repository(name: "Repo1"),
+        Repository(name: "Repo2"),
+        Repository(name: "Repo3")
+      ]
+      completion(.success(repos))
+    }
+  }
+  mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void) {
+    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.0001) {
+      let model = GithubModel(
+        totalCount: 3,
+        incompleteResults: false,
+        items: [
+          GithubUser(login: "Viranchee"),
+          GithubUser(login: "virancheewednesday"),
+          GithubUser(login: "rameez")
+        ]
+      )
+      completion(.success(model))
+    }
+  }
+  
+  mutating func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void) {
+    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.0001) {
+      
+      completion(.failure(.noDataError))
+    }
+  }
+  
 }

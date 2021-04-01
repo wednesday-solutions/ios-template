@@ -19,7 +19,7 @@ class RepoListModelTests: XCTestCase {
   
   func testSearchingUserRepositories() {
     let expectation = XCTestExpectation()
-    let viewModel = RepoListViewModel(user: "Viranchee")
+    let viewModel = RepoListViewModel(user: "Viranchee", networking: Networking())
     
     XCTAssert(viewModel.repositories.count == 0)
     viewModel.onDataLoad = { () -> Void in
@@ -40,7 +40,7 @@ class RepoListModelTests: XCTestCase {
   
   func testLoadingMoreRepos() {
     let expectation = XCTestExpectation()
-    let viewModel = RepoListViewModel(user: "Viranchee")
+    let viewModel = RepoListViewModel(user: "Viranchee", networking: Networking())
     
     XCTAssert(viewModel.repositories.count == 0)
     viewModel.onDataLoad = { () -> Void in
