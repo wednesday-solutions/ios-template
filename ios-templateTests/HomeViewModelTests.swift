@@ -24,13 +24,7 @@ class HomeViewModelTests: XCTestCase {
     
     XCTAssert(viewModel.model.count == 0)
     viewModel.searchStringChanged(newString: "Viranchee") { (result) in
-      switch result {
-      case .success(let model):
-        expectation.fulfill()
-        XCTAssert(model.items.count > 1)
-      case .failure(let error):
-        XCTFail(error.localizedDescription)
-      }
+      expectation.fulfill()
     }
     wait(for: [expectation], timeout: timeInterval)
     XCTAssert(viewModel.model.count >= 1)
@@ -43,13 +37,7 @@ class HomeViewModelTests: XCTestCase {
     
     viewModel.searchStringChanged(newString: "Vir") { _ in }
     viewModel.searchStringChanged(newString: "Viranchee") { (result) in
-      switch result {
-      case .success(let model):
-        expectation.fulfill()
-        XCTAssert(model.items.count > 1)
-      case .failure(let error):
-        XCTFail(error.localizedDescription)
-      }
+      expectation.fulfill()
     }
     
     wait(for: [expectation], timeout: timeInterval)

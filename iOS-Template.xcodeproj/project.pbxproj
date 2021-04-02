@@ -23,6 +23,7 @@
 		61918ED02613409C00DF2BFE /* HomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61918ECF2613409C00DF2BFE /* HomeViewCoordinator.swift */; };
 		61918ED5261340AF00DF2BFE /* RepoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61918ED4261340AF00DF2BFE /* RepoListCoordinator.swift */; };
 		61A3AEDB2616FC1A00498D7F /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A3AEDA2616FC1A00498D7F /* Callback.swift */; };
+		61A3AEFB261709F500498D7F /* NetworkingMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A3AEFA261709F500498D7F /* NetworkingMockTests.swift */; };
 		61A57CA12600BB1A0021A615 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A57CA02600BB1A0021A615 /* RepoListViewModel.swift */; };
 		61AE7B332613289100630075 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE7B322613289100630075 /* HomeViewModel.swift */; };
 		61CCEEEF260087CA00334E0B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCEEEE260087CA00334E0B /* UITableView+Extension.swift */; };
@@ -83,6 +84,7 @@
 		61918ECF2613409C00DF2BFE /* HomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinator.swift; sourceTree = "<group>"; };
 		61918ED4261340AF00DF2BFE /* RepoListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListCoordinator.swift; sourceTree = "<group>"; };
 		61A3AEDA2616FC1A00498D7F /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
+		61A3AEFA261709F500498D7F /* NetworkingMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMockTests.swift; sourceTree = "<group>"; };
 		61A57CA02600BB1A0021A615 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
 		61AE7B322613289100630075 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		61CCEEEE260087CA00334E0B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				618A320C25FF55EC007CEEDF /* ios_templateTests.swift */,
 				61D2DB4E26147B1000192F9F /* HomeViewModelTests.swift */,
 				61D2DB5A26147C8900192F9F /* RepoListViewModelTests.swift */,
+				61A3AEFA261709F500498D7F /* NetworkingMockTests.swift */,
 				618A320E25FF55EC007CEEDF /* Info.plist */,
 			);
 			path = "ios-templateTests";
@@ -601,6 +604,7 @@
 				61D2DB5F26147D1D00192F9F /* RepoListViewModelTests.swift in Sources */,
 				61D2DB5626147B4E00192F9F /* HomeViewModelTests.swift in Sources */,
 				618A320D25FF55EC007CEEDF /* ios_templateTests.swift in Sources */,
+				61A3AEFB261709F500498D7F /* NetworkingMockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
