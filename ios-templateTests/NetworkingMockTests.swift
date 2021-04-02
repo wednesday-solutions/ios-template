@@ -14,7 +14,7 @@ class NetworkingTests: XCTestCase {
   func testCopy() {
     let networking = NetworkingMock()
     _ = networking.copy()
-    XCTAssert(true, "Networking could be copied. This was only for code coverage")
+    XCTAssertTrue(true, "Networking could be copied. This was only for code coverage")
   }
   
   func testUserSearch() {
@@ -24,7 +24,7 @@ class NetworkingTests: XCTestCase {
       switch result {
       case .success(let model):
         expectation.fulfill()
-        XCTAssert(model.items.count > 1)
+        XCTAssertGreaterThanOrEqual(model.items.count, 1)
       case .failure(let error):
         XCTFail(error.localizedDescription)
       }
@@ -41,7 +41,7 @@ class NetworkingTests: XCTestCase {
       switch result {
       case .success(let repos):
         expectation.fulfill()
-        XCTAssert(repos.items.count >= 1)
+        XCTAssertGreaterThanOrEqual(repos.items.count, 1)
       case .failure(let error):
         XCTFail(error.localizedDescription)
       }

@@ -22,13 +22,13 @@ class RepoListModelTests: XCTestCase {
     let expectation = XCTestExpectation()
     let viewModel = RepoListViewModel(user: "Viranchee", networking: NetworkingMock())
 
-    XCTAssert(viewModel.repositories.count == 0)
+    XCTAssertEqual(viewModel.repositories.count, 0)
     viewModel.searchForUserRepositories { (result) in
       expectation.fulfill()
     }
 
     wait(for: [expectation], timeout: timeout)
-    XCTAssert(viewModel.repositories.count > 1)
+    XCTAssertGreaterThanOrEqual(viewModel.repositories.count, 1)
 
   }
 

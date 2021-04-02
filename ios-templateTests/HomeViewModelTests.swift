@@ -22,12 +22,12 @@ class HomeViewModelTests: XCTestCase {
     let expectation = XCTestExpectation()
     let viewModel = HomeViewModel(networking: NetworkingMock())
     
-    XCTAssert(viewModel.model.count == 0)
+    XCTAssertEqual(viewModel.model.count, 0)
     viewModel.searchStringChanged(newString: "Viranchee") { (result) in
       expectation.fulfill()
     }
     wait(for: [expectation], timeout: timeInterval)
-    XCTAssert(viewModel.model.count >= 1)
+    XCTAssertGreaterThanOrEqual(viewModel.model.count, 1)
 
   }
   
@@ -41,7 +41,7 @@ class HomeViewModelTests: XCTestCase {
     }
     
     wait(for: [expectation], timeout: timeInterval)
-    XCTAssert(viewModel.model.count >= 1)
+    XCTAssertGreaterThanOrEqual(viewModel.model.count, 1)
 
   }
   
