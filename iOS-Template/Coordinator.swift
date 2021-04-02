@@ -32,11 +32,3 @@ final class ApplicationCoordinator: Coordinator {
     window.makeKeyAndVisible()
   }
 }
-
-struct Environment {
-  var networking: Endpoints
-}
-
-extension Environment {
-  static let live: Self = .init(networking: Networking())
-}
