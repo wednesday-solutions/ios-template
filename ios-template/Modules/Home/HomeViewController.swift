@@ -28,10 +28,6 @@ final class HomeViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
   
-  deinit {
-    viewModel.onDataLoad = nil
-  }
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Github User Search"
@@ -40,11 +36,6 @@ final class HomeViewController: UIViewController {
     tableView.dataSource = self
     tableView.registerCell(UITableViewCell.self)
     layoutViews()
-    viewModel.onDataLoad = { [weak self] () -> Void in
-      DispatchQueue.main.async {
-        self?.tableView.reloadData()
-      }
-    }
   }
   
   func layoutViews() {
@@ -73,11 +64,19 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     guard let searchText = searchBar.text, searchText != "" else { return }
-    viewModel.searchStringChanged(newString: searchText)
+    viewModel.searchStringChanged(newString: searchText) { [weak self] _ in
+      DispatchQueue.main.async {
+        self?.tableView.reloadData()
+      }
+    }
   }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    viewModel.searchStringChanged(newString: searchText)
+    viewModel.searchStringChanged(newString: searchText) { [weak self] _ in
+      DispatchQueue.main.async {
+        self?.tableView.reloadData()
+      }
+    }
   }
 }
 

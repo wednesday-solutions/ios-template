@@ -3,6 +3,7 @@
 
 target 'iOS-Template' do
   # Comment the next line if you don't want to use dynamic frameworks
+  platform :ios, '14.4'
   use_frameworks!
 
   # Pods for ios-template
@@ -19,4 +20,14 @@ target 'iOS-Template' do
     # Pods for testing
   end
 
+end
+
+# Remove iOS 8 support, mentioned here:
+## https://developer.apple.com/forums/thread/656616
+post_install do |installer|
+ installer.pods_project.targets.each do |target|
+  target.build_configurations.each do |config|
+   config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+  end
+ end
 end

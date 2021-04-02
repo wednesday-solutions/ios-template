@@ -21,5 +21,4 @@ struct GithubModel: Codable {
 // MARK: - Item
 struct GithubUser: Codable {
   let login: String
-  
 }

@@ -9,6 +9,7 @@ import XCTest
 @testable import iOS_Template
 
 class RepoListModelTests: XCTestCase {
+  let timeout: TimeInterval = 1
   override func setUpWithError() throws {
     
   }
@@ -19,41 +20,22 @@ class RepoListModelTests: XCTestCase {
   
   func testSearchingUserRepositories() {
     let expectation = XCTestExpectation()
-    let viewModel = RepoListViewModel(user: "Viranchee", networking: Networking())
-    
+    let viewModel = RepoListViewModel(user: "Viranchee", networking: NetworkingMock())
+
     XCTAssert(viewModel.repositories.count == 0)
-    viewModel.onDataLoad = { () -> Void in
-      expectation.fulfill()
+    viewModel.searchForUserRepositories { (result) in
+      switch result {
+      case .success(let repos):
+        expectation.fulfill()
+        XCTAssert(repos.count >= 1)
+      case .failure(let error):
+        XCTFail(error.localizedDescription)
+      }
     }
-    
-    viewModel.searchForUserRepositories()
-    wait(for: [expectation], timeout: 2)
+
+    wait(for: [expectation], timeout: timeout)
     XCTAssert(viewModel.repositories.count > 1)
-    
-    let reposCount = viewModel.repositories.count
-    
-    viewModel.endOfPageReached()
-    wait(for: [expectation], timeout: 2)
-    XCTAssert(viewModel.repositories.count > reposCount)
 
   }
-  
-  func testLoadingMoreRepos() {
-    let expectation = XCTestExpectation()
-    let viewModel = RepoListViewModel(user: "Viranchee", networking: Networking())
-    
-    XCTAssert(viewModel.repositories.count == 0)
-    viewModel.onDataLoad = { () -> Void in
-      expectation.fulfill()
-    }
-    
-    viewModel.searchForUserRepositories()
-    wait(for: [], timeout: 2)
-    let reposCount = viewModel.repositories.count
-    
-    viewModel.endOfPageReached()
-    wait(for: [expectation], timeout: 2)
-    XCTAssert(viewModel.repositories.count > reposCount)
 
-  }
 }

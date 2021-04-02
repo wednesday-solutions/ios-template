@@ -16,10 +16,6 @@ final class RepoListViewController: UITableViewController {
     super.init(nibName: nil, bundle: nil)
   }
   
-  deinit {
-    viewModel.onDataLoad = nil
-  }
-  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -28,12 +24,11 @@ final class RepoListViewController: UITableViewController {
     super.viewDidLoad()
     title = "Repos for \(viewModel.user)"
     tableView.registerCell(UITableViewCell.self)
-    viewModel.onDataLoad = { [weak self] in
+    viewModel.searchForUserRepositories { [weak self] _ in
       DispatchQueue.main.async {
         self?.tableView.reloadData()
       }
     }
-    viewModel.searchForUserRepositories()
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
