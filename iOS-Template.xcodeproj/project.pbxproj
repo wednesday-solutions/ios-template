@@ -167,7 +167,7 @@
 		618A31E925FF55E9007CEEDF = {
 			isa = PBXGroup;
 			children = (
-				618A31F425FF55E9007CEEDF /* ios-template */,
+				618A31F425FF55E9007CEEDF /* iOS-Template */,
 				618A320B25FF55EC007CEEDF /* ios-templateTests */,
 				618A321625FF55EC007CEEDF /* ios-templateUITests */,
 				618A31F325FF55E9007CEEDF /* Products */,
@@ -188,7 +188,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		618A31F425FF55E9007CEEDF /* ios-template */ = {
+		618A31F425FF55E9007CEEDF /* iOS-Template */ = {
 			isa = PBXGroup;
 			children = (
 				618FEDD125FF704B003C1F6E /* Start */,
@@ -201,7 +201,7 @@
 				618A328425FF69E0007CEEDF /* .swiftlint.yml */,
 				618A320325FF55EC007CEEDF /* Info.plist */,
 			);
-			path = "ios-template";
+			path = "iOS-Template";
 			sourceTree = "<group>";
 		};
 		618A320B25FF55EC007CEEDF /* ios-templateTests */ = {

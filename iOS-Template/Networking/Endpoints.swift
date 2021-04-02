@@ -13,4 +13,3 @@ protocol Endpoints {
   mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void)
   mutating func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void)
 }
-
