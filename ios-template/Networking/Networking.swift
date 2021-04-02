@@ -7,31 +7,6 @@
 
 import UIKit
 
-protocol Endpoints {
-  func copy() -> Self
-  mutating func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void)
-  mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void)
-  mutating func getImage(url: URL, completion: @escaping (Result<UIImage, NetworkingError>) -> Void)
-}
-
-enum GithubEndpoints {
-  static let urlComp = URLComponents(string: Constants.githubURL)!
-
-  static var searchUser: (String, Int) -> URL? = { query, page in
-    var searchComponent = Self.urlComp
-    searchComponent.path = "/search/users"
-    let query = "q=\"\(query)\"&page=\(String(page))"
-    searchComponent.query = query
-    return searchComponent.url
-  }
-  
-  static let getRepos: (String) -> URL? = {
-    var component = Self.urlComp
-    component.path = "/users/\($0)/repos"
-    return component.url
-  }
-}
-
 struct Networking {
   
   private var currentNetworkRequest: URLSessionDataTask?
