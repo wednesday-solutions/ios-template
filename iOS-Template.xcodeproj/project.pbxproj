@@ -168,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				618A31F425FF55E9007CEEDF /* iOS-Template */,
-				618A320B25FF55EC007CEEDF /* ios-templateTests */,
-				618A321625FF55EC007CEEDF /* ios-templateUITests */,
+				618A320B25FF55EC007CEEDF /* iOS-TemplateTests */,
+				618A321625FF55EC007CEEDF /* iOS-TemplateUITests */,
 				618A31F325FF55E9007CEEDF /* Products */,
 				85C59994A513C5322BA9D5CA /* Pods */,
 				10E9D0136DD7109D14FBC3DE /* Frameworks */,
@@ -204,7 +204,7 @@
 			path = "iOS-Template";
 			sourceTree = "<group>";
 		};
-		618A320B25FF55EC007CEEDF /* ios-templateTests */ = {
+		618A320B25FF55EC007CEEDF /* iOS-TemplateTests */ = {
 			isa = PBXGroup;
 			children = (
 				618A320C25FF55EC007CEEDF /* ios_templateTests.swift */,
@@ -214,16 +214,16 @@
 				61A3AF0D26170F3400498D7F /* GithubEndpointsTests.swift */,
 				618A320E25FF55EC007CEEDF /* Info.plist */,
 			);
-			path = "ios-templateTests";
+			path = "iOS-TemplateTests";
 			sourceTree = "<group>";
 		};
-		618A321625FF55EC007CEEDF /* ios-templateUITests */ = {
+		618A321625FF55EC007CEEDF /* iOS-TemplateUITests */ = {
 			isa = PBXGroup;
 			children = (
 				618A321725FF55EC007CEEDF /* ios_templateUITests.swift */,
 				618A321925FF55EC007CEEDF /* Info.plist */,
 			);
-			path = "ios-templateUITests";
+			path = "iOS-TemplateUITests";
 			sourceTree = "<group>";
 		};
 		618A324225FF5DF5007CEEDF /* Modules */ = {
