@@ -794,9 +794,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viranchee.ios-templateUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "ios-template";
+				TEST_TARGET_NAME = "iOS-Template";
 			};
 			name = QA;
 		};
@@ -1017,9 +1018,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viranchee.ios-templateUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "ios-template";
+				TEST_TARGET_NAME = "iOS-Template";
 			};
 			name = Dev;
 		};
@@ -1038,9 +1040,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viranchee.ios-templateUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "ios-template";
+				TEST_TARGET_NAME = "iOS-Template";
 			};
 			name = Release;
 		};
