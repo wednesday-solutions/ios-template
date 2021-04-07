@@ -16,8 +16,8 @@ final class HomeViewController: UIViewController {
   weak var delegate: HomeViewControllerDelegate!
   var viewModel: HomeViewModel
   
-  var searchBar = UISearchBar()
-  var tableView = UITableView()
+  lazy var searchBar = UISearchBar()
+  lazy var tableView = UITableView()
   
   init(viewModel: HomeViewModel) {
     self.viewModel = viewModel
