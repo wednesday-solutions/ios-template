@@ -25,7 +25,7 @@
 		B3BA65AC1F5A269100B34850 /* SocketClientDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA65A31F5A269100B34850 /* SocketClientDelegateProtocol.swift */; };
 		B3BA65AD1F5A269100B34850 /* SocketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA65A41F5A269100B34850 /* SocketResponse.swift */; };
 		B3BA65AF1F5A2D5C00B34850 /* RunnerArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA65AE1F5A2D5C00B34850 /* RunnerArgument.swift */; };
-		D55B28C31F6C588300DC42C5 /* Deliverfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BC1F6C588300DC42C5 /* Deliverfile.swift */; };
+		D55B28C31F6C588300DC42C5 /* DeliverFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BC1F6C588300DC42C5 /* DeliverFile.swift */; };
 		D55B28C41F6C588300DC42C5 /* Gymfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BD1F6C588300DC42C5 /* Gymfile.swift */; };
 		D55B28C51F6C588300DC42C5 /* Matchfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BE1F6C588300DC42C5 /* Matchfile.swift */; };
 		D55B28C61F6C588300DC42C5 /* Precheckfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BF1F6C588300DC42C5 /* Precheckfile.swift */; };
@@ -63,7 +63,7 @@
 		B3BA65A41F5A269100B34850 /* SocketResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketResponse.swift; path = ../SocketResponse.swift; sourceTree = "<group>"; };
 		B3BA65AE1F5A2D5C00B34850 /* RunnerArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunnerArgument.swift; path = ../RunnerArgument.swift; sourceTree = "<group>"; };
 		D556D6A91F6A08F5003108E3 /* FastlaneRunner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FastlaneRunner; sourceTree = BUILT_PRODUCTS_DIR; };
-		D55B28BC1F6C588300DC42C5 /* Deliverfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deliverfile.swift; path = ../Deliverfile.swift; sourceTree = "<group>"; };
+		D55B28BC1F6C588300DC42C5 /* DeliverFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeliverFile.swift; path = ../DeliverFile.swift; sourceTree = "<group>"; };
 		D55B28BD1F6C588300DC42C5 /* Gymfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gymfile.swift; path = ../Gymfile.swift; sourceTree = "<group>"; };
 		D55B28BE1F6C588300DC42C5 /* Matchfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matchfile.swift; path = ../Matchfile.swift; sourceTree = "<group>"; };
 		D55B28BF1F6C588300DC42C5 /* Precheckfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Precheckfile.swift; path = ../Precheckfile.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				B3BA65B11F5A325E00B34850 /* Networking */,
 				D512BA011F7C7F40000D2137 /* Runner Code */,
 				D5A7C48D1F7C4DAF00A91DE6 /* Appfile.swift */,
-				D55B28BC1F6C588300DC42C5 /* Deliverfile.swift */,
+				D55B28BC1F6C588300DC42C5 /* DeliverFile.swift */,
 				D5A7C48E1F7C4DAF00A91DE6 /* Fastfile.swift */,
 				D55B28BD1F6C588300DC42C5 /* Gymfile.swift */,
 				D55B28BE1F6C588300DC42C5 /* Matchfile.swift */,
@@ -258,7 +258,7 @@
 				D5BAFD121F7DAAFC0030B324 /* ArgumentProcessor.swift in Sources */,
 				B302067C1F5E3E9000DE6EBD /* GymfileProtocol.swift in Sources */,
 				B302067B1F5E3E9000DE6EBD /* SnapshotfileProtocol.swift in Sources */,
-				D55B28C31F6C588300DC42C5 /* Deliverfile.swift in Sources */,
+				D55B28C31F6C588300DC42C5 /* DeliverFile.swift in Sources */,
 				D5A7C4901F7C4DAF00A91DE6 /* Fastfile.swift in Sources */,
 				0311E38B230AC9490060BB5C /* Actions.swift in Sources */,
 				D5A7C48F1F7C4DAF00A91DE6 /* Appfile.swift in Sources */,

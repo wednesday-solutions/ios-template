@@ -9811,7 +9811,7 @@ func parseInt(fromString: String, function: String = #function) -> Int {
     return NSString(string: fromString.trimmingCharacters(in: .punctuationCharacters)).integerValue
 }
 
-public let deliverfile = Deliverfile()
+public let deliverfile = DeliverFile()
 public let gymfile = Gymfile()
 public let matchfile = Matchfile()
 public let precheckfile = Precheckfile()
