@@ -20,6 +20,34 @@
                ReferencedContainer = "container:iOS-Template.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "618A320725FF55EC007CEEDF"
+               BuildableName = "iOS-TemplateTests.xctest"
+               BlueprintName = "iOS-TemplateTests"
+               ReferencedContainer = "container:iOS-Template.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "618A321225FF55EC007CEEDF"
+               BuildableName = "iOS-TemplateUITests.xctest"
+               BlueprintName = "iOS-TemplateUITests"
+               ReferencedContainer = "container:iOS-Template.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
