@@ -9,7 +9,7 @@ import XCTest
 @testable import iOS_Template
 
 class HomeViewModelTests: XCTestCase {
-  let timeInterval: TimeInterval = 1
+  let timeInterval: TimeInterval = 2
   override func setUpWithError() throws {
     
   }
