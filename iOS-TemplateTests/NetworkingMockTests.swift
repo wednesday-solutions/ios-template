@@ -9,7 +9,7 @@ import XCTest
 @testable import iOS_Template
 
 class NetworkingTests: XCTestCase {
-  let timeInterval: TimeInterval = 1
+  let timeInterval: TimeInterval = 2
   
   func testCopy() {
     let networking = NetworkingMock()
