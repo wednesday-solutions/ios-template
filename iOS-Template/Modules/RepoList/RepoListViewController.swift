@@ -24,6 +24,7 @@ final class RepoListViewController: UITableViewController {
     super.viewDidLoad()
     title = "Repos for \(viewModel.user)"
     tableView.registerCell(UITableViewCell.self)
+    tableView.accessibilityIdentifier = "List of repositories"
     viewModel.searchForUserRepositories { [weak self] _ in
       DispatchQueue.main.async {
         self?.tableView.reloadData()

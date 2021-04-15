@@ -31,10 +31,17 @@ final class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Github User Search"
+    
+    searchBar.placeholder = "Github Username"
     searchBar.delegate = self
+    searchBar.accessibilityIdentifier = "githubSearchBar"
+    searchBar.accessibilityLabel = "Enter Github Username to Search"
+    
     tableView.delegate = self
     tableView.dataSource = self
     tableView.registerCell(UITableViewCell.self)
+    tableView.accessibilityIdentifier = "List of Users"
+    
     layoutViews()
   }
   
@@ -87,7 +94,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-    cell.textLabel?.text = viewModel.model[indexPath.row].login
+    let userName = viewModel.model[indexPath.row].login
+    cell.textLabel?.text = userName
+    cell.accessibilityIdentifier = userName
     return cell
   }
   
