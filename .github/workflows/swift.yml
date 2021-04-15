@@ -2,9 +2,9 @@ name: Swift
 
 on:
   push:
-    branches: [ master feature/mvvm-coordinator ]
+    branches: [ master feature/mvvm-coordinator feature/try-actions-from-different-branch ]
   pull_request:
-    branches: [ master feature/mvvm-coordinator ]
+    branches: [ master feature/mvvm-coordinator feature/try-actions-from-different-branch ]
 
 jobs:
   build:
