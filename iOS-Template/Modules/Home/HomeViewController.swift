@@ -40,7 +40,7 @@ final class HomeViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.registerCell(UITableViewCell.self)
-    tableView.accessibilityIdentifier = "List of Users"
+    tableView.accessibilityLabel = "List of Users"
     
     layoutViews()
   }
@@ -96,7 +96,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
     let userName = viewModel.model[indexPath.row].login
     cell.textLabel?.text = userName
-    cell.accessibilityIdentifier = userName
+    cell.accessibilityLabel = userName
     return cell
   }
   

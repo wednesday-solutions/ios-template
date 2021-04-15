@@ -22,21 +22,7 @@ class iOS_TemplateUITests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
   
-  func testSearchingSpecificUser() throws {
-    
-    let app = XCUIApplication()
-    app.launch()
-    app/*@START_MENU_TOKEN@*/.searchFields["Github Username"]/*[[".otherElements[\"Enter Github Username to Search\"].searchFields[\"Github Username\"]",".otherElements[\"githubSearchBar\"].searchFields[\"Github Username\"]",".searchFields[\"Github Username\"]"],[[[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    
-    let vKey = app/*@START_MENU_TOKEN@*/.keys["V"]/*[[".keyboards.keys[\"V\"]",".keys[\"V\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-    vKey.tap()
-    let tablesQuery = app.tables
-    tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["v"]/*[[".cells[\"v\"].staticTexts[\"v\"]",".staticTexts[\"v\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["2048-ai"]/*[[".cells.staticTexts[\"2048-ai\"]",".staticTexts[\"2048-ai\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-    
-  }
-  
-  func testLOL() throws {
+  func testUserSearch() throws {
     
     let app = XCUIApplication()
     app.launch()
@@ -44,7 +30,6 @@ class iOS_TemplateUITests: XCTestCase {
     app/*@START_MENU_TOKEN@*/.keys["V"]/*[[".keyboards.keys[\"V\"]",".keys[\"V\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     app.tables["List of Users"]/*@START_MENU_TOKEN@*/.staticTexts["v"]/*[[".cells[\"v\"].staticTexts[\"v\"]",".staticTexts[\"v\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     app.tables["List of repositories"]/*@START_MENU_TOKEN@*/.staticTexts["2048-ai"]/*[[".cells.staticTexts[\"2048-ai\"]",".staticTexts[\"2048-ai\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-     
   }
 
   func testLaunchPerformance() throws {

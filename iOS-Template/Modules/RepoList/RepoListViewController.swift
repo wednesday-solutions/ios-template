@@ -24,7 +24,7 @@ final class RepoListViewController: UITableViewController {
     super.viewDidLoad()
     title = "Repos for \(viewModel.user)"
     tableView.registerCell(UITableViewCell.self)
-    tableView.accessibilityIdentifier = "List of repositories"
+    tableView.accessibilityLabel = "List of repositories"
     viewModel.searchForUserRepositories { [weak self] _ in
       DispatchQueue.main.async {
         self?.tableView.reloadData()
@@ -38,7 +38,9 @@ final class RepoListViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-    cell.textLabel?.text = viewModel.repositories[indexPath.row].name
+    let repoName = viewModel.repositories[indexPath.row].name
+    cell.textLabel?.text = repoName
+    cell.accessibilityLabel = repoName
     return cell
   }
 }
