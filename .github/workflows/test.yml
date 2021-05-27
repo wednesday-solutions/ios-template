@@ -1,0 +1,90 @@
+name: Swift
+
+on:
+  push:
+    branches: [master feature/mvvm-coordinator]
+
+jobs:
+  swiftLint:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Bundle
+        run: bundle install
+      - name: Run swiftlint
+        run: bundle exec fastlane swiftLintLane
+
+  build:
+    needs: swiftLint
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Bundle
+        run: bundle install
+      - name: Build
+        run: bundle exec fastlane buildLane
+      - name: Upload build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: derivedData/Build/Products/Debug-iphonesimulator/Portfolius-iOS.app
+      - name: Upload Runner
+        uses: actions/upload-artifact@v2
+        with:
+          name: runner
+          path: derivedData/Build/Products/Debug-iphonesimulator/Portfolius-iOSUITests-Runner.app
+      - name: Upload Core Tests
+        uses: actions/upload-artifact@v2
+        with:
+          name: coreTests
+          path: derivedData/Build/Products/Debug-iphonesimulator/PortfoliusCoreTests.xctest
+
+  unitTests:
+    needs: build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download core tests
+        uses: actions/download-artifact@v2
+        with:
+          name: coreTests
+          path: derivedData/Build/Products/Debug-iphonesimulator/PortfoliusCoreTests.xctest
+      - name: Install Bundle
+        run: bundle install
+      - name: Run unit tests
+        run: bundle exec fastlane unitTestLane
+
+  integrationTests:
+    needs: build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download build
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: derivedData/Build/Products/Debug-iphonesimulator/Portfolius-iOS.app
+      - name: Install Bundle
+        run: bundle install
+      - name: Run integration tests
+        run: bundle exec fastlane integrationTestLane
+
+  uiTests:
+    needs: build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download build
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: derivedData/Build/Products/Debug-iphonesimulator/Portfolius-iOS.app
+      - name: Download runner
+        uses: actions/download-artifact@v2
+        with:
+          name: runner
+          path: derivedData/Build/Products/Debug-iphonesimulator/Portfolius-iOSUITests-Runner.app
+      - name: Install Bundle
+        run: bundle install
+      - name: Run ui tests
+        run: bundle exec fastlane uiTestLane
