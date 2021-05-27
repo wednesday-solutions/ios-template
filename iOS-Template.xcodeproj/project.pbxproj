@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
+		18C70E38265FACF500EF8F77 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */; };
+		18C70E43265FAD0600EF8F77 /* RootNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */; };
+		18C70E48265FAD2A00EF8F77 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */; };
+		18C70E4D265FAD3D00EF8F77 /* RootWindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		6120229526283D0200A5A725 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229326283D0100A5A725 /* .swiftlint.yml */; };
 		6120229626283D0200A5A725 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229426283D0100A5A725 /* swiftgen.yml */; };
@@ -62,6 +66,10 @@
 /* Begin PBXFileReference section */
 		0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AED7286AD29028EC476125 /* Pods-iOS-TemplateTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.qa.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.qa.xcconfig"; sourceTree = "<group>"; };
+		18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationCoordinator.swift; sourceTree = "<group>"; };
+		18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
+		18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWindowCoordinator.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
 		58CB12D784EBF75EEE0E84CB /* Pods-iOS-TemplateTests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.devrelease.xcconfig"; sourceTree = "<group>"; };
 		5AB5AFD6E3298AF76607D7A2 /* Pods-iOS-TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.release.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +174,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		18C70E51265FAD5500EF8F77 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */,
+				18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */,
+				18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */,
+				18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		612022AB26283F0A00A5A725 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +229,7 @@
 			children = (
 				61C63D75262839CC007EA247 /* Start */,
 				61C63DB926283B39007EA247 /* Modules */,
+				18C70E51265FAD5500EF8F77 /* Coordinators */,
 				61C63DA126283AD1007EA247 /* Networking */,
 				61C63D8E26283A87007EA247 /* Helpers */,
 				61C63D3426283916007EA247 /* Assets.xcassets */,
@@ -595,6 +615,7 @@
 			files = (
 				61C63DCE26283B9B007EA247 /* HomeViewCoordinator.swift in Sources */,
 				61C63D9826283AB5007EA247 /* Callback.swift in Sources */,
+				18C70E48265FAD2A00EF8F77 /* WindowCoordinator.swift in Sources */,
 				61C63DB026283B0D007EA247 /* Networking.swift in Sources */,
 				61C63D8226283A0D007EA247 /* Coordinator.swift in Sources */,
 				61C63DD026283B9B007EA247 /* GithubModel.swift in Sources */,
@@ -607,10 +628,13 @@
 				61C63DD926283BA4007EA247 /* RepoListCoordinator.swift in Sources */,
 				61C63DA326283AED007EA247 /* Endpoints.swift in Sources */,
 				61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */,
+				18C70E4D265FAD3D00EF8F77 /* RootWindowCoordinator.swift in Sources */,
 				61C63DCF26283B9B007EA247 /* HomeViewController.swift in Sources */,
 				61C63DDC26283BA4007EA247 /* RepoModel.swift in Sources */,
+				18C70E43265FAD0600EF8F77 /* RootNavigationCoordinator.swift in Sources */,
 				61C63DD126283B9B007EA247 /* HomeViewModel.swift in Sources */,
 				61C63DDB26283BA4007EA247 /* RepoListViewController.swift in Sources */,
+				18C70E38265FACF500EF8F77 /* NavigationCoordinator.swift in Sources */,
 				61C63D9D26283AC5007EA247 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,7 +738,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -731,8 +755,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,9 +776,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -773,7 +798,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -839,7 +864,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -856,8 +881,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -876,9 +902,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -898,7 +924,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -964,7 +990,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1019,7 +1045,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1036,8 +1062,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1056,8 +1083,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1076,9 +1104,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1099,9 +1127,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1121,7 +1149,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1142,7 +1170,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499NLNJYQN;
+				DEVELOPMENT_TEAM = 7JTC3SZUZB;
 				INFOPLIST_FILE = "iOS-TemplateUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

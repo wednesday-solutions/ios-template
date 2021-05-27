@@ -8,22 +8,15 @@
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-  
-  var window: UIWindow?
-  private var applicationCoordinator: ApplicationCoordinator?
-  private var environment: Environment = .current
+
+  private var windowCoordinator: RootWindowCoordinator!
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    guard let windowScene = (scene as? UIWindowScene) else { return }
-    let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-    
-    let applicationCoordinator = ApplicationCoordinator(window: window, environment: environment)
-    window.windowScene = windowScene
-    self.window = window
-    self.applicationCoordinator = applicationCoordinator
-    
-    applicationCoordinator.start()
-
+    guard let coordinator = RootWindowCoordinator(scene: scene, environment: .current) else {
+      fatalError("Unexpected UIScene: \(scene)")
+    }
+    coordinator.start()
+    self.windowCoordinator = coordinator
   }
-  
+
 }
