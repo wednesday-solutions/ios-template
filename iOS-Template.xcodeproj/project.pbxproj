@@ -12,6 +12,8 @@
 		18C70E43265FAD0600EF8F77 /* RootNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */; };
 		18C70E48265FAD2A00EF8F77 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */; };
 		18C70E4D265FAD3D00EF8F77 /* RootWindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */; };
+		18C70E59265FB0E400EF8F77 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E58265FB0E400EF8F77 /* UsersListViewController.swift */; };
+		18C70E7C265FC9C500EF8F77 /* GitHubUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E7B265FC9C500EF8F77 /* GitHubUsersDataSource.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		6120229526283D0200A5A725 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229326283D0100A5A725 /* .swiftlint.yml */; };
 		6120229626283D0200A5A725 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229426283D0100A5A725 /* swiftgen.yml */; };
@@ -70,6 +72,8 @@
 		18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationCoordinator.swift; sourceTree = "<group>"; };
 		18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
 		18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWindowCoordinator.swift; sourceTree = "<group>"; };
+		18C70E58265FB0E400EF8F77 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		18C70E7B265FC9C500EF8F77 /* GitHubUsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersDataSource.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
 		58CB12D784EBF75EEE0E84CB /* Pods-iOS-TemplateTests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.devrelease.xcconfig"; sourceTree = "<group>"; };
 		5AB5AFD6E3298AF76607D7A2 /* Pods-iOS-TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.release.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +187,15 @@
 				18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		18C70E83265FCB1E00EF8F77 /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				18C70E58265FB0E400EF8F77 /* UsersListViewController.swift */,
+				18C70E7B265FC9C500EF8F77 /* GitHubUsersDataSource.swift */,
+			);
+			path = UsersList;
 			sourceTree = "<group>";
 		};
 		612022AB26283F0A00A5A725 /* Extensions */ = {
@@ -300,6 +313,7 @@
 			children = (
 				61C63DC226283B53007EA247 /* Home */,
 				61C63DC326283B58007EA247 /* RepoList */,
+				18C70E83265FCB1E00EF8F77 /* UsersList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -630,9 +644,11 @@
 				61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */,
 				18C70E4D265FAD3D00EF8F77 /* RootWindowCoordinator.swift in Sources */,
 				61C63DCF26283B9B007EA247 /* HomeViewController.swift in Sources */,
+				18C70E59265FB0E400EF8F77 /* UsersListViewController.swift in Sources */,
 				61C63DDC26283BA4007EA247 /* RepoModel.swift in Sources */,
 				18C70E43265FAD0600EF8F77 /* RootNavigationCoordinator.swift in Sources */,
 				61C63DD126283B9B007EA247 /* HomeViewModel.swift in Sources */,
+				18C70E7C265FC9C500EF8F77 /* GitHubUsersDataSource.swift in Sources */,
 				61C63DDB26283BA4007EA247 /* RepoListViewController.swift in Sources */,
 				18C70E38265FACF500EF8F77 /* NavigationCoordinator.swift in Sources */,
 				61C63D9D26283AC5007EA247 /* Constants.swift in Sources */,

@@ -19,9 +19,7 @@ final class RootNavigationCoordinator: NSObject, NavigationCoordinator {
   }
   
   private func makeRootViewController() -> UIViewController {
-    let viewController = UIViewController()
-    viewController.view.backgroundColor = .systemGreen
-    return viewController
+    return UsersListViewController()
   }
   
   func start() {
