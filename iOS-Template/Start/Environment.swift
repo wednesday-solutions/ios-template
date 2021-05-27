@@ -8,9 +8,25 @@
 import Foundation
 
 struct Environment {
+  
   var networking: Endpoints
+  
+  fileprivate init(networking: Endpoints) {
+    self.networking = networking
+  }
+  
 }
 
 extension Environment {
-  static let live: Self = .init(networking: Networking())
+  
+  private static let live: Self = .init(networking: Networking())
+  
+  static var current: Self {
+    #if DEBUG
+    return .live
+    #else
+    return .live
+    #endif
+  }
+  
 }
