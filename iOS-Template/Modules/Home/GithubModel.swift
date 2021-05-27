@@ -25,3 +25,17 @@ struct GithubUser: Codable, Identifiable {
   let id: Int
   
 }
+
+extension Array where Element == GithubUser {
+  
+  static var placholderList: [GithubUser] {
+    [
+      GithubUser(login: "ASDF1", id: 1),
+      GithubUser(login: "ASDF2", id: 2),
+      GithubUser(login: "ASDF3", id: 3),
+      GithubUser(login: "ASDF4", id: 4),
+      GithubUser(login: "ASDF5", id: 5)
+    ]
+  }
+  
+}
