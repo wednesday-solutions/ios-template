@@ -19,6 +19,9 @@ struct GithubModel: Codable {
 }
 
 // MARK: - Item
-struct GithubUser: Codable {
+struct GithubUser: Codable, Identifiable {
+  
   let login: String
+  let id: Int
+  
 }
