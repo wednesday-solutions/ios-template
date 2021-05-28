@@ -15,6 +15,10 @@ class GitHubUsersDataSource: UICollectionViewDiffableDataSource<Int, Int> {
     users.first(where: { $0.id == id })
   }
   
+  subscript(indexPath: IndexPath) -> GithubUser {
+    users[indexPath.item]
+  }
+  
   override init(
     collectionView: UICollectionView,
     cellProvider: @escaping UICollectionViewDiffableDataSource<Int, Int>.CellProvider
