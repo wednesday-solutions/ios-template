@@ -27,3 +27,11 @@ final class RootNavigationCoordinator: NSObject, NavigationCoordinator {
   }
   
 }
+
+extension RootNavigationCoordinator: UserSelectionHandling {
+  
+  func didSelect(user: GithubUser) {
+    dump(user)
+  }
+  
+}
