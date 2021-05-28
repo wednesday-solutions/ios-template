@@ -15,3 +15,15 @@ enum NetworkingError: Error {
   case jsonDecodingError
   case requestCancelled
 }
+
+extension NetworkingError {
+  
+  init(urlError error: URLError) {
+    self = .urlError(error)
+  }
+  
+  init(urlErrorCode code: URLError.Code) {
+    self.init(urlError: URLError(code))
+  }
+  
+}
