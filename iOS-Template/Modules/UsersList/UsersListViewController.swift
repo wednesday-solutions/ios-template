@@ -28,7 +28,6 @@ final class UsersListViewController: UIViewController {
       collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: userID)
     })
     self.usersDataSource = diffableDataSource
-    addPlaceholderData()
     let searchController = UISearchController(searchResultsController: nil)
     navigationItem.searchController = searchController
     observeSearchTextChanges(
@@ -49,17 +48,6 @@ final class UsersListViewController: UIViewController {
   
   override func loadView() {
     self.view = listView
-  }
-  
-  private func makeCollectionViewLayout() -> UICollectionViewLayout {
-    var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-    listConfiguration.headerMode = .none
-    let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
-    return layout
-  }
-  
-  private func addPlaceholderData() {
-    usersDataSource.replaceExistingUsers(with: .placholderList)
   }
   
   private func observeSearchTextChanges(
