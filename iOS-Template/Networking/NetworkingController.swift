@@ -35,4 +35,17 @@ struct NetworkingController {
       .eraseToAnyPublisher()
   }
   
+  func reposPublisher(for user: GithubUser) -> AnyPublisher<[Repository], NetworkingError> {
+    guard let url = urlProvider.makeReposURL(for: user) else {
+      return .fail(NetworkingError(urlErrorCode: .badURL))
+    }
+    return publisherProvider
+      .publisher(for: url)
+      .map(\.data)
+      .catch { AnyPublisher.fail(NetworkingError(urlError: $0)) }
+      .decode(type: [Repository].self, decoder: JSONDecoder())
+      .catch { _ in AnyPublisher.fail(NetworkingError.jsonDecodingError) }
+      .eraseToAnyPublisher()
+  }
+  
 }

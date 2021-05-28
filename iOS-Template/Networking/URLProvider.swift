@@ -26,4 +26,10 @@ struct URLProvider {
     return components.url
   }
   
+  func makeReposURL(for user: GithubUser) -> URL? {
+    var components = self.components
+    components.path = "/users/\(user.login)/repos"
+    return components.url
+  }
+  
 }
