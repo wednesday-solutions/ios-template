@@ -5,12 +5,15 @@
 //  Created by apple on 27/05/21.
 //
 
+import Combine
 import UIKit
 
 final class UsersListViewController: UIViewController {
   
   private var listView: UICollectionView!
   private var usersDataSource: GitHubUsersDataSource!
+  private var cancellables = Set<AnyCancellable>()
+  private let networkingController = NetworkingController()
   
   init() {
     super.init(nibName: nil, bundle: nil)
@@ -28,6 +31,15 @@ final class UsersListViewController: UIViewController {
     addPlaceholderData()
     let searchController = UISearchController(searchResultsController: nil)
     navigationItem.searchController = searchController
+    observeSearchTextChanges(
+      searchField: searchController.searchBar.searchTextField,
+      onSearchResults: { [weak dataSource = diffableDataSource] (result) in
+        switch result {
+        case .success(let users): dataSource?.replaceExistingUsers(with: users)
+        case .failure(let error): print(error)
+        }
+      }
+    )
   }
   
   @available(*, unavailable)
@@ -48,6 +60,33 @@ final class UsersListViewController: UIViewController {
   
   private func addPlaceholderData() {
     usersDataSource.replaceExistingUsers(with: .placholderList)
+  }
+  
+  private func observeSearchTextChanges(
+    searchField: UISearchTextField,
+    onSearchResults callback: @escaping (Result<[GithubUser], NetworkingError>) -> Void
+  ) {
+    NotificationCenter.default.publisher(
+      for: UISearchTextField.textDidChangeNotification,
+      object: searchField
+    )
+    .debounce(for: .milliseconds(200), scheduler: RunLoop.main)
+    .compactMap {
+      switch ($0.object as? UISearchTextField)?.text {
+      case .none: return nil
+      case .some(let text) where text.isEmpty: return nil
+      case .some(let text): return text
+      }
+    }
+    .removeDuplicates()
+    .setFailureType(to: NetworkingError.self)
+    .flatMap { [networkingController] in
+      networkingController.usersPublisher(query: $0)
+    }
+    .receive(on: RunLoop.main)
+    .asResult()
+    .sink(receiveValue: callback)
+    .store(in: &cancellables)
   }
   
 }
