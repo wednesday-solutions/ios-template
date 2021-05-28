@@ -26,6 +26,8 @@ final class UsersListViewController: UIViewController {
     })
     self.usersDataSource = diffableDataSource
     addPlaceholderData()
+    let searchController = UISearchController(searchResultsController: nil)
+    navigationItem.searchController = searchController
   }
   
   @available(*, unavailable)
