@@ -8,7 +8,7 @@
 import Combine
 import UIKit
 
-final class UsersListViewController: UIViewController {
+final class UsersListViewController: UIViewController, UICollectionViewDelegate {
   
   private var listView: UICollectionView!
   private var usersDataSource: GitHubUsersDataSource!
@@ -18,6 +18,7 @@ final class UsersListViewController: UIViewController {
   init() {
     super.init(nibName: nil, bundle: nil)
     self.listView = UICollectionView(frame: .zero, collectionViewLayout: .insetGroupedListLayout)
+    listView.delegate = self
     let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Int> { [weak self] (cell, _, userID) in
       guard let item = self?.usersDataSource?[userID] else { return }
       var configuration = cell.defaultContentConfiguration()
@@ -78,6 +79,10 @@ final class UsersListViewController: UIViewController {
     .asResult()
     .sink(receiveValue: callback)
     .store(in: &cancellables)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.deselectItem(at: indexPath, animated: true)
   }
   
 }
