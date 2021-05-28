@@ -14,6 +14,7 @@
 		18C70E4D265FAD3D00EF8F77 /* RootWindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */; };
 		18C70E59265FB0E400EF8F77 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E58265FB0E400EF8F77 /* UsersListViewController.swift */; };
 		18C70E7C265FC9C500EF8F77 /* GitHubUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E7B265FC9C500EF8F77 /* GitHubUsersDataSource.swift */; };
+		18C70EA22660EA4500EF8F77 /* CombineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70EA12660EA4500EF8F77 /* CombineExtensions.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		6120229526283D0200A5A725 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229326283D0100A5A725 /* .swiftlint.yml */; };
 		6120229626283D0200A5A725 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229426283D0100A5A725 /* swiftgen.yml */; };
@@ -74,6 +75,7 @@
 		18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWindowCoordinator.swift; sourceTree = "<group>"; };
 		18C70E58265FB0E400EF8F77 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		18C70E7B265FC9C500EF8F77 /* GitHubUsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersDataSource.swift; sourceTree = "<group>"; };
+		18C70EA12660EA4500EF8F77 /* CombineExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineExtensions.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
 		58CB12D784EBF75EEE0E84CB /* Pods-iOS-TemplateTests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.devrelease.xcconfig"; sourceTree = "<group>"; };
 		5AB5AFD6E3298AF76607D7A2 /* Pods-iOS-TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.release.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		61C63DA126283AD1007EA247 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				18C70EA12660EA4500EF8F77 /* CombineExtensions.swift */,
 				61C63DA226283AED007EA247 /* Endpoints.swift */,
 				61C63DAA26283AFF007EA247 /* GithubEndpoints.swift */,
 				61C63DAF26283B0D007EA247 /* Networking.swift */,
@@ -638,6 +641,7 @@
 				61C63D9026283AA3007EA247 /* UITableView+Extensions.swift in Sources */,
 				61C63D2E26283913007EA247 /* SceneDelegate.swift in Sources */,
 				61C63DDA26283BA4007EA247 /* RepoListViewModel.swift in Sources */,
+				18C70EA22660EA4500EF8F77 /* CombineExtensions.swift in Sources */,
 				61C63D8726283A2A007EA247 /* Environment.swift in Sources */,
 				61C63DD926283BA4007EA247 /* RepoListCoordinator.swift in Sources */,
 				61C63DA326283AED007EA247 /* Endpoints.swift in Sources */,
