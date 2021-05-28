@@ -14,6 +14,7 @@
 		18C70E4D265FAD3D00EF8F77 /* RootWindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */; };
 		18C70E59265FB0E400EF8F77 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E58265FB0E400EF8F77 /* UsersListViewController.swift */; };
 		18C70E7C265FC9C500EF8F77 /* GitHubUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E7B265FC9C500EF8F77 /* GitHubUsersDataSource.swift */; };
+		18C70E942660E72000EF8F77 /* NetworkingPublisherProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E932660E72000EF8F77 /* NetworkingPublisherProviding.swift */; };
 		18C70EA22660EA4500EF8F77 /* CombineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70EA12660EA4500EF8F77 /* CombineExtensions.swift */; };
 		18C70EA72660F19900EF8F77 /* URLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70EA62660F19900EF8F77 /* URLProvider.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
@@ -76,6 +77,7 @@
 		18C70E4C265FAD3D00EF8F77 /* RootWindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWindowCoordinator.swift; sourceTree = "<group>"; };
 		18C70E58265FB0E400EF8F77 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		18C70E7B265FC9C500EF8F77 /* GitHubUsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersDataSource.swift; sourceTree = "<group>"; };
+		18C70E932660E72000EF8F77 /* NetworkingPublisherProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingPublisherProviding.swift; sourceTree = "<group>"; };
 		18C70EA12660EA4500EF8F77 /* CombineExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineExtensions.swift; sourceTree = "<group>"; };
 		18C70EA62660F19900EF8F77 /* URLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProvider.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		61C63DA126283AD1007EA247 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				18C70E932660E72000EF8F77 /* NetworkingPublisherProviding.swift */,
 				18C70EA62660F19900EF8F77 /* URLProvider.swift */,
 				18C70EA12660EA4500EF8F77 /* CombineExtensions.swift */,
 				61C63DA226283AED007EA247 /* Endpoints.swift */,
@@ -650,6 +653,7 @@
 				61C63DD926283BA4007EA247 /* RepoListCoordinator.swift in Sources */,
 				61C63DA326283AED007EA247 /* Endpoints.swift in Sources */,
 				61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */,
+				18C70E942660E72000EF8F77 /* NetworkingPublisherProviding.swift in Sources */,
 				18C70E4D265FAD3D00EF8F77 /* RootWindowCoordinator.swift in Sources */,
 				61C63DCF26283B9B007EA247 /* HomeViewController.swift in Sources */,
 				18C70E59265FB0E400EF8F77 /* UsersListViewController.swift in Sources */,
