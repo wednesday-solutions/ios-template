@@ -10,6 +10,7 @@
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
 		182E0818266126E5005FD4EE /* UserSelectionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E0817266126E5005FD4EE /* UserSelectionHandling.swift */; };
 		182E0823266128E7005FD4EE /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E0822266128E7005FD4EE /* ReposListViewController.swift */; };
+		182E082B26613400005FD4EE /* RepositoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E082A26613400005FD4EE /* RepositoriesDataSource.swift */; };
 		18C70E38265FACF500EF8F77 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */; };
 		18C70E43265FAD0600EF8F77 /* RootNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */; };
 		18C70E48265FAD2A00EF8F77 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */; };
@@ -76,6 +77,7 @@
 		10AED7286AD29028EC476125 /* Pods-iOS-TemplateTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.qa.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.qa.xcconfig"; sourceTree = "<group>"; };
 		182E0817266126E5005FD4EE /* UserSelectionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectionHandling.swift; sourceTree = "<group>"; };
 		182E0822266128E7005FD4EE /* ReposListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
+		182E082A26613400005FD4EE /* RepositoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDataSource.swift; sourceTree = "<group>"; };
 		18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationCoordinator.swift; sourceTree = "<group>"; };
 		18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				182E0822266128E7005FD4EE /* ReposListViewController.swift */,
+				182E082A26613400005FD4EE /* RepositoriesDataSource.swift */,
 			);
 			path = ReposList;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				61C63DD026283B9B007EA247 /* GithubModel.swift in Sources */,
 				61C63DAB26283AFF007EA247 /* GithubEndpoints.swift in Sources */,
 				61C63D2C26283913007EA247 /* AppDelegate.swift in Sources */,
+				182E082B26613400005FD4EE /* RepositoriesDataSource.swift in Sources */,
 				61C63D9026283AA3007EA247 /* UITableView+Extensions.swift in Sources */,
 				61C63D2E26283913007EA247 /* SceneDelegate.swift in Sources */,
 				61C63DDA26283BA4007EA247 /* RepoListViewModel.swift in Sources */,
