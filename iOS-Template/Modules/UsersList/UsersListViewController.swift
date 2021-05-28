@@ -29,6 +29,9 @@ final class UsersListViewController: UIViewController {
     })
     self.usersDataSource = diffableDataSource
     let searchController = UISearchController(searchResultsController: nil)
+    title = "GitHub User Search"
+    searchController.definesPresentationContext = true
+    searchController.obscuresBackgroundDuringPresentation = false
     navigationItem.searchController = searchController
     observeSearchTextChanges(
       searchField: searchController.searchBar.searchTextField,
