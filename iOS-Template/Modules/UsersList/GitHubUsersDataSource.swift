@@ -9,10 +9,19 @@ import UIKit
 
 class GitHubUsersDataSource: UICollectionViewDiffableDataSource<Int, Int> {
   
-  private(set) var users: [GithubUser] = []
+  private(set) var users: [GithubUser]
   
   subscript(id: GithubUser.ID) -> GithubUser? {
     users.first(where: { $0.id == id })
+  }
+  
+  override init(
+    collectionView: UICollectionView,
+    cellProvider: @escaping UICollectionViewDiffableDataSource<Int, Int>.CellProvider
+  ) {
+    users = []
+    super.init(collectionView: collectionView, cellProvider: cellProvider)
+    replaceExistingUsers(with: users)
   }
   
   func replaceExistingUsers(with newUsers: [GithubUser]) {
