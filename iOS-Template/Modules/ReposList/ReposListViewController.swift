@@ -5,6 +5,7 @@
 //  Created by apple on 28/05/21.
 //
 
+import Combine
 import UIKit
 
 final class ReposListViewController: UIViewController {
@@ -12,6 +13,8 @@ final class ReposListViewController: UIViewController {
   private let user: GithubUser
   private let listView: UICollectionView
   private var repositoriesDataSource: RepositoriesDataSource!
+  private var cancellables = Set<AnyCancellable>()
+  private let networkingController = NetworkingController()
   
   init(user: GithubUser) {
     self.user = user
@@ -42,7 +45,16 @@ final class ReposListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemRed
+    networkingController
+      .reposPublisher(for: user)
+      .asResult()
+      .sink { [weak dataSource = repositoriesDataSource] result in
+        switch result {
+        case .success(let repositories): dataSource?.replaceExistingRepositories(with: repositories)
+        case .failure(let error): print(error)
+        }
+      }
+      .store(in: &cancellables)
   }
   
 }
