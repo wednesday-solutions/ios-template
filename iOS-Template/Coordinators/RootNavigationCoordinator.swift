@@ -31,7 +31,7 @@ final class RootNavigationCoordinator: NSObject, NavigationCoordinator {
 extension RootNavigationCoordinator: UserSelectionHandling {
   
   func didSelect(user: GithubUser) {
-    controller.pushViewController(UIViewController(), animated: true)
+    controller.pushViewController(ReposListViewController(user: user), animated: true)
   }
   
 }
