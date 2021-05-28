@@ -19,7 +19,7 @@ final class RootNavigationCoordinator: NSObject, NavigationCoordinator {
   }
   
   private func makeRootViewController() -> UIViewController {
-    return UsersListViewController()
+    return UsersListViewController(userSelectionHandler: self)
   }
   
   func start() {
@@ -31,7 +31,7 @@ final class RootNavigationCoordinator: NSObject, NavigationCoordinator {
 extension RootNavigationCoordinator: UserSelectionHandling {
   
   func didSelect(user: GithubUser) {
-    dump(user)
+    controller.pushViewController(UIViewController(), animated: true)
   }
   
 }

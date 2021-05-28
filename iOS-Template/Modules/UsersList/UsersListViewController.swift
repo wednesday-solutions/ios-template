@@ -14,8 +14,10 @@ final class UsersListViewController: UIViewController, UICollectionViewDelegate 
   private var usersDataSource: GitHubUsersDataSource!
   private var cancellables = Set<AnyCancellable>()
   private let networkingController = NetworkingController()
+  private weak var userSelectionHandler: UserSelectionHandling?
   
-  init() {
+  init(userSelectionHandler: UserSelectionHandling? = nil) {
+    self.userSelectionHandler = userSelectionHandler
     super.init(nibName: nil, bundle: nil)
     self.listView = UICollectionView(frame: .zero, collectionViewLayout: .insetGroupedListLayout)
     listView.delegate = self
@@ -83,6 +85,8 @@ final class UsersListViewController: UIViewController, UICollectionViewDelegate 
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     collectionView.deselectItem(at: indexPath, animated: true)
+    let user = usersDataSource[indexPath]
+    userSelectionHandler?.didSelect(user: user)
   }
   
 }
