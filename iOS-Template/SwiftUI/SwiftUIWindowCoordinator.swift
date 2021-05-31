@@ -31,7 +31,7 @@ class SwiftUIWindowCoordinator: NSObject, WindowCoordinator {
   }
   
   func makeView() -> some View {
-    Text("Hello, World!")
+    UsersListView()
   }
   
 }
