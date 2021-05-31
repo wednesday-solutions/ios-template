@@ -5,15 +5,13 @@
 //  Created by apple on 31/05/21.
 //
 
-import Combine
 import SwiftUI
 
 class UsersListViewModel: ObservableObject {
   
   @Published var searchText = ""
-  @Published private(set) var results: Result<[GithubUser], NetworkingError> = .success([])
+  @Published private(set) var users: Result<[GithubUser], NetworkingError> = .success([])
   private let networkingController = NetworkingController()
-  private var cancellables = Set<AnyCancellable>()
   
   init() {
     $searchText
@@ -23,8 +21,7 @@ class UsersListViewModel: ObservableObject {
       .flatMap { [networkingController] in networkingController.usersPublisher(query: $0) }
       .asResult()
       .receive(on: DispatchQueue.main)
-      .assign(to: \.results, on: self)
-      .store(in: &cancellables)
+      .assign(to: &$users)
   }
   
 }

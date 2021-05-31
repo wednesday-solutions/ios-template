@@ -17,7 +17,7 @@ struct UsersListView: View {
         Section(header: Text("Search")) {
           TextField("Username", text: $viewModel.searchText)
         }
-        switch viewModel.results {
+        switch viewModel.users {
         case .success(let users) where users.isEmpty && viewModel.searchText.isEmpty:
           EmptyView()
         case .success(let users):
