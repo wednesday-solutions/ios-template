@@ -23,7 +23,9 @@ struct UsersListView: View {
         case .success(let users):
           Section(header: Text("\(users.count) Users Found")) {
             ForEach(users) { user in
-              Text(user.login)
+              NavigationLink(destination: RepositoriesListView(user: user)) {
+                Text(user.login)
+              }
             }
           }
         case .failure(let error):
