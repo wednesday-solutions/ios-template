@@ -17,9 +17,9 @@ struct NetworkingMock: Endpoints {
   mutating func getRepos(user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) {
     DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.0001) {
       let repos: [Repository] = [
-        Repository(name: "Repo1"),
-        Repository(name: "Repo2"),
-        Repository(name: "Repo3")
+        Repository(name: "Repo1", id: 1),
+        Repository(name: "Repo2", id: 2),
+        Repository(name: "Repo3", id: 3)
       ]
       completion(.success(repos))
     }
@@ -30,9 +30,9 @@ struct NetworkingMock: Endpoints {
         totalCount: 3,
         incompleteResults: false,
         items: [
-          GithubUser(login: "Viranchee"),
-          GithubUser(login: "virancheewednesday"),
-          GithubUser(login: "rameez")
+          GithubUser(login: "Viranchee", id: 1),
+          GithubUser(login: "virancheewednesday", id: 2),
+          GithubUser(login: "rameez", id: 3)
         ]
       )
       completion(.success(model))
