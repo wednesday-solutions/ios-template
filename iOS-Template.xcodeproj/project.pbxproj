@@ -13,6 +13,7 @@
 		182E082B26613400005FD4EE /* RepositoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E082A26613400005FD4EE /* RepositoriesDataSource.swift */; };
 		182F8DAF266605D000247F4E /* NetworkingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F8DAE266605D000247F4E /* NetworkingControllerTests.swift */; };
 		182F8DB426660DF500247F4E /* MockNetworkingPublisherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F8DB326660DF500247F4E /* MockNetworkingPublisherProvider.swift */; };
+		182F8DB9266633C700247F4E /* URLProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F8DB8266633C700247F4E /* URLProviderTests.swift */; };
 		18C70E38265FACF500EF8F77 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */; };
 		18C70E43265FAD0600EF8F77 /* RootNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */; };
 		18C70E48265FAD2A00EF8F77 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */; };
@@ -82,6 +83,7 @@
 		182E082A26613400005FD4EE /* RepositoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDataSource.swift; sourceTree = "<group>"; };
 		182F8DAE266605D000247F4E /* NetworkingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingControllerTests.swift; sourceTree = "<group>"; };
 		182F8DB326660DF500247F4E /* MockNetworkingPublisherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingPublisherProvider.swift; sourceTree = "<group>"; };
+		182F8DB8266633C700247F4E /* URLProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProviderTests.swift; sourceTree = "<group>"; };
 		18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationCoordinator.swift; sourceTree = "<group>"; };
 		18C70E47265FAD2A00EF8F77 /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				61C63D4426283916007EA247 /* Info.plist */,
 				182F8DAE266605D000247F4E /* NetworkingControllerTests.swift */,
 				182F8DB326660DF500247F4E /* MockNetworkingPublisherProvider.swift */,
+				182F8DB8266633C700247F4E /* URLProviderTests.swift */,
 			);
 			path = "iOS-TemplateTests";
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				612022C326283FB300A5A725 /* NetworkingMockTests.swift in Sources */,
 				612022C826283FE300A5A725 /* GithubEndpoints.swift in Sources */,
 				612022AE26283F2F00A5A725 /* NetworkingMock.swift in Sources */,
+				182F8DB9266633C700247F4E /* URLProviderTests.swift in Sources */,
 				612022BB26283F7D00A5A725 /* RepoListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
