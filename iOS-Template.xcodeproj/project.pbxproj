@@ -11,6 +11,7 @@
 		182E0818266126E5005FD4EE /* UserSelectionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E0817266126E5005FD4EE /* UserSelectionHandling.swift */; };
 		182E0823266128E7005FD4EE /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E0822266128E7005FD4EE /* ReposListViewController.swift */; };
 		182E082B26613400005FD4EE /* RepositoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E082A26613400005FD4EE /* RepositoriesDataSource.swift */; };
+		182F8DAF266605D000247F4E /* NetworkingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F8DAE266605D000247F4E /* NetworkingControllerTests.swift */; };
 		182F8DB426660DF500247F4E /* MockNetworkingPublisherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F8DB326660DF500247F4E /* MockNetworkingPublisherProvider.swift */; };
 		18C70E38265FACF500EF8F77 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */; };
 		18C70E43265FAD0600EF8F77 /* RootNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */; };
@@ -79,6 +80,7 @@
 		182E0817266126E5005FD4EE /* UserSelectionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelectionHandling.swift; sourceTree = "<group>"; };
 		182E0822266128E7005FD4EE /* ReposListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
 		182E082A26613400005FD4EE /* RepositoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDataSource.swift; sourceTree = "<group>"; };
+		182F8DAE266605D000247F4E /* NetworkingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingControllerTests.swift; sourceTree = "<group>"; };
 		182F8DB326660DF500247F4E /* MockNetworkingPublisherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingPublisherProvider.swift; sourceTree = "<group>"; };
 		18C70E37265FACF500EF8F77 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		18C70E42265FAD0600EF8F77 /* RootNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationCoordinator.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				612022C226283FB300A5A725 /* NetworkingMockTests.swift */,
 				612022C726283FE300A5A725 /* GithubEndpoints.swift */,
 				61C63D4426283916007EA247 /* Info.plist */,
+				182F8DAE266605D000247F4E /* NetworkingControllerTests.swift */,
 				182F8DB326660DF500247F4E /* MockNetworkingPublisherProvider.swift */,
 			);
 			path = "iOS-TemplateTests";
@@ -699,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				612022B626283F5000A5A725 /* Environment.swift in Sources */,
+				182F8DAF266605D000247F4E /* NetworkingControllerTests.swift in Sources */,
 				612022A726283EFE00A5A725 /* HomeViewModelTests.swift in Sources */,
 				182F8DB426660DF500247F4E /* MockNetworkingPublisherProvider.swift in Sources */,
 				612022C326283FB300A5A725 /* NetworkingMockTests.swift in Sources */,
