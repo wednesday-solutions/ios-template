@@ -15,9 +15,7 @@ struct MockNetworkingPublisherProvider: NetworkingPublisherProviding {
   private let response: URLResponse
   
   private var publisher: AnyPublisher<(data: Data, response: URLResponse), URLError> {
-    Result.success((data, response))
-      .publisher
-      .eraseToAnyPublisher()
+    .just((data, response))
   }
   
   init(data: Data, response: HTTPURLResponse) {
