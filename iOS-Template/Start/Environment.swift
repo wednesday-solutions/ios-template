@@ -11,7 +11,7 @@ struct Environment {
   
   var networking: Endpoints
   
-  fileprivate init(networking: Endpoints) {
+  init(networking: Endpoints) {
     self.networking = networking
   }
   
