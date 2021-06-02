@@ -9,7 +9,7 @@ import UIKit
 
 final class RepositoriesDataSource: UICollectionViewDiffableDataSource<Int, Int> {
   
-  private var repositories: [Repository] = []
+  private var repositories: [Repository]
   
   subscript(indexPath: IndexPath) -> Repository {
     repositories[indexPath.item]
@@ -19,6 +19,7 @@ final class RepositoriesDataSource: UICollectionViewDiffableDataSource<Int, Int>
     collectionView: UICollectionView,
     cellProvider: @escaping UICollectionViewDiffableDataSource<Int, Int>.CellProvider
   ) {
+    repositories = []
     super.init(collectionView: collectionView, cellProvider: cellProvider)
     replaceExistingRepositories(with: [])
   }

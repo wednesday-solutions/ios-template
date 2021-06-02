@@ -10,7 +10,7 @@ import UIKit
 
 final class UsersListViewController: UIViewController, UICollectionViewDelegate {
   
-  private var listView: UICollectionView!
+  private var listView: UICollectionView
   private var usersDataSource: GitHubUsersDataSource!
   private var cancellables = Set<AnyCancellable>()
   private let networkingController = NetworkingController()
@@ -18,18 +18,18 @@ final class UsersListViewController: UIViewController, UICollectionViewDelegate 
   
   init(userSelectionHandler: UserSelectionHandling? = nil) {
     self.userSelectionHandler = userSelectionHandler
-    super.init(nibName: nil, bundle: nil)
     self.listView = UICollectionView(frame: .zero, collectionViewLayout: .insetGroupedListLayout)
+    super.init(nibName: nil, bundle: nil)
     listView.delegate = self
-    let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Int> { [weak self] (cell, _, userID) in
+    let registration = UICollectionView.CellRegistration<UICollectionViewListCell, Int> { [weak self] cell, _, userID in
       guard let item = self?.usersDataSource?[userID] else { return }
       var configuration = cell.defaultContentConfiguration()
       configuration.text = item.login
       cell.contentConfiguration = configuration
     }
-    let diffableDataSource = GitHubUsersDataSource(collectionView: listView, cellProvider: { (collectionView, indexPath, userID) -> UICollectionViewCell? in
+    let diffableDataSource = GitHubUsersDataSource(collectionView: listView) { (collectionView, indexPath, userID) in
       collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: userID)
-    })
+    }
     self.usersDataSource = diffableDataSource
     let searchController = UISearchController(searchResultsController: nil)
     title = "GitHub User Search"

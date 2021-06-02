@@ -9,7 +9,7 @@ import UIKit
 
 class GitHubUsersDataSource: UICollectionViewDiffableDataSource<Int, Int> {
   
-  private(set) var users: [GithubUser]
+  private var users: [GithubUser]
   
   subscript(id: GithubUser.ID) -> GithubUser? {
     users.first(where: { $0.id == id })
