@@ -10,10 +10,19 @@ import UIKit
 
 final class ReposListViewController: UIViewController {
   
+  /// A GitHub user whose repositories must be shown.
   private let user: GithubUser
+  
+  /// A collection view that shows a list of the provided user's repositories.
   private let listView: UICollectionView
+  
+  /// A diffable data source that is responsible for configuring and populating the list view with repositories.
   private var repositoriesDataSource: RepositoriesDataSource!
+  
+  /// A set to hold cancellables from Combine pipelines.
   private var cancellables = Set<AnyCancellable>()
+  
+  /// A controller to handle networking.
   private let networkingController = NetworkingController()
   
   init(user: GithubUser) {

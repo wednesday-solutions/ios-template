@@ -16,6 +16,7 @@ struct URLProvider {
     return components
   }()
   
+  /// Makes a URL for searching GitHub for the search string provided and the page number of the expected results.
   func makeSearchURL(query: String, page: Int) -> URL? {
     var components = self.components
     components.path = "/search/users"
@@ -26,6 +27,7 @@ struct URLProvider {
     return components.url
   }
   
+  /// Makes a URL for fetching repositories belonging to the provided user.
   func makeReposURL(for user: GithubUser) -> URL? {
     var components = self.components
     components.path = "/users/\(user.login)/repos"

@@ -9,6 +9,7 @@ import UIKit
 
 class GitHubUsersDataSource: UICollectionViewDiffableDataSource<Int, Int> {
   
+  /// An array of users to be shown in this data source's collection view.
   private var users: [GithubUser]
   
   subscript(id: GithubUser.ID) -> GithubUser? {
@@ -28,6 +29,8 @@ class GitHubUsersDataSource: UICollectionViewDiffableDataSource<Int, Int> {
     replaceExistingUsers(with: users)
   }
   
+  /// Removes existing users in the data source's collection view and inserts the provided array with new users.
+  /// - Parameter newUsers: An array of new users to replace in the collection view.
   func replaceExistingUsers(with newUsers: [GithubUser]) {
     let section = 0
     var sectionSnapshot = snapshot(for: section)

@@ -24,6 +24,9 @@ final class RepositoriesDataSource: UICollectionViewDiffableDataSource<Int, Int>
     replaceExistingRepositories(with: [])
   }
   
+  /// Removes existing repositories in the data source's collection view and inserts the provided array with new
+  /// repositories.
+  /// - Parameter newUsers: An array of new repositories to replace in the collection view.
   func replaceExistingRepositories(with newRepositories: [Repository]) {
     let section = 0
     var sectionSnapshot = snapshot(for: section)

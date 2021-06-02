@@ -21,6 +21,11 @@ struct NetworkingController {
     self.urlProvider = urlProvider
   }
   
+  /// Returns a publisher that on success publishes an array of users matching the search result and the page number
+  /// provided, or fails with any networking error from upstream.
+  /// - Parameters:
+  ///   - query: The string to search for
+  ///   - page: The page number of search results. Defaults to 1.
   func usersPublisher(query: String, page: Int = 1) -> AnyPublisher<[GithubUser], NetworkingError> {
     guard let url = urlProvider.makeSearchURL(query: query, page: page) else {
       return .fail(NetworkingError(urlErrorCode: .badURL))
@@ -35,6 +40,11 @@ struct NetworkingController {
       .eraseToAnyPublisher()
   }
   
+  /// Returns a publisher that on success publishes an array of repositories belonging to the provided user, or fails
+  /// with any networking error from upstream.
+  /// - Parameters:
+  ///   - query: The string to search for
+  ///   - page: The page number of search results. Defaults to 1.
   func reposPublisher(for user: GithubUser) -> AnyPublisher<[Repository], NetworkingError> {
     guard let url = urlProvider.makeReposURL(for: user) else {
       return .fail(NetworkingError(urlErrorCode: .badURL))

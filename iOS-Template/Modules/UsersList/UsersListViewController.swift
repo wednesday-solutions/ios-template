@@ -10,10 +10,19 @@ import UIKit
 
 final class UsersListViewController: UIViewController, UICollectionViewDelegate {
   
+  /// A collection view that shows a list of users matching a search query.
   private var listView: UICollectionView
+  
+  /// A diffable data source that is responsible for configuring and populating the list view with users.
   private var usersDataSource: GitHubUsersDataSource!
+  
+  /// A set to hold cancellables from Combine pipelines.
   private var cancellables = Set<AnyCancellable>()
+  
+  /// A controller to handle networking.
   private let networkingController = NetworkingController()
+  
+  /// An object to handle user selection.
   private weak var userSelectionHandler: UserSelectionHandling?
   
   init(userSelectionHandler: UserSelectionHandling? = nil) {
@@ -56,6 +65,11 @@ final class UsersListViewController: UIViewController, UICollectionViewDelegate 
     self.view = listView
   }
   
+  /// Observes the search controller's text field for changes to its text, debounces for 200 ms, removes duplicates, and
+  /// fetches search results for the final text from the network.
+  /// - Parameters:
+  ///   - searchField: The text field to observe.
+  ///   - callback: A closure to execute when users are fetched from the network.
   private func observeSearchTextChanges(
     searchField: UISearchTextField,
     onSearchResults callback: @escaping (Result<[GithubUser], NetworkingError>) -> Void
@@ -93,6 +107,7 @@ final class UsersListViewController: UIViewController, UICollectionViewDelegate 
 
 extension UICollectionViewLayout {
   
+  /// A compositional layout with inset grouped appearance, with no section headers.
   static var insetGroupedListLayout: UICollectionViewCompositionalLayout {
     var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
     listConfiguration.headerMode = .none
