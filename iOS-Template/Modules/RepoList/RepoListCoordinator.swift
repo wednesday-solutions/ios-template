@@ -20,7 +20,7 @@ final class ReposListCoordinator: Coordinator {
   }
   
   func start() {
-    let repoListViewModel = RepoListViewModel(user: user, networking: self.environment.networking.copy())
+    let repoListViewModel = RepoListViewModel(user: user )
     let repoListViewController = RepoListViewController(viewModel: repoListViewModel)
     repoListViewController.title = "Repos for \(user)"
     self.reposListViewController = repoListViewController

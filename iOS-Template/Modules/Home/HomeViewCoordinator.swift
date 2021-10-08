@@ -19,7 +19,7 @@ final class HomeViewCoordinator: Coordinator {
   }
   
   func start() {
-    let homeViewModel = HomeViewModel(networking: environment.networking.copy())
+    let homeViewModel = HomeViewModel()
     let homeViewController = HomeViewController(viewModel: homeViewModel)
     homeViewController.delegate = self
     presenter?.pushViewController(homeViewController, animated: true)

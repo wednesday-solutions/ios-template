@@ -8,7 +8,7 @@
 import Foundation
 
 struct Environment {
-  var networking: Endpoints
+  var networking: Networking
 }
 
 extension Environment {

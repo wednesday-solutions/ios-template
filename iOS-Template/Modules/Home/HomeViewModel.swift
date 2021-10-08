@@ -12,10 +12,10 @@ final class HomeViewModel {
   private (set) var model: [GithubUser] = []
   private var searchString: String = ""
   private var nextPage = 1
-  var networking: Endpoints
+  var usersAPI: UsersAPI
   
-  init(networking: Endpoints) {
-    self.networking = networking
+  init() {
+    self.usersAPI = UsersAPI()
   }
   
   func searchStringChanged(newString: String, callback: @escaping Callback<Result<GithubModel, NetworkingError>>) {
@@ -29,7 +29,7 @@ final class HomeViewModel {
   }
   
   private func searchUsers(callback: @escaping Callback<Result<GithubModel, NetworkingError>>) {
-    networking.searchUsers(query: searchString, page: nextPage) { [weak self] (resultModel) in
+      usersAPI.searchUsers(query: searchString, page: nextPage) { [weak self] (resultModel) in
       guard let self = self else { return }
       switch resultModel {
       case .success(let model):
