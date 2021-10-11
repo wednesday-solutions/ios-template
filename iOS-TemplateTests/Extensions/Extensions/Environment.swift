@@ -9,5 +9,5 @@ import Foundation
 @testable import iOS_Template
 
 extension Environment {
-  static let mock: Self = .init(networking: NetworkingMock())
+  static let mock: Self = .init(networking: Networking())
 }

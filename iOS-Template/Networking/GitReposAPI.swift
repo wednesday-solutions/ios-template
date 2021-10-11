@@ -6,7 +6,12 @@
 //
 
 import Foundation
-struct GitReposAPI {
+
+protocol GitReposAPIProtocol {
+    mutating func getRepos(of user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void)
+}
+
+struct GitReposAPI: GitReposAPIProtocol {
     var networking = Networking()
     
     func generateURL(for user: String) -> URL? {
@@ -16,7 +21,7 @@ struct GitReposAPI {
     }
     
     mutating func getRepos(of user: String, completion: @escaping (Result<[Repository], NetworkingError>) -> Void) {
-        let searchURL = GithubEndpoints.getRepos(user)
+        let searchURL = generateURL(for: user)
         networking.genericURLSession(url: searchURL, completion: completion)
     }
 }

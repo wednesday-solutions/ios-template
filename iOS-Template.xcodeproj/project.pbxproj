@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
-		1827BAE3270F01F900C1FA79 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAE2270F01F900C1FA79 /* UsersAPI.swift */; };
+		1827BAE3270F01F900C1FA79 /* GitUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAE2270F01F900C1FA79 /* GitUsersAPI.swift */; };
 		1827BAE5270F0F3A00C1FA79 /* GitReposAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAE4270F0F3A00C1FA79 /* GitReposAPI.swift */; };
+		1827BAF627144E2800C1FA79 /* GitUserAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAF527144E2800C1FA79 /* GitUserAPITests.swift */; };
+		1827BAFB2714596F00C1FA79 /* GitUserMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAFA2714596F00C1FA79 /* GitUserMockAPI.swift */; };
+		1827BAFD27145B5500C1FA79 /* GitRepoMockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAFC27145B5500C1FA79 /* GitRepoMockAPI.swift */; };
+		1827BAFF27145FEE00C1FA79 /* GitReposAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827BAFE27145FEE00C1FA79 /* GitReposAPITests.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		6120229526283D0200A5A725 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229326283D0100A5A725 /* .swiftlint.yml */; };
 		6120229626283D0200A5A725 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229426283D0100A5A725 /* swiftgen.yml */; };
@@ -64,8 +68,12 @@
 /* Begin PBXFileReference section */
 		0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AED7286AD29028EC476125 /* Pods-iOS-TemplateTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.qa.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.qa.xcconfig"; sourceTree = "<group>"; };
-		1827BAE2270F01F900C1FA79 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		1827BAE2270F01F900C1FA79 /* GitUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUsersAPI.swift; sourceTree = "<group>"; };
 		1827BAE4270F0F3A00C1FA79 /* GitReposAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitReposAPI.swift; sourceTree = "<group>"; };
+		1827BAF527144E2800C1FA79 /* GitUserAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GitUserAPITests.swift; path = "iOS-TemplateTests/GitUserAPITests.swift"; sourceTree = SOURCE_ROOT; };
+		1827BAFA2714596F00C1FA79 /* GitUserMockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserMockAPI.swift; sourceTree = "<group>"; };
+		1827BAFC27145B5500C1FA79 /* GitRepoMockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoMockAPI.swift; sourceTree = "<group>"; };
+		1827BAFE27145FEE00C1FA79 /* GitReposAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitReposAPITests.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
 		58CB12D784EBF75EEE0E84CB /* Pods-iOS-TemplateTests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.devrelease.xcconfig"; sourceTree = "<group>"; };
 		5AB5AFD6E3298AF76607D7A2 /* Pods-iOS-TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.release.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,9 +178,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		1827BAF92714594000C1FA79 /* MockAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1827BAFA2714596F00C1FA79 /* GitUserMockAPI.swift */,
+				1827BAFC27145B5500C1FA79 /* GitRepoMockAPI.swift */,
+			);
+			path = MockAPI;
+			sourceTree = "<group>";
+		};
 		612022AB26283F0A00A5A725 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1827BAF92714594000C1FA79 /* MockAPI */,
 				612022AC26283F2000A5A725 /* Extensions */,
 			);
 			path = Extensions;
@@ -229,11 +247,13 @@
 			isa = PBXGroup;
 			children = (
 				612022AB26283F0A00A5A725 /* Extensions */,
-				612022A626283EFE00A5A725 /* HomeViewModelTests.swift */,
-				612022BA26283F7D00A5A725 /* RepoListViewModelTest.swift */,
-				612022C226283FB300A5A725 /* NetworkingMockTests.swift */,
 				612022C726283FE300A5A725 /* GithubEndpoints.swift */,
+				1827BAFE27145FEE00C1FA79 /* GitReposAPITests.swift */,
+				1827BAF527144E2800C1FA79 /* GitUserAPITests.swift */,
+				612022A626283EFE00A5A725 /* HomeViewModelTests.swift */,
 				61C63D4426283916007EA247 /* Info.plist */,
+				612022C226283FB300A5A725 /* NetworkingMockTests.swift */,
+				612022BA26283F7D00A5A725 /* RepoListViewModelTest.swift */,
 			);
 			path = "iOS-TemplateTests";
 			sourceTree = "<group>";
@@ -275,7 +295,7 @@
 				61C63DAA26283AFF007EA247 /* GithubEndpoints.swift */,
 				61C63DAF26283B0D007EA247 /* Networking.swift */,
 				61C63DB426283B24007EA247 /* NetworkingError.swift */,
-				1827BAE2270F01F900C1FA79 /* UsersAPI.swift */,
+				1827BAE2270F01F900C1FA79 /* GitUsersAPI.swift */,
 				1827BAE4270F0F3A00C1FA79 /* GitReposAPI.swift */,
 			);
 			path = Networking;
@@ -613,7 +633,7 @@
 				61C63D8726283A2A007EA247 /* Environment.swift in Sources */,
 				61C63DD926283BA4007EA247 /* RepoListCoordinator.swift in Sources */,
 				61C63DA326283AED007EA247 /* Endpoints.swift in Sources */,
-				1827BAE3270F01F900C1FA79 /* UsersAPI.swift in Sources */,
+				1827BAE3270F01F900C1FA79 /* GitUsersAPI.swift in Sources */,
 				61C63DB526283B24007EA247 /* NetworkingError.swift in Sources */,
 				61C63DCF26283B9B007EA247 /* HomeViewController.swift in Sources */,
 				61C63DDC26283BA4007EA247 /* RepoModel.swift in Sources */,
@@ -631,7 +651,11 @@
 				612022A726283EFE00A5A725 /* HomeViewModelTests.swift in Sources */,
 				612022C326283FB300A5A725 /* NetworkingMockTests.swift in Sources */,
 				612022C826283FE300A5A725 /* GithubEndpoints.swift in Sources */,
+				1827BAFD27145B5500C1FA79 /* GitRepoMockAPI.swift in Sources */,
+				1827BAFF27145FEE00C1FA79 /* GitReposAPITests.swift in Sources */,
 				612022AE26283F2F00A5A725 /* NetworkingMock.swift in Sources */,
+				1827BAF627144E2800C1FA79 /* GitUserAPITests.swift in Sources */,
+				1827BAFB2714596F00C1FA79 /* GitUserMockAPI.swift in Sources */,
 				612022BB26283F7D00A5A725 /* RepoListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

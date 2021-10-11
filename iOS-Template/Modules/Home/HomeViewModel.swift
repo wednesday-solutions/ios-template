@@ -12,10 +12,10 @@ final class HomeViewModel {
   private (set) var model: [GithubUser] = []
   private var searchString: String = ""
   private var nextPage = 1
-  var usersAPI: UsersAPI
+  var usersAPI: GitUserAPIProtocol
   
   init() {
-    self.usersAPI = UsersAPI()
+    self.usersAPI = GitUsersAPI()
   }
   
   func searchStringChanged(newString: String, callback: @escaping Callback<Result<GithubModel, NetworkingError>>) {

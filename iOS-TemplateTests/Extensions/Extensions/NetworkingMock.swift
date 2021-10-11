@@ -45,5 +45,4 @@ struct NetworkingMock: Endpoints {
       completion(.failure(.noDataError))
     }
   }
-  
 }

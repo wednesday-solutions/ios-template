@@ -11,7 +11,7 @@ final class RepoListViewModel {
     let user: String
     private (set) var repositories: [Repository] = []
     private var nextPage: Int = 1
-    var gitReposAPI: GitReposAPI
+    var gitReposAPI: GitReposAPIProtocol
     
     init(user: String) {
         self.user = user

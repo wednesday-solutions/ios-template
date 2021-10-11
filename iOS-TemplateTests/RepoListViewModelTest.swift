@@ -9,27 +9,17 @@ import XCTest
 @testable import iOS_Template
 
 class RepoListModelTests: XCTestCase {
-  let timeout: TimeInterval = 1
-  override func setUpWithError() throws {
+    let timeout: TimeInterval = 2
     
-  }
-  
-  override func tearDownWithError() throws {
-    
-  }
-  
-  func testSearchingUserRepositories() {
-    let expectation = XCTestExpectation()
-    let viewModel = RepoListViewModel(user: "Viranchee", networking: NetworkingMock())
-
-    XCTAssertEqual(viewModel.repositories.count, 0)
-    viewModel.searchForUserRepositories { (result) in
-      expectation.fulfill()
+    func testSearchingUserRepositories() {
+        let expectation = XCTestExpectation()
+        let viewModel = RepoListViewModel(user: "Viranchee")
+        viewModel.gitReposAPI = GitReposMockAPI()
+        XCTAssertEqual(viewModel.repositories.count, 0)
+        viewModel.searchForUserRepositories { (result) in
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeout)
+        XCTAssertGreaterThanOrEqual(viewModel.repositories.count, 1)
     }
-
-    wait(for: [expectation], timeout: timeout)
-    XCTAssertGreaterThanOrEqual(viewModel.repositories.count, 1)
-
-  }
-
 }

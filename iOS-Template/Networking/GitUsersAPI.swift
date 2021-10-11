@@ -1,5 +1,5 @@
 //
-//  Users+API.swift
+//  GitUsers+API.swift
 //  iOS-Template
 //
 //  Created by Apple on 07/10/21.
@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct UsersAPI {
+protocol GitUserAPIProtocol {
+    mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void)
+}
+
+struct GitUsersAPI: GitUserAPIProtocol {
     var networking = Networking()
     
     func generateURL(for user: String, page: Int) -> URL? {
@@ -20,7 +24,7 @@ struct UsersAPI {
     }
     
     mutating func searchUsers(query: String, page: Int, completion: @escaping (Result<GithubModel, NetworkingError>) -> Void) {
-        let searchURL = GithubEndpoints.searchUser(query, page)
+        let searchURL = generateURL(for: query, page: page)
         networking.genericURLSession(url: searchURL, completion: completion)
     }
 }
