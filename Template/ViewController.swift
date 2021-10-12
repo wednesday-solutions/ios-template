@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        print(Environment.rootURL.absoluteString)
+        print(Environment.serverUrl.absoluteString)
     }
 
 

@@ -9,8 +9,7 @@ import Foundation
 public enum Environment {
     enum Keys {
         enum Plist {
-          static let rootURL = "server_url"
-          static let apiKey = "API_KEY"
+          static let serverUrl = "server_url"
         }
       }
 
@@ -23,20 +22,13 @@ public enum Environment {
       }()
 
       // MARK: - Plist values
-      static let rootURL: URL = {
-        guard let rootURLstring = Environment.infoDictionary[Keys.Plist.rootURL] as? String else {
-          fatalError("Root URL not set in plist for this environment")
+      static let serverUrl: URL = {
+        guard let serverUrlstring = Environment.infoDictionary[Keys.Plist.serverUrl] as? String else {
+          fatalError("Server URL not set in plist for this environment")
         }
-        guard let url = URL(string: rootURLstring) else {
-          fatalError("Root URL is invalid")
+        guard let url = URL(string: serverUrlstring) else {
+          fatalError("Server URL is invalid")
         }
         return url
-      }()
-
-      static let apiKey: String = {
-        guard let apiKey = Environment.infoDictionary[Keys.Plist.apiKey] as? String else {
-          fatalError("API Key not set in plist for this environment")
-        }
-        return apiKey
       }()
 }
