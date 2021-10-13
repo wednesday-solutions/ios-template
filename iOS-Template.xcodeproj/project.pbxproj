@@ -106,6 +106,10 @@
 		65A7D8BAF010BB0851026A23 /* Pods-iOS-Template-iOS-TemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C7D9850DE58F7FBC425B43E /* Pods-iOS-Template-iOS-TemplateUITests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.devrelease.xcconfig"; sourceTree = "<group>"; };
 		6F73AFD5B145780E511DFB8F /* Pods-iOS-Template-iOS-TemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7A606406CED9ACE942192E82 /* Pods-iOS-TemplateTests.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.productionrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.productionrelease.xcconfig"; sourceTree = "<group>"; };
+		7CA80005F8E8D249581BFCFB /* Pods-iOS-Template-iOS-TemplateUITests.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.productionrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.productionrelease.xcconfig"; sourceTree = "<group>"; };
+		906FF9E439FEF2D169165D4E /* Pods-iOS-Template-iOS-TemplateUITests.productiondebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.productiondebug.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.productiondebug.xcconfig"; sourceTree = "<group>"; };
+		A7AD9EF1D1693C2D39ECD11E /* Pods-iOS-TemplateTests.productiondebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.productiondebug.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.productiondebug.xcconfig"; sourceTree = "<group>"; };
 		B29600C30C2AE8530D82FB27 /* Pods-iOS-Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.debug.xcconfig"; sourceTree = "<group>"; };
 		B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_TemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6573CCBED67795AE74A4365 /* Pods-iOS-Template.devdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devdebug.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devdebug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 		D952492F090FE839527EF7DA /* Pods-iOS-Template-iOS-TemplateUITests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template-iOS-TemplateUITests.production.xcconfig"; path = "Target Support Files/Pods-iOS-Template-iOS-TemplateUITests/Pods-iOS-Template-iOS-TemplateUITests.production.xcconfig"; sourceTree = "<group>"; };
 		DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template_iOS_TemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4676D5A6C5E07141EEE97C6 /* Pods-iOS-TemplateTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.production.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.production.xcconfig"; sourceTree = "<group>"; };
+		E8C11703ECE8F411BBFF1528 /* Pods-iOS-Template.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.productionrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.productionrelease.xcconfig"; sourceTree = "<group>"; };
+		FCC3CAD53D0E37975F8859FF /* Pods-iOS-Template.productiondebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.productiondebug.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.productiondebug.xcconfig"; sourceTree = "<group>"; };
 		FEE109C4180D982309C2EA8F /* Pods-iOS-TemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +174,12 @@
 				35A36F5D0997944CBA44FAD9 /* Pods-iOS-Template.production.xcconfig */,
 				D952492F090FE839527EF7DA /* Pods-iOS-Template-iOS-TemplateUITests.production.xcconfig */,
 				E4676D5A6C5E07141EEE97C6 /* Pods-iOS-TemplateTests.production.xcconfig */,
+				E8C11703ECE8F411BBFF1528 /* Pods-iOS-Template.productionrelease.xcconfig */,
+				FCC3CAD53D0E37975F8859FF /* Pods-iOS-Template.productiondebug.xcconfig */,
+				7CA80005F8E8D249581BFCFB /* Pods-iOS-Template-iOS-TemplateUITests.productionrelease.xcconfig */,
+				906FF9E439FEF2D169165D4E /* Pods-iOS-Template-iOS-TemplateUITests.productiondebug.xcconfig */,
+				7A606406CED9ACE942192E82 /* Pods-iOS-TemplateTests.productionrelease.xcconfig */,
+				A7AD9EF1D1693C2D39ECD11E /* Pods-iOS-TemplateTests.productiondebug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -669,10 +681,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		18822819270D7AC900CF8765 /* Production */ = {
+		184B51152716A0AD003C9526 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "https://api.github.com";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -722,11 +735,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Production;
+			name = ProductionDebug;
 		};
-		1882281A270D7AC900CF8765 /* Production */ = {
+		184B51162716A0AD003C9526 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35A36F5D0997944CBA44FAD9 /* Pods-iOS-Template.production.xcconfig */;
+			baseConfigurationReference = FCC3CAD53D0E37975F8859FF /* Pods-iOS-Template.productiondebug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -742,11 +755,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Production;
+			name = ProductionDebug;
 		};
-		1882281B270D7AC900CF8765 /* Production */ = {
+		184B51172716A0AD003C9526 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4676D5A6C5E07141EEE97C6 /* Pods-iOS-TemplateTests.production.xcconfig */;
+			baseConfigurationReference = A7AD9EF1D1693C2D39ECD11E /* Pods-iOS-TemplateTests.productiondebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -765,11 +778,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Template.app/iOS-Template";
 			};
-			name = Production;
+			name = ProductionDebug;
 		};
-		1882281C270D7AC900CF8765 /* Production */ = {
+		184B51182716A0AD003C9526 /* ProductionDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D952492F090FE839527EF7DA /* Pods-iOS-Template-iOS-TemplateUITests.production.xcconfig */;
+			baseConfigurationReference = 906FF9E439FEF2D169165D4E /* Pods-iOS-Template-iOS-TemplateUITests.productiondebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -786,12 +799,133 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "iOS-Template";
 			};
-			name = Production;
+			name = ProductionDebug;
+		};
+		184B51192716A0BE003C9526 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "https://api.github.com";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = ProductionRelease;
+		};
+		184B511A2716A0BE003C9526 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C11703ECE8F411BBFF1528 /* Pods-iOS-Template.productionrelease.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 499NLNJYQN;
+				INFOPLIST_FILE = "iOS-Template/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.viranchee.iOS-Template";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ProductionRelease;
+		};
+		184B511B2716A0BE003C9526 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A606406CED9ACE942192E82 /* Pods-iOS-TemplateTests.productionrelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 499NLNJYQN;
+				INFOPLIST_FILE = "iOS-TemplateTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.viranchee.iOS-TemplateTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Template.app/iOS-Template";
+			};
+			name = ProductionRelease;
+		};
+		184B511C2716A0BE003C9526 /* ProductionRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CA80005F8E8D249581BFCFB /* Pods-iOS-Template-iOS-TemplateUITests.productionrelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 499NLNJYQN;
+				INFOPLIST_FILE = "iOS-TemplateUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.viranchee.iOS-TemplateUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS-Template";
+			};
+			name = ProductionRelease;
 		};
 		612022CF262849FA00A5A725 /* QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = qa.iostemplate.com;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -917,6 +1051,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = devrelease.iostemplate.com;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1042,6 +1177,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = devdegub.iostemplate.com;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1103,6 +1239,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = iostemplate.com;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1292,7 +1429,8 @@
 				612022D3262849FF00A5A725 /* DevRelease */,
 				612022CF262849FA00A5A725 /* QA */,
 				61C63D5126283916007EA247 /* Release */,
-				18822819270D7AC900CF8765 /* Production */,
+				184B51192716A0BE003C9526 /* ProductionRelease */,
+				184B51152716A0AD003C9526 /* ProductionDebug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1304,7 +1442,8 @@
 				612022D4262849FF00A5A725 /* DevRelease */,
 				612022D0262849FA00A5A725 /* QA */,
 				61C63D5426283916007EA247 /* Release */,
-				1882281A270D7AC900CF8765 /* Production */,
+				184B511A2716A0BE003C9526 /* ProductionRelease */,
+				184B51162716A0AD003C9526 /* ProductionDebug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1316,7 +1455,8 @@
 				612022D5262849FF00A5A725 /* DevRelease */,
 				612022D1262849FA00A5A725 /* QA */,
 				61C63D5726283916007EA247 /* Release */,
-				1882281B270D7AC900CF8765 /* Production */,
+				184B511B2716A0BE003C9526 /* ProductionRelease */,
+				184B51172716A0AD003C9526 /* ProductionDebug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1328,7 +1468,8 @@
 				612022D6262849FF00A5A725 /* DevRelease */,
 				612022D2262849FA00A5A725 /* QA */,
 				61C63D5A26283916007EA247 /* Release */,
-				1882281C270D7AC900CF8765 /* Production */,
+				184B511C2716A0BE003C9526 /* ProductionRelease */,
+				184B51182716A0AD003C9526 /* ProductionDebug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

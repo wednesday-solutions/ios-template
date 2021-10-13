@@ -6,5 +6,5 @@
 //
 
 enum Constants {
-  static let githubURL = "https://api.github.com"
+  
 }
