@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
+		184B51252716EA73003C9526 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 184B51272716EA73003C9526 /* Localizable.strings */; };
+		184B512B2716EAF2003C9526 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B512A2716EAF2003C9526 /* String+Extensions.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		6120229526283D0200A5A725 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229326283D0100A5A725 /* .swiftlint.yml */; };
 		6120229626283D0200A5A725 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229426283D0100A5A725 /* swiftgen.yml */; };
@@ -62,6 +64,10 @@
 /* Begin PBXFileReference section */
 		0E0076B30315E9FB7514F430 /* Pods_iOS_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AED7286AD29028EC476125 /* Pods-iOS-TemplateTests.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.qa.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.qa.xcconfig"; sourceTree = "<group>"; };
+		184B51212716E9F3003C9526 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		184B51262716EA73003C9526 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		184B51282716EA78003C9526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		184B512A2716EAF2003C9526 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
 		35A36F5D0997944CBA44FAD9 /* Pods-iOS-Template.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.production.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.production.xcconfig"; sourceTree = "<group>"; };
 		58CB12D784EBF75EEE0E84CB /* Pods-iOS-TemplateTests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.devrelease.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		184B51222716EA36003C9526 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				184B51272716EA73003C9526 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		184B51292716EAD8003C9526 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				184B512A2716EAF2003C9526 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		612022AB26283F0A00A5A725 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,15 +248,17 @@
 		61C63D2A26283913007EA247 /* iOS-Template */ = {
 			isa = PBXGroup;
 			children = (
-				61C63D75262839CC007EA247 /* Start */,
+				6120229326283D0100A5A725 /* .swiftlint.yml */,
+				61C63D3426283916007EA247 /* Assets.xcassets */,
+				184B51292716EAD8003C9526 /* Extensions */,
+				61C63D8E26283A87007EA247 /* Helpers */,
+				61C63D3926283916007EA247 /* Info.plist */,
+				61C63D3626283916007EA247 /* LaunchScreen.storyboard */,
 				61C63DB926283B39007EA247 /* Modules */,
 				61C63DA126283AD1007EA247 /* Networking */,
-				61C63D8E26283A87007EA247 /* Helpers */,
-				61C63D3426283916007EA247 /* Assets.xcassets */,
-				61C63D3626283916007EA247 /* LaunchScreen.storyboard */,
-				61C63D3926283916007EA247 /* Info.plist */,
+				184B51222716EA36003C9526 /* Resources */,
+				61C63D75262839CC007EA247 /* Start */,
 				6120229426283D0100A5A725 /* swiftgen.yml */,
-				6120229326283D0100A5A725 /* .swiftlint.yml */,
 			);
 			path = "iOS-Template";
 			sourceTree = "<group>";
@@ -426,6 +450,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-IN",
 			);
 			mainGroup = 61C63D1F26283912007EA247;
 			productRefGroup = 61C63D2926283913007EA247 /* Products */;
@@ -444,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184B51252716EA73003C9526 /* Localizable.strings in Resources */,
 				6120229526283D0200A5A725 /* .swiftlint.yml in Resources */,
 				61C63D3826283916007EA247 /* LaunchScreen.storyboard in Resources */,
 				61C63D3526283916007EA247 /* Assets.xcassets in Resources */,
@@ -619,6 +645,7 @@
 				61C63DAB26283AFF007EA247 /* GithubEndpoints.swift in Sources */,
 				61C63D2C26283913007EA247 /* AppDelegate.swift in Sources */,
 				61C63D9026283AA3007EA247 /* UITableView+Extensions.swift in Sources */,
+				184B512B2716EAF2003C9526 /* String+Extensions.swift in Sources */,
 				61C63D2E26283913007EA247 /* SceneDelegate.swift in Sources */,
 				61C63DDA26283BA4007EA247 /* RepoListViewModel.swift in Sources */,
 				61C63D8726283A2A007EA247 /* Environment.swift in Sources */,
@@ -670,10 +697,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		184B51272716EA73003C9526 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184B51262716EA73003C9526 /* en-IN */,
+				184B51282716EA78003C9526 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		61C63D3626283916007EA247 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				61C63D3726283916007EA247 /* Base */,
+				184B51212716E9F3003C9526 /* en-IN */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -686,6 +723,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "https://api.github.com";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -806,6 +844,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "https://api.github.com";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -926,6 +965,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = qa.iostemplate.com;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1052,6 +1092,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = devrelease.iostemplate.com;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1178,6 +1219,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = devdegub.iostemplate.com;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1240,6 +1282,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = iostemplate.com;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

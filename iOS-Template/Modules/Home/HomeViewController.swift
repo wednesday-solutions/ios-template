@@ -30,9 +30,9 @@ final class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Github User Search"
+      title = "Github User Search".localized
     
-    searchBar.placeholder = "Github Username"
+      searchBar.placeholder = "Github Username".localized
     searchBar.delegate = self
     searchBar.accessibilityIdentifier = "githubSearchBar"
     searchBar.accessibilityLabel = "Enter Github Username to Search"
