@@ -31,8 +31,8 @@ class ViewController: UIViewController {
         print(SecretConfig.apiSecretKey)
         
         // Test swiftLint
-//        var r = "test"
-// gs       print("r is", r)
+        var r = "test"
+        print("r is", r)
     }
 }
 
