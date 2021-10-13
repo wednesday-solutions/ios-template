@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514EA8B62716B18D00BEAA43 /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */; };
 		518D518E2715A36100DDF6D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D518D2715A36100DDF6D5 /* AppDelegate.swift */; };
 		518D51902715A36100DDF6D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D518F2715A36100DDF6D5 /* SceneDelegate.swift */; };
 		518D51922715A36100DDF6D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D51912715A36100DDF6D5 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		3B3CDBAAB017BCF595321BDC /* Pods-Template.prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.prod debug.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.prod debug.xcconfig"; sourceTree = "<group>"; };
 		41A9F555498A2987B4C6B71A /* Pods-Template.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.dev release.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.dev release.xcconfig"; sourceTree = "<group>"; };
 		514EA8452715D89200BEAA43 /* SecretConfig.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
+		514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		518D518A2715A36100DDF6D5 /* Dev Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dev Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		518D518D2715A36100DDF6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518D518F2715A36100DDF6D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		514EA89D2715E3CC00BEAA43 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */,
 				514EA8452715D89200BEAA43 /* SecretConfig.stencil */,
 			);
 			path = Helpers;
@@ -455,6 +458,7 @@
 				518D51982715A36100DDF6D5 /* Template.xcdatamodeld in Sources */,
 				518D518E2715A36100DDF6D5 /* AppDelegate.swift in Sources */,
 				518D51902715A36100DDF6D5 /* SceneDelegate.swift in Sources */,
+				514EA8B62716B18D00BEAA43 /* SecretConfig.generated.swift in Sources */,
 				518D52872715BFF100DDF6D5 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,7 +660,7 @@
 		};
 		518D51B92715A36400DDF6D5 /* Dev Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51C62715B25400DDF6D5 /* Dev.xcconfig */;
+			baseConfigurationReference = 41A9F555498A2987B4C6B71A /* Pods-Template.dev release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -699,7 +703,7 @@
 		};
 		518D51BC2715A36400DDF6D5 /* Dev Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51C62715B25400DDF6D5 /* Dev.xcconfig */;
+			baseConfigurationReference = E25437BECB4C9362BB787007 /* Pods-TemplateTests.dev release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -743,7 +747,7 @@
 		};
 		518D51BF2715A36400DDF6D5 /* Dev Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51C62715B25400DDF6D5 /* Dev.xcconfig */;
+			baseConfigurationReference = 17E2F1FC442FE550F92E159A /* Pods-Template-TemplateUITests.dev release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1081,7 +1085,7 @@
 		};
 		518D51DC2715B3FA00DDF6D5 /* Qa Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51E32715B42600DDF6D5 /* Qa.xcconfig */;
+			baseConfigurationReference = 561C4FD95767311C09830713 /* Pods-Template.qa release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1101,7 +1105,7 @@
 		};
 		518D51DD2715B3FA00DDF6D5 /* Qa Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51E32715B42600DDF6D5 /* Qa.xcconfig */;
+			baseConfigurationReference = B0DA393AEC6671D22BA8AC5F /* Pods-TemplateTests.qa release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1124,7 +1128,7 @@
 		};
 		518D51DE2715B3FA00DDF6D5 /* Qa Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51E32715B42600DDF6D5 /* Qa.xcconfig */;
+			baseConfigurationReference = A39FEA6C94EDF1E1F975CEA2 /* Pods-Template-TemplateUITests.qa release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1204,7 +1208,7 @@
 		};
 		518D51E02715B40300DDF6D5 /* Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51E42715B44C00DDF6D5 /* Prod.xcconfig */;
+			baseConfigurationReference = 8F8B7CFC9327643EB7A7ADB8 /* Pods-Template.prod release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1224,7 +1228,7 @@
 		};
 		518D51E12715B40300DDF6D5 /* Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51E42715B44C00DDF6D5 /* Prod.xcconfig */;
+			baseConfigurationReference = C4F9A63C0FF6381D30CD21BC /* Pods-TemplateTests.prod release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1247,7 +1251,7 @@
 		};
 		518D51E22715B40300DDF6D5 /* Prod Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 518D51E42715B44C00DDF6D5 /* Prod.xcconfig */;
+			baseConfigurationReference = A176FC6A151E5EC308C65BCF /* Pods-Template-TemplateUITests.prod release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
