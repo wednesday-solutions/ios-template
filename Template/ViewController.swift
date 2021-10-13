@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         
         print(Environment.serverUrl.absoluteString)
         print(SecretConfig.apiSecretKey)
+        
+        // Test swiftLint
+        var r = "test"
+        print("r is", r)
     }
 
 
