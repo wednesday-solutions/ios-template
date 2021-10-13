@@ -141,12 +141,19 @@
 			path = Localized;
 			sourceTree = "<group>";
 		};
-		518D51812715A36100DDF6D5 = {
+		514EA8FD2717092800BEAA43 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
 				518D51E42715B44C00DDF6D5 /* Prod.xcconfig */,
 				518D51E32715B42600DDF6D5 /* Qa.xcconfig */,
 				518D51C62715B25400DDF6D5 /* Dev.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		518D51812715A36100DDF6D5 = {
+			isa = PBXGroup;
+			children = (
 				518D518C2715A36100DDF6D5 /* Template */,
 				518D51A62715A36400DDF6D5 /* TemplateTests */,
 				518D51B12715A36400DDF6D5 /* TemplateUITests */,
@@ -169,6 +176,7 @@
 		518D518C2715A36100DDF6D5 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				514EA8FD2717092800BEAA43 /* Configurations */,
 				514EA8F42716FFFA00BEAA43 /* Localized */,
 				514EA89D2715E3CC00BEAA43 /* Helpers */,
 				518D52852715BFDB00DDF6D5 /* Utils */,
