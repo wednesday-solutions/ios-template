@@ -4,7 +4,7 @@
 ##   Every input/output paths in the rest of the config will then be expressed relative to these.
 ##   Those two top-level keys are optional and default to "." (the directory of the config file).
 input_dir: Template/
-output_dir: Template/Localized/
+output_dir: Template/Generated/
 
 
 ## Generate constants for your localized strings.
@@ -23,16 +23,21 @@ strings:
 ##   This example also shows how to provide additional parameters to your template to customize the output.
 ##   - Especially the `forceProvidesNamespaces: true` param forces to create sub-namespace for each folder/group used in your Asset Catalogs, even the ones without "Provides Namespace". Without this param, SwiftGen only generates sub-namespaces for folders/groups which have the "Provides Namespace" box checked in the Inspector pane.
 ##   - To know which params are supported for a template, use `swiftgen template doc xcassets swift5` to open the template documentation on GitHub.
-# xcassets:
-#   inputs:
-#     - Main.xcassets
-#     - ProFeatures.xcassets
-#   outputs:
-#     - templateName: swift5
-#       params:
-#         forceProvidesNamespaces: true
-#       output: XCAssets+Generated.swift
+xcassets:
+  inputs: Assets.xcassets
+  outputs:
+    - 
+      templateName: swift5
+      params:
+        forceProvidesNamespaces: true
+      output: Assets.swift
 
+## Generate constants for your fonts.
+fonts:
+  inputs: Resources/Fonts/
+  outputs:
+    templateName: swift5
+    output: Fonts.swift
 
 ## Generate constants for your storyboards and XIBs.
 ##   This one generates 2 output files, one containing the storyboard scenes, and another for the segues.
