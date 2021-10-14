@@ -7,6 +7,7 @@ target 'Template' do
 
   # Pods for Template
     pod 'Sourcery'
+    pod 'SwiftGen', '~> 6.0'
   target 'TemplateTests' do
     inherit! :search_paths
     # Pods for testing

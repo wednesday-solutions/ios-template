@@ -338,6 +338,7 @@
 				518D51882715A36100DDF6D5 /* Resources */,
 				518D52AE2715CD4400DDF6D5 /* Generate SecretConfig.swift */,
 				514EA8D22716D11F00BEAA43 /* SwiftLint */,
+				514EA9BD2718359E00BEAA43 /* Generate  assets, images, fonts and  localizable strings using SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -534,6 +535,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		514EA9BD2718359E00BEAA43 /* Generate  assets, images, fonts and  localizable strings using SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate  assets, images, fonts and  localizable strings using SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
 		};
 		518D52AE2715CD4400DDF6D5 /* Generate SecretConfig.swift */ = {
 			isa = PBXShellScriptBuildPhase;

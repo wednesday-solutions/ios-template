@@ -12,7 +12,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.text = L10n.welcome
         // Picking up color and font from generated files so no safe unwrapping during initialisation
-        label.backgroundColor = Asset.accentColor.color
+        label.backgroundColor = Asset.redColor.color
         label.font = FontFamily.Roboto.blackItalic.font(size: 24.0)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
