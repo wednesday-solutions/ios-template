@@ -28,7 +28,6 @@
 		518D518E2715A36100DDF6D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D518D2715A36100DDF6D5 /* AppDelegate.swift */; };
 		518D51902715A36100DDF6D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D518F2715A36100DDF6D5 /* SceneDelegate.swift */; };
 		518D51922715A36100DDF6D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D51912715A36100DDF6D5 /* ViewController.swift */; };
-		518D51952715A36100DDF6D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518D51932715A36100DDF6D5 /* Main.storyboard */; };
 		518D51982715A36100DDF6D5 /* Template.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 518D51962715A36100DDF6D5 /* Template.xcdatamodeld */; };
 		518D519A2715A36400DDF6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518D51992715A36400DDF6D5 /* Assets.xcassets */; };
 		518D519D2715A36400DDF6D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518D519B2715A36400DDF6D5 /* LaunchScreen.storyboard */; };
@@ -65,7 +64,6 @@
 		41A9F555498A2987B4C6B71A /* Pods-Template.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.dev release.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.dev release.xcconfig"; sourceTree = "<group>"; };
 		514EA8452715D89200BEAA43 /* SecretConfig.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
 		514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
-		514EA8DC2716F6C300BEAA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		514EA8DD2716F6C400BEAA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		514EA8EA2716FAC600BEAA43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		514EA8F02716FADB00BEAA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 		518D518D2715A36100DDF6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518D518F2715A36100DDF6D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		518D51912715A36100DDF6D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		518D51942715A36100DDF6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		518D51972715A36100DDF6D5 /* Template.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Template.xcdatamodel; sourceTree = "<group>"; };
 		518D51992715A36400DDF6D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		518D519C2715A36400DDF6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -252,7 +249,6 @@
 				518D518D2715A36100DDF6D5 /* AppDelegate.swift */,
 				518D518F2715A36100DDF6D5 /* SceneDelegate.swift */,
 				518D51912715A36100DDF6D5 /* ViewController.swift */,
-				518D51932715A36100DDF6D5 /* Main.storyboard */,
 				518D51992715A36400DDF6D5 /* Assets.xcassets */,
 				518D519B2715A36400DDF6D5 /* LaunchScreen.storyboard */,
 				518D519E2715A36400DDF6D5 /* Dev.plist */,
@@ -453,7 +449,6 @@
 				514EA9A2271828BD00BEAA43 /* Roboto-Regular.ttf in Resources */,
 				514EA9A7271828BD00BEAA43 /* Roboto-Italic.ttf in Resources */,
 				518D519A2715A36400DDF6D5 /* Assets.xcassets in Resources */,
-				518D51952715A36100DDF6D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,15 +647,6 @@
 				514EA8F02716FADB00BEAA43 /* de */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		518D51932715A36100DDF6D5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				518D51942715A36100DDF6D5 /* Base */,
-				514EA8DC2716F6C300BEAA43 /* de */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		518D519B2715A36400DDF6D5 /* LaunchScreen.storyboard */ = {

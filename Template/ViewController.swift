@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        view.backgroundColor = .white
         view.addSubview(label)
         view.addSubview(wednesdayImageView)
         NSLayoutConstraint.activate([
