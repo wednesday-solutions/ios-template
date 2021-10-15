@@ -22,7 +22,7 @@ final class RepoListViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-      title = "Repos for".localized + " \(viewModel.user)"
+    title = L10n.reposFor + " \(viewModel.user)"
     tableView.registerCell(UITableViewCell.self)
     tableView.accessibilityLabel = "List of repositories"
     viewModel.searchForUserRepositories { [weak self] _ in
