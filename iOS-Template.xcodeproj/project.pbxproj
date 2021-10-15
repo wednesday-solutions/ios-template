@@ -10,6 +10,8 @@
 		17E008AE888F95484D12CC88 /* Pods_iOS_TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3ECC42EE33D926912F99EDE /* Pods_iOS_TemplateTests.framework */; };
 		184B51252716EA73003C9526 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 184B51272716EA73003C9526 /* Localizable.strings */; };
 		184B512B2716EAF2003C9526 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B512A2716EAF2003C9526 /* String+Extensions.swift */; };
+		18A1147F2719BFF2001551AD /* SecretConfig.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 18A1147E2719BFF2001551AD /* SecretConfig.stencil */; };
+		18A114812719C010001551AD /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A114802719C010001551AD /* SecretConfig.generated.swift */; };
 		4FB2AC4C4B63B3514455C1E0 /* Pods_iOS_Template_iOS_TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39579F71529DADEC459444 /* Pods_iOS_Template_iOS_TemplateUITests.framework */; };
 		6120229526283D0200A5A725 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229326283D0100A5A725 /* .swiftlint.yml */; };
 		6120229626283D0200A5A725 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6120229426283D0100A5A725 /* swiftgen.yml */; };
@@ -68,6 +70,8 @@
 		184B51262716EA73003C9526 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		184B51282716EA78003C9526 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		184B512A2716EAF2003C9526 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		18A1147E2719BFF2001551AD /* SecretConfig.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
+		18A114802719C010001551AD /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		2EB2D38274FF78CC82BEC667 /* Pods-iOS-Template.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.devrelease.xcconfig"; sourceTree = "<group>"; };
 		35A36F5D0997944CBA44FAD9 /* Pods-iOS-Template.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Template.production.xcconfig"; path = "Target Support Files/Pods-iOS-Template/Pods-iOS-Template.production.xcconfig"; sourceTree = "<group>"; };
 		58CB12D784EBF75EEE0E84CB /* Pods-iOS-TemplateTests.devrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.devrelease.xcconfig"; path = "Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.devrelease.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 		61C63D8E26283A87007EA247 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				18A114802719C010001551AD /* SecretConfig.generated.swift */,
+				18A1147E2719BFF2001551AD /* SecretConfig.stencil */,
 				61C63D8F26283AA3007EA247 /* UITableView+Extensions.swift */,
 				61C63D9726283AB5007EA247 /* Callback.swift */,
 				61C63D9C26283AC5007EA247 /* Constants.swift */,
@@ -372,6 +378,7 @@
 				61C63D2526283912007EA247 /* Frameworks */,
 				61C63D2626283912007EA247 /* Resources */,
 				68B7CBEFCC2BC3FC0EB55721 /* [CP] Embed Pods Frameworks */,
+				18A1147D2719BFB5001551AD /* Secret Config Generation */,
 			);
 			buildRules = (
 			);
@@ -469,6 +476,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A1147F2719BFF2001551AD /* SecretConfig.stencil in Resources */,
 				184B51252716EA73003C9526 /* Localizable.strings in Resources */,
 				6120229526283D0200A5A725 /* .swiftlint.yml in Resources */,
 				61C63D3826283916007EA247 /* LaunchScreen.storyboard in Resources */,
@@ -494,6 +502,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18A1147D2719BFB5001551AD /* Secret Config Generation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Secret Config Generation";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f ./secrets-vars.sh ]\nthen\nsource ./secrets-vars.sh\nfi\necho ${PODS_ROOT}\n${PODS_ROOT}/Sourcery/bin/sourcery --templates ./iOS-Template/Helpers/ --output ./iOS-Template/Helpers/ --sources ./iOS-Template/ --args api_secret_key=$API_SECRET_KEY,api_password=$API_PASSWORD\n\n";
+		};
 		61C63DE026283BD0007EA247 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C63DCE26283B9B007EA247 /* HomeViewCoordinator.swift in Sources */,
+				18A114812719C010001551AD /* SecretConfig.generated.swift in Sources */,
 				61C63D9826283AB5007EA247 /* Callback.swift in Sources */,
 				61C63DB026283B0D007EA247 /* Networking.swift in Sources */,
 				61C63D8226283A0D007EA247 /* Coordinator.swift in Sources */,

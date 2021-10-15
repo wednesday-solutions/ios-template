@@ -1,5 +1,7 @@
 Pods
 vendor
+secrets-vars.sh
+*.generated.swift
 .DS_Store
 # Created by https://www.toptal.com/developers/gitignore/api/Xcode
 # Edit at https://www.toptal.com/developers/gitignore?templates=Xcode
