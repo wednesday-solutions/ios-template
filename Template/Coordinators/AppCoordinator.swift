@@ -25,7 +25,9 @@ class AppCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         navigationController.pushViewController(rootViewController, animated: false)
     }
     
+    
     private func showDetail() {
+        // A new coordinator can be declared here which can take care of the flow 
         let detailViewController = DetailViewController()
         navigationController.pushViewController(detailViewController, animated: true)
     }
