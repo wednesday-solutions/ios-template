@@ -28,6 +28,13 @@
 		514EA9F327186CFC00BEAA43 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA9F227186CFC00BEAA43 /* Coordinator.swift */; };
 		514EAA2B271A034E00BEAA43 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA2A271A034E00BEAA43 /* AppCoordinator.swift */; };
 		514EAA30271A0BC700BEAA43 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA2F271A0BC700BEAA43 /* DetailViewController.swift */; };
+		514EAA4D271C7FE100BEAA43 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA4C271C7FE000BEAA43 /* Endpoint.swift */; };
+		514EAA55271C811D00BEAA43 /* ITunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA54271C811D00BEAA43 /* ITunesEndpoint.swift */; };
+		514EAA71271C8F3B00BEAA43 /* ITunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA54271C811D00BEAA43 /* ITunesEndpoint.swift */; };
+		514EAA76271C908300BEAA43 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA4C271C7FE000BEAA43 /* Endpoint.swift */; };
+		514EAA86271C932900BEAA43 /* ITunesEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA85271C932900BEAA43 /* ITunesEndpointTests.swift */; };
+		514EAA8B271C968A00BEAA43 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA8A271C968A00BEAA43 /* NetworkEngine.swift */; };
+		514EAA90271C9B7000BEAA43 /* NetworkEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA8F271C9B6F00BEAA43 /* NetworkEngineTests.swift */; };
 		518D518E2715A36100DDF6D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D518D2715A36100DDF6D5 /* AppDelegate.swift */; };
 		518D51902715A36100DDF6D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D518F2715A36100DDF6D5 /* SceneDelegate.swift */; };
 		518D51922715A36100DDF6D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D51912715A36100DDF6D5 /* ViewController.swift */; };
@@ -89,6 +96,11 @@
 		514EA9F227186CFC00BEAA43 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		514EAA2A271A034E00BEAA43 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		514EAA2F271A0BC700BEAA43 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		514EAA4C271C7FE000BEAA43 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		514EAA54271C811D00BEAA43 /* ITunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesEndpoint.swift; sourceTree = "<group>"; };
+		514EAA85271C932900BEAA43 /* ITunesEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesEndpointTests.swift; sourceTree = "<group>"; };
+		514EAA8A271C968A00BEAA43 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		514EAA8F271C9B6F00BEAA43 /* NetworkEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngineTests.swift; sourceTree = "<group>"; };
 		518D518A2715A36100DDF6D5 /* Dev Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dev Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		518D518D2715A36100DDF6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518D518F2715A36100DDF6D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +243,18 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		514EAA3D271C55A400BEAA43 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				514EAA4C271C7FE000BEAA43 /* Endpoint.swift */,
+				514EAA54271C811D00BEAA43 /* ITunesEndpoint.swift */,
+				514EAA85271C932900BEAA43 /* ITunesEndpointTests.swift */,
+				514EAA8A271C968A00BEAA43 /* NetworkEngine.swift */,
+				514EAA8F271C9B6F00BEAA43 /* NetworkEngineTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		518D51812715A36100DDF6D5 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +280,7 @@
 		518D518C2715A36100DDF6D5 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				514EAA3D271C55A400BEAA43 /* Networking */,
 				518D518D2715A36100DDF6D5 /* AppDelegate.swift */,
 				518D51992715A36400DDF6D5 /* Assets.xcassets */,
 				514EA8FD2717092800BEAA43 /* Configurations */,
@@ -414,7 +439,6 @@
 					};
 					518D51A22715A36400DDF6D5 = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 518D51892715A36100DDF6D5;
 					};
 					518D51AD2715A36400DDF6D5 = {
 						CreatedOnToolsVersion = 12.4;
@@ -613,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514EAA4D271C7FE100BEAA43 /* Endpoint.swift in Sources */,
 				514EAA2B271A034E00BEAA43 /* AppCoordinator.swift in Sources */,
 				518D51922715A36100DDF6D5 /* ViewController.swift in Sources */,
 				518D51982715A36100DDF6D5 /* Template.xcdatamodeld in Sources */,
@@ -621,7 +646,9 @@
 				514EA988271825EF00BEAA43 /* L10n-Constants.swift in Sources */,
 				518D51902715A36100DDF6D5 /* SceneDelegate.swift in Sources */,
 				514EA9F327186CFC00BEAA43 /* Coordinator.swift in Sources */,
+				514EAA55271C811D00BEAA43 /* ITunesEndpoint.swift in Sources */,
 				514EA8B62716B18D00BEAA43 /* SecretConfig.generated.swift in Sources */,
+				514EAA8B271C968A00BEAA43 /* NetworkEngine.swift in Sources */,
 				518D52872715BFF100DDF6D5 /* Environment.swift in Sources */,
 				514EA9B12718291C00BEAA43 /* Fonts.swift in Sources */,
 				514EA989271825EF00BEAA43 /* Assets.swift in Sources */,
@@ -632,6 +659,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514EAA86271C932900BEAA43 /* ITunesEndpointTests.swift in Sources */,
+				514EAA71271C8F3B00BEAA43 /* ITunesEndpoint.swift in Sources */,
+				514EAA90271C9B7000BEAA43 /* NetworkEngineTests.swift in Sources */,
+				514EAA76271C908300BEAA43 /* Endpoint.swift in Sources */,
 				518D51A82715A36400DDF6D5 /* TemplateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -852,7 +883,6 @@
 			baseConfigurationReference = B0FAFE102D306725DE44697C /* Pods-TemplateTests.dev debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8X44V8282;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
@@ -866,7 +896,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = "Dev Debug";
 		};
@@ -875,7 +904,6 @@
 			baseConfigurationReference = E25437BECB4C9362BB787007 /* Pods-TemplateTests.dev release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8X44V8282;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
@@ -889,7 +917,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = "Dev Release";
 		};
@@ -1026,7 +1053,6 @@
 			baseConfigurationReference = 9724D7FB0B882188EABAD22B /* Pods-TemplateTests.qa debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8X44V8282;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
@@ -1040,7 +1066,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = "Qa Debug";
 		};
@@ -1156,7 +1181,6 @@
 			baseConfigurationReference = 8A7C1AAF94AC1DAA7CA1F5A8 /* Pods-TemplateTests.prod debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8X44V8282;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
@@ -1170,7 +1194,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = "Prod Debug";
 		};
@@ -1280,7 +1303,6 @@
 			baseConfigurationReference = B0DA393AEC6671D22BA8AC5F /* Pods-TemplateTests.qa release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8X44V8282;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
@@ -1294,7 +1316,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = "Qa Release";
 		};
@@ -1404,7 +1425,6 @@
 			baseConfigurationReference = C4F9A63C0FF6381D30CD21BC /* Pods-TemplateTests.prod release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8X44V8282;
 				INFOPLIST_FILE = TemplateTests/Info.plist;
@@ -1418,7 +1438,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template.app/Template";
 			};
 			name = "Prod Release";
 		};

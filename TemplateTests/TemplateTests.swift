@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Template
+
 
 class TemplateTests: XCTestCase {
 
