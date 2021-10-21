@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5113A21A271EFB5400982852 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EAA8A271C968A00BEAA43 /* NetworkEngine.swift */; };
+		5113A220271EFCA000982852 /* ItunesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113A21F271EFCA000982852 /* ItunesSearchResult.swift */; };
+		5113A224271EFF0800982852 /* ItunesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113A21F271EFCA000982852 /* ItunesSearchResult.swift */; };
+		5113A237271F1A1300982852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518D51992715A36400DDF6D5 /* Assets.xcassets */; };
+		511D2F162721A9B6002E9658 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D2F152721A9B6002E9658 /* ErrorTypes.swift */; };
+		511D2F1E2721D30D002E9658 /* TestURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D2F1D2721D30D002E9658 /* TestURLProtocol.swift */; };
+		511D2F252721D35D002E9658 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D2F152721A9B6002E9658 /* ErrorTypes.swift */; };
 		514EA8B62716B18D00BEAA43 /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */; };
 		514EA8EB2716FAC600BEAA43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 514EA8E92716FAC600BEAA43 /* Localizable.strings */; };
 		514EA988271825EF00BEAA43 /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA986271825EE00BEAA43 /* L10n-Constants.swift */; };
@@ -72,6 +79,9 @@
 		17E2F1FC442FE550F92E159A /* Pods-Template-TemplateUITests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template-TemplateUITests.dev release.xcconfig"; path = "Target Support Files/Pods-Template-TemplateUITests/Pods-Template-TemplateUITests.dev release.xcconfig"; sourceTree = "<group>"; };
 		3B3CDBAAB017BCF595321BDC /* Pods-Template.prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.prod debug.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.prod debug.xcconfig"; sourceTree = "<group>"; };
 		41A9F555498A2987B4C6B71A /* Pods-Template.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.dev release.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.dev release.xcconfig"; sourceTree = "<group>"; };
+		5113A21F271EFCA000982852 /* ItunesSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchResult.swift; sourceTree = "<group>"; };
+		511D2F152721A9B6002E9658 /* ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
+		511D2F1D2721D30D002E9658 /* TestURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLProtocol.swift; sourceTree = "<group>"; };
 		514EA8452715D89200BEAA43 /* SecretConfig.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
 		514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		514EA8DD2716F6C400BEAA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -169,6 +179,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5113A21E271EFBED00982852 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5113A21F271EFCA000982852 /* ItunesSearchResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		514EA89D2715E3CC00BEAA43 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +269,7 @@
 				514EAA85271C932900BEAA43 /* ITunesEndpointTests.swift */,
 				514EAA8A271C968A00BEAA43 /* NetworkEngine.swift */,
 				514EAA8F271C9B6F00BEAA43 /* NetworkEngineTests.swift */,
+				511D2F1D2721D30D002E9658 /* TestURLProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -280,6 +299,7 @@
 		518D518C2715A36100DDF6D5 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				5113A21E271EFBED00982852 /* Models */,
 				514EAA3D271C55A400BEAA43 /* Networking */,
 				518D518D2715A36100DDF6D5 /* AppDelegate.swift */,
 				518D51992715A36400DDF6D5 /* Assets.xcassets */,
@@ -324,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				518D52862715BFF100DDF6D5 /* Environment.swift */,
+				511D2F152721A9B6002E9658 /* ErrorTypes.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -497,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5113A237271F1A1300982852 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +659,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5113A220271EFCA000982852 /* ItunesSearchResult.swift in Sources */,
+				511D2F162721A9B6002E9658 /* ErrorTypes.swift in Sources */,
 				514EAA4D271C7FE100BEAA43 /* Endpoint.swift in Sources */,
 				514EAA2B271A034E00BEAA43 /* AppCoordinator.swift in Sources */,
 				518D51922715A36100DDF6D5 /* ViewController.swift in Sources */,
@@ -659,9 +683,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5113A224271EFF0800982852 /* ItunesSearchResult.swift in Sources */,
 				514EAA86271C932900BEAA43 /* ITunesEndpointTests.swift in Sources */,
 				514EAA71271C8F3B00BEAA43 /* ITunesEndpoint.swift in Sources */,
+				5113A21A271EFB5400982852 /* NetworkEngine.swift in Sources */,
+				511D2F252721D35D002E9658 /* ErrorTypes.swift in Sources */,
 				514EAA90271C9B7000BEAA43 /* NetworkEngineTests.swift in Sources */,
+				511D2F1E2721D30D002E9658 /* TestURLProtocol.swift in Sources */,
 				514EAA76271C908300BEAA43 /* Endpoint.swift in Sources */,
 				518D51A82715A36400DDF6D5 /* TemplateTests.swift in Sources */,
 			);

@@ -21,7 +21,7 @@ class ITunesEndpointTests: XCTestCase {
         let searchEndpoint = ITunesEndpoint.getSong(searchText: "test")
         XCTAssertEqual(searchEndpoint.scheme, "https")
         XCTAssertEqual(searchEndpoint.baseURL, "itunes.apple.com")
-        XCTAssertEqual(searchEndpoint.path, "search")
+        XCTAssertEqual(searchEndpoint.path, "/search")
         XCTAssertTrue(searchEndpoint.params.contains(URLQueryItem(name: "term", value: "test")))
         XCTAssertEqual(searchEndpoint.method, "get")
     }

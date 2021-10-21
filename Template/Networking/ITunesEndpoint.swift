@@ -9,7 +9,7 @@ import Foundation
 
 enum ITunesEndpoint: Endpoint {
     case getSong(searchText: String)
-    
+    case failure
     var scheme: String {
         switch self {
         default:
@@ -26,13 +26,16 @@ enum ITunesEndpoint: Endpoint {
     
     var path: String {
         switch self {
+        case .failure: return "/fail"
         case .getSong:
-            return "search"
+            return "/search"
         }
     }
     
     var params: [URLQueryItem] {
         switch self {
+        case .failure:
+            return []
         case .getSong(let searchTerm):
             return [URLQueryItem(name: "term", value: searchTerm)]
         }
@@ -40,6 +43,7 @@ enum ITunesEndpoint: Endpoint {
     
     var method: String {
         switch self {
+        case .failure: return "get"
         case .getSong:
             return "get"
         }

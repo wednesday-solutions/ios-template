@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         // Picking up images from generated files so no need for safe unwrapping
+        let iage = UIImage(named: "sjfsdfjs")
+        if let img = iage {
+            print(img)
+        }
         button.setImage(Asset.wednesday.image, for: .normal)
         return button
     }()
@@ -54,6 +58,16 @@ class ViewController: UIViewController {
         // Test swiftLint
 //        var r = "test"
 //        print("r is", r)
+        
+        let networkEngine = NetworkEngine(urlSession: URLSession.shared)
+        networkEngine.request(endpoint: ITunesEndpoint.getSong(searchText: "jack johnson")) { (result: Result<ItunesSearchResult?, Error>) in
+            switch  result {
+            case .failure(let error):
+                print("error is \(error.localizedDescription)")
+            case .success(let result):
+                print("success is \(result?.resultCount)")
+            }
+        }
     }
     
     private func setUpButton() {
