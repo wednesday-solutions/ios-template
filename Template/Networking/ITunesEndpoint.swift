@@ -37,7 +37,7 @@ enum ITunesEndpoint: Endpoint {
         case .failure:
             return []
         case .getSong(let searchTerm):
-            return [URLQueryItem(name: "term", value: searchTerm)]
+            return [URLQueryItem(name: "term", value: searchTerm), URLQueryItem(name: "media", value: "music")]
         }
     }
     

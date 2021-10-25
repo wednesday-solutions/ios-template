@@ -19,21 +19,21 @@ struct ItunesResult: Codable {
     let wrapperType: WrapperType?
     let kind: Kind?
     let artistID, collectionID: Int?
-    let trackID: Int
+    let trackID: Int?
     let artistName: String
     let collectionName: String?
-    let trackName: String
+    let trackName: String?
     let collectionCensoredName: String?
-    let trackCensoredName: String
+    let trackCensoredName: String?
     let artistViewURL, collectionViewURL: String?
-    let trackViewURL: String
-    let previewURL: String
-    let artworkUrl30, artworkUrl60, artworkUrl100: String
-    let collectionPrice, trackPrice: Double
-    let releaseDate: String
-    let collectionExplicitness, trackExplicitness: Explicitness
+    let trackViewURL: String?
+    let previewURL: String?
+    let artworkUrl30, artworkUrl60, artworkUrl100: String?
+    let collectionPrice, trackPrice: Double?
+    let releaseDate: String?
+    let collectionExplicitness, trackExplicitness: Explicitness?
     let discCount, discNumber, trackCount, trackNumber: Int?
-    let trackTimeMillis: Int
+    let trackTimeMillis: Int?
     let country: Country
     let currency: Currency
     let primaryGenreName: String
@@ -68,7 +68,9 @@ struct ItunesResult: Codable {
 }
 
 enum Explicitness: String, Codable {
-    case notExplicit = "notExplicit"
+    case notExplicit
+    case explicit
+    case cleaned
 }
 
 enum Country: String, Codable {
@@ -82,8 +84,10 @@ enum Currency: String, Codable {
 enum Kind: String, Codable {
     case featureMovie = "feature-movie"
     case song = "song"
+    case tvEpisode = "tv-episode"
 }
 
 enum WrapperType: String, Codable {
     case track = "track"
+    case audioBook = "audiobook"
 }

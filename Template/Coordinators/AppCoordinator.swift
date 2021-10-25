@@ -17,14 +17,16 @@ class AppCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
 
     func start() {
         navigationController.delegate = self
-        let rootViewController = ViewController()
+        let itunesApiService = ItunesApiService()
+        let searchViewModel = SearchViewModel(with: itunesApiService)
+        let rootViewController = ViewController(with: searchViewModel)
         // Create separate coordinators as the app grows
         rootViewController.showDetail = { [weak self] in
             self?.showDetail()
         }
+        navigationController.navigationBar.barStyle = .black
         navigationController.pushViewController(rootViewController, animated: false)
     }
-    
     
     private func showDetail() {
         // A new coordinator can be declared here which can take care of the flow 
