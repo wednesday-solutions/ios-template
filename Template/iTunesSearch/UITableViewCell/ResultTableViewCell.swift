@@ -12,6 +12,8 @@ class ResultTableViewCell: UITableViewCell {
     private let resultImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 4.0
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -19,7 +21,7 @@ class ResultTableViewCell: UITableViewCell {
         let lbl = UILabel()
         lbl.numberOfLines = 0
         lbl.textAlignment = .left
-        lbl.font = FontFamily.Roboto.regular.font(size: 16.0)
+        lbl.font = FontFamily.Roboto.regular.font(size: 12.0)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -28,11 +30,11 @@ class ResultTableViewCell: UITableViewCell {
         let lbl = UILabel()
         lbl.numberOfLines = 0
         lbl.textAlignment = .left
-        lbl.font = FontFamily.Roboto.regular.font(size: 12.0)
+        lbl.font = FontFamily.Roboto.regular.font(size: 10.0)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -86,5 +88,4 @@ class ResultTableViewCell: UITableViewCell {
             }
         }
     }
-
 }

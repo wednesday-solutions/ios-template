@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         // Add localization for this string
-        searchController.searchBar.placeholder = "Search artists/songs"
+        searchController.searchBar.placeholder = L10n.searchSongs
         searchController.searchBar.autocapitalizationType = .allCharacters
         return searchController
     }()
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         ])
         addSearchBarToNavBar()
         // add localization for this
-        navigationItem.title = "Search"
+        navigationItem.title = L10n.search
         self.navigationController?.navigationBar.prefersLargeTitles = true
         resultsTableView.dataSource = self
         resultsTableView.delegate = self
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         searchViewModel.reloadData = { [weak self] in
             self?.resultsTableView.reloadData()
         }
-
+        print("itunes \(Environment.iTunesUrl)")
         searchViewModel.passError = { [weak self] error in
             print("show error")
             let label = UILabel()
@@ -101,7 +101,7 @@ extension ViewController: UITableViewDataSource {
         if searchViewModel.itunesResult.isEmpty {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: NoResultTableViewCell.description())
                     as? NoResultTableViewCell else { return UITableViewCell() }
-            let text = searchViewModel.searchedText.isEmpty ?  "You haven't searched anything yet" : "No result found"
+            let text = searchViewModel.searchedText.isEmpty ? L10n.youHavenTSearchedAnythingYet : L10n.noResultsFound
             cell.setTextForResult(text)
             return cell
         }

@@ -20,7 +20,7 @@ enum ITunesEndpoint: Endpoint {
     var baseURL: String {
         switch self {
         default:
-            return "itunes.apple.com"
+            return Environment.iTunesUrl
         }
     }
     

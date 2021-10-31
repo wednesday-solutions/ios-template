@@ -13,7 +13,6 @@ protocol ItunesApiServiceProtocol {
 
 struct ItunesApiService: ItunesApiServiceProtocol {
     func getSongs(for text: String, completion: @escaping (Result<ItunesSearchResult?, Error>) -> Void) {
-        
         let networkEngine = NetworkEngine(urlSession: URLSession.init(configuration: .default))
         let itunesEndpoint = ITunesEndpoint.getSong(searchText: text)
         networkEngine.request(endpoint: itunesEndpoint) { (itunesResult: Result<ItunesSearchResult?, Error>) in

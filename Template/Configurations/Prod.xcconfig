@@ -8,3 +8,4 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 server_url = www.wednesday.is
+itunes_base_url = itunes.apple.com

@@ -10,8 +10,16 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// No results found
+  internal static let noResultsFound = L10n.tr("Localizable", "No results found")
+  /// Search
+  internal static let search = L10n.tr("Localizable", "Search")
+  /// Search Songs
+  internal static let searchSongs = L10n.tr("Localizable", "Search Songs")
   /// Welcome
   internal static let welcome = L10n.tr("Localizable", "Welcome")
+  /// You haven't searched anything yet
+  internal static let youHavenTSearchedAnythingYet = L10n.tr("Localizable", "You haven't searched anything yet")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
