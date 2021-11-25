@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         // Add localization for this string
+        searchController.searchBar.searchTextField.isAccessibilityElement = true
+        searchController.searchBar.searchTextField.accessibilityIdentifier = "songs-search-bar"
         searchController.searchBar.placeholder = L10n.searchSongs
         searchController.searchBar.autocapitalizationType = .allCharacters
         return searchController
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
     
     let resultsTableView: UITableView = {
         let tableView = UITableView()
+        tableView.accessibilityIdentifier = "songs-table-view"
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(NoResultTableViewCell.self, forCellReuseIdentifier: NoResultTableViewCell.description())
         tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.description())
@@ -59,15 +62,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.accessibilityIdentifier = "songs-navigation-bar"
         searchViewModel.reloadData = { [weak self] in
             self?.resultsTableView.reloadData()
         }
         print("itunes \(Environment.iTunesUrl)")
         searchViewModel.passError = { [weak self] error in
             print("show error")
-            let label = UILabel()
-            label.text = "this is an error"
-            self?.resultsTableView.backgroundView = label
+            DispatchQueue.main.async {
+                let label = UILabel()
+                label.text = "this is an error"
+                self?.resultsTableView.backgroundView = label
+            }
+            
         }
     }
     
@@ -107,6 +114,7 @@ extension ViewController: UITableViewDataSource {
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.description())
                 as? ResultTableViewCell else { return UITableViewCell() }
+        cell.accessibilityIdentifier = "myCell_\(indexPath.row)"
         cell.setupSong(with: searchViewModel.itunesResult[indexPath.row], cache: searchViewModel.nsCache)
         return cell
     }

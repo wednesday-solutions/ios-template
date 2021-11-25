@@ -20,12 +20,14 @@ final class NetworkEngine {
         components.host = endpoint.baseURL
         components.path = endpoint.path
         components.queryItems = endpoint.params
+        components.port = endpoint.port
         guard let url = components.url else { return }
         
         var urlRequest = URLRequest(url: url)
         
         urlRequest.httpMethod = endpoint.method
-        
+//        let urlString = "http://localhost:9999/itunes.apple.com/search?term=J&media=music"
+//        let myReq = URLRequest(url: URL(string: urlString)!)
         let dataTask = urlSession.dataTask(with: urlRequest) { (data, response, error) in
             
             guard error == nil else {

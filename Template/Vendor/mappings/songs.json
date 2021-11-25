@@ -1,0 +1,10 @@
+{
+  "request": {
+    	"method": "GET",
+	"url": "/search?term=J&media=music"
+  },
+ "response": {
+	"status": 200,
+	"bodyFileName": "songs.json"
+  }
+}

@@ -23,6 +23,9 @@ class ResultTableViewCell: UITableViewCell {
         lbl.textAlignment = .left
         lbl.font = FontFamily.Roboto.regular.font(size: 12.0)
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.isAccessibilityElement = true
+        lbl.accessibilityLabel = "song-title"
+        lbl.accessibilityIdentifier = "song-title"
         return lbl
     }()
     
@@ -32,6 +35,9 @@ class ResultTableViewCell: UITableViewCell {
         lbl.textAlignment = .left
         lbl.font = FontFamily.Roboto.regular.font(size: 10.0)
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.isAccessibilityElement = true
+        lbl.accessibilityLabel = "song-description"
+        lbl.accessibilityIdentifier = "song-description"
         return lbl
     }()
     

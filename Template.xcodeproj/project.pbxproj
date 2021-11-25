@@ -16,9 +16,8 @@
 		5113A220271EFCA000982852 /* ItunesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113A21F271EFCA000982852 /* ItunesSearchResult.swift */; };
 		5113A224271EFF0800982852 /* ItunesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113A21F271EFCA000982852 /* ItunesSearchResult.swift */; };
 		5113A237271F1A1300982852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518D51992715A36400DDF6D5 /* Assets.xcassets */; };
-		511D2F162721A9B6002E9658 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D2F152721A9B6002E9658 /* ErrorTypes.swift */; };
 		511D2F1E2721D30D002E9658 /* TestURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D2F1D2721D30D002E9658 /* TestURLProtocol.swift */; };
-		511D2F252721D35D002E9658 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D2F152721A9B6002E9658 /* ErrorTypes.swift */; };
+		512E86AD274E639800C08949 /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA986271825EE00BEAA43 /* L10n-Constants.swift */; };
 		514EA8B62716B18D00BEAA43 /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */; };
 		514EA8EB2716FAC600BEAA43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 514EA8E92716FAC600BEAA43 /* Localizable.strings */; };
 		514EA988271825EF00BEAA43 /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA986271825EE00BEAA43 /* L10n-Constants.swift */; };
@@ -88,8 +87,10 @@
 		5111C9812726F5EE0010D84B /* NoResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultTableViewCell.swift; sourceTree = "<group>"; };
 		5111C9862727004B0010D84B /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		5113A21F271EFCA000982852 /* ItunesSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchResult.swift; sourceTree = "<group>"; };
-		511D2F152721A9B6002E9658 /* ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
 		511D2F1D2721D30D002E9658 /* TestURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLProtocol.swift; sourceTree = "<group>"; };
+		514219DD272ED6BE00A382FF /* wiremock-jre8-standalone-2.31.0.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "wiremock-jre8-standalone-2.31.0.jar"; sourceTree = "<group>"; };
+		514219E8272ED8A900A382FF /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
+		514219F2272ED8B400A382FF /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		514EA8452715D89200BEAA43 /* SecretConfig.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
 		514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		514EA8DD2716F6C400BEAA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -214,6 +215,32 @@
 			path = iTunesSearch;
 			sourceTree = "<group>";
 		};
+		514219DB272ED6BE00A382FF /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				514219DC272ED6BE00A382FF /* __files */,
+				514219DD272ED6BE00A382FF /* wiremock-jre8-standalone-2.31.0.jar */,
+				514219DE272ED6BE00A382FF /* mappings */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		514219DC272ED6BE00A382FF /* __files */ = {
+			isa = PBXGroup;
+			children = (
+				514219E8272ED8A900A382FF /* songs.json */,
+			);
+			path = __files;
+			sourceTree = "<group>";
+		};
+		514219DE272ED6BE00A382FF /* mappings */ = {
+			isa = PBXGroup;
+			children = (
+				514219F2272ED8B400A382FF /* songs.json */,
+			);
+			path = mappings;
+			sourceTree = "<group>";
+		};
 		514EA89D2715E3CC00BEAA43 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +353,7 @@
 		518D518C2715A36100DDF6D5 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				514219DB272ED6BE00A382FF /* Vendor */,
 				511D2F292721D505002E9658 /* iTunesSearch */,
 				5113A21E271EFBED00982852 /* Models */,
 				514EAA3D271C55A400BEAA43 /* Networking */,
@@ -371,7 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				518D52862715BFF100DDF6D5 /* Environment.swift */,
-				511D2F152721A9B6002E9658 /* ErrorTypes.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -688,7 +715,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5113A220271EFCA000982852 /* ItunesSearchResult.swift in Sources */,
-				511D2F162721A9B6002E9658 /* ErrorTypes.swift in Sources */,
 				514EAA4D271C7FE100BEAA43 /* Endpoint.swift in Sources */,
 				514EAA2B271A034E00BEAA43 /* AppCoordinator.swift in Sources */,
 				518D51922715A36100DDF6D5 /* ViewController.swift in Sources */,
@@ -718,7 +744,6 @@
 				514EAA86271C932900BEAA43 /* ITunesEndpointTests.swift in Sources */,
 				514EAA71271C8F3B00BEAA43 /* ITunesEndpoint.swift in Sources */,
 				5113A21A271EFB5400982852 /* NetworkEngine.swift in Sources */,
-				511D2F252721D35D002E9658 /* ErrorTypes.swift in Sources */,
 				514EAA90271C9B7000BEAA43 /* NetworkEngineTests.swift in Sources */,
 				511D2F1E2721D30D002E9658 /* TestURLProtocol.swift in Sources */,
 				514EAA76271C908300BEAA43 /* Endpoint.swift in Sources */,
@@ -731,6 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512E86AD274E639800C08949 /* L10n-Constants.swift in Sources */,
 				518D51B32715A36400DDF6D5 /* TemplateUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

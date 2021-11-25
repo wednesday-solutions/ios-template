@@ -13,14 +13,14 @@ enum ITunesEndpoint: Endpoint {
     var scheme: String {
         switch self {
         default:
-            return "https"
+            return  CommandLine.arguments.contains("-debugServer") ? "http" : "https"
         }
     }
     
     var baseURL: String {
         switch self {
         default:
-            return Environment.iTunesUrl
+            return  CommandLine.arguments.contains("-debugServer") ? "localhost" : "itunes.apple.com"
         }
     }
     
@@ -29,6 +29,13 @@ enum ITunesEndpoint: Endpoint {
         case .failure: return "/fail"
         case .getSong:
             return "/search"
+        }
+    }
+    
+    var port: Int? {
+        switch self {
+        default:
+            return CommandLine.arguments.contains("-debugServer") ? 9999 : nil
         }
     }
     

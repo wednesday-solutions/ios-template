@@ -21,4 +21,6 @@ protocol Endpoint {
     var params: [URLQueryItem] { get }
     
     var method: String { get }
+    
+    var port: Int? { get }
 }
