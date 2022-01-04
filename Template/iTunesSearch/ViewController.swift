@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var showDetail: (() -> Void)?
+    var showDetail: ((ItunesResult) -> Void)?
     let searchViewModel: SearchViewModel
     private lazy var songSearchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -81,10 +81,6 @@ class ViewController: UIViewController {
     private func addSearchBarToNavBar() {
         navigationItem.searchController = songSearchController
     }
-    
-    @objc func onWednesdayButtonSelected(_ button: UIButton) {
-        showDetail?()
-    }
 }
 
 extension ViewController: UISearchResultsUpdating {
@@ -126,5 +122,12 @@ extension ViewController: UITableViewDelegate {
             return tableView.frame.size.height
         }
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let showDetail = showDetail, !searchViewModel.itunesResult.isEmpty {
+            let result = searchViewModel.itunesResult[indexPath.row]
+            showDetail(result)
+        }
     }
 }
