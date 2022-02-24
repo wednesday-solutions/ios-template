@@ -9,7 +9,7 @@ excluded:
 - SwiftLint/Common/3rdPartyLib
 line_length:
     warning: 150
-    error: 200
+    error: 100
     ignores_function_declarations: true
     ignores_comments: true
     ignores_urls: true
