@@ -2,7 +2,7 @@
 //  TemplateUITests.swift
 //  TemplateUITests
 //
-//  Created by Rameez Khan on 12/10/21.
+//  Created by Apple on 03/03/22.
 //
 
 import XCTest
@@ -30,47 +30,9 @@ class TemplateUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
-    func testIfTableViewIsLoaded() {        
-        let app = XCUIApplication()
-        app.launchArguments = ["-debugServer"]
-        app.launch()
-        let songsTableViewTable = app.tables["songs-table-view"]
-        XCTAssertNotNil(songsTableViewTable)
-    }
-    
-    func testAfterTextEnteredInSearchCancelButtonShown() {
-        let app = XCUIApplication()
-        app.launchArguments = ["-debugServer"]
-        app.launch()
-        
-        let songsTableViewTable = app.tables["songs-table-view"]
-        songsTableViewTable.swipeDown()
-        app.searchFields.firstMatch.tap()
-        
-        app.searchFields.firstMatch.typeText("J")
-        let cell = songsTableViewTable.cells.firstMatch.label
-        print(cell)
-        XCTAssertGreaterThanOrEqual(songsTableViewTable.cells.count, 2 )
-    }
-    
-    func testAfterSearchClickingOnCellShouldNavigateToDetailView() {
-        let app = XCUIApplication()
-        app.launchArguments = ["-debugServer"]
-        app.launch()
-        
-        let songsTableViewTable = app.tables["songs-table-view"]
-        songsTableViewTable.swipeDown()
-        app.searchFields.firstMatch.tap()
-        
-        app.searchFields.firstMatch.typeText("J")
-        songsTableViewTable.cells.firstMatch.tap()
-       
-    }
-
 
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
+        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
