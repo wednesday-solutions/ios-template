@@ -10,7 +10,7 @@ An enterprise iOS template application showcasing - App architecture pattern(MVV
 ### Requirements
 * [Cocoapods](https://cocoapods.org/)
 * [Fastlane](https://fastlane.tools/)
-* [SwiftLinit]
+* [SwiftLinit](https://github.com/realm/SwiftLint)
 ### Getting started
 * Clone Repo
 * Checkout `develop` brach
@@ -27,7 +27,19 @@ This architecture is combination of best practices, which help to write code tha
 
 ### Code Tools
 #### [Sourcery](https://github.com/krzysztofzablocki/Sourcery)
-Sourcery is auto code genration tool that is used for storing the keys used in the application securely by generating them at build time. You'll have to manually add a shell script named `secrets-vars.sh` with below content, Make sure the file is in the root folder of the project along side `xcworkspace`.
-![secrets](readme_resources/secrets-vars.png)
-you can find the script named `Generate SecretConfig.swift` in Build Phases of the main app target. Once built successfully you can find `SecretConfig.generated.swift` file generated under `Helpers` folder. *If not shown open the folder in finder window it will be there, just drag and drop it under Helpers folder*. This files will contain the secrets for usage in app. `secrets-vars.sh` and `SecretConfig.generated.swift` are both added to `.gitignore`.
+Sourcery is a code generator for Swift language, built on top of Apple's own SwiftSyntax. It extends the language abstractions to allow you to generate boilerplate code automatically.
+Here we have used this tool to safeguard the app secrets, by adding them to the project at build time. 
+To run the project you will have to create and shell script with name `secrets-vars.sh` and add below content to it. Once added place the move this file to root of project directory.
+//Add Image Here
+In build phases you can see 
 #### [SwiftGen](https://github.com/SwiftGen/SwiftGen)
+SwiftGen is a tool to automatically generate Swift code for resources of your projects (like images, localised strings, etc), to make them type-safe to use.
+There are multiple benefits in using this:
+* Avoid any risk of typo when using a String
+* Free auto-completion
+* Avoid the risk of using a non-existing asset name
+* All this will be ensured by the compiler and thus avoid the risk of crashing at runtime
+
+You can see the `swiftgen.yml` file at the root of project directory, this files defines the inputs from where the resourced liks fonts, strings, images to pick from and output files where the swift code to be added for there resourceds to be accessed in type safe manner. You can read more about how to configure, and various configuration optiones [here](https://github.com/SwiftGen/SwiftGen/blob/stable/Documentation/ConfigFile.md). 
+#### [SwiftLint](https://github.com/realm/SwiftLint)
+A tool to enforce Swift style and conventions, that helps to maintain the uniform code structure and style, you can read more about the standard rules [here](https://github.com/raywenderlich/swift-style-guide). This rules can be tweaked as needed by editing `.swiftlint.yml` files that gets generated when installling swiftlint. You also need to run a script that maked sures all the rules and followed, if not it will show warning or errors based on rules specified in `swiftlint.yml.` You can find the script for swiftlint in `Build Phases`
