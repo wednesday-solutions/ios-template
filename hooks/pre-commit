@@ -6,10 +6,9 @@ for file in $files; do
 
 	if [ $count -gt 0 ]
 	then
-        	echo "Please correct swift-lint errors"
-        	echo "\n--------------------------------\n"
+        	echo "Please correct swift-lint errors $file"
         	swiftlint lint $file --quiet
-        	exit 1
+					echo "\n--------------------------------\n"
 	else
         	echo "Code quality check done."
         	echo "\nThank you for keeping the code clean."
