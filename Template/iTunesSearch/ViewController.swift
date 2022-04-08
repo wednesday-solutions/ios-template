@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     var showDetail: ((ItunesResult) -> Void)?
     let searchViewModel: SearchViewModel
+    let x = 0
     private lazy var songSearchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
         tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.description())
         return tableView
     }()
-    
+
     init(with viewModel: SearchViewModel) {
         self.searchViewModel = viewModel
         super.init(nibName: nil, bundle: nil)
