@@ -8,7 +8,7 @@ on:
       - develop
   pull_request:
     branches:
-      - master
+      - develop
 jobs:
   SwiftLint:
     runs-on: ubuntu-latest
