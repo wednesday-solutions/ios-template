@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - master
+jobs:
+  SwiftLint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.0.1
+
+  Test:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: List available Xcode versions
+        run: ls /Applications | grep Xcode
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
+      - name: Go to Vendor directory and start wiremock
+        run: cd Template/Vendor && java -jar wiremock-jre8-standalone-2.31.0.jar --port 9999 --verbose
+      - name: Run unit tests
+        run: xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.2' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
