@@ -1,0 +1,17 @@
+#!/bin/bash
+
+files=`git diff --cached --name-only | grep -E '.swift$' `
+for file in $files; do
+    count=`swiftlint lint $file --enable-all-rules --quiet | wc -l | awk '{print $1}' | bc`
+    if [ $count -gt 0 ]
+    then
+        echo "Please correct swift-lint errors $file"
+        swiftlint lint $file --quiet
+        echo "\n--------------------------------\n"
+    else
+        echo "Code quality check done."
+        echo "\nThank you for keeping the code clean."
+        echo "\nCommiting code"
+        exit 0
+    fi
+done
