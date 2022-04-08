@@ -218,8 +218,8 @@
 		514219DB272ED6BE00A382FF /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				514219DC272ED6BE00A382FF /* __files */,
 				514219DD272ED6BE00A382FF /* wiremock-jre8-standalone-2.31.0.jar */,
+				514219DC272ED6BE00A382FF /* __files */,
 				514219DE272ED6BE00A382FF /* mappings */,
 			);
 			path = Vendor;
