@@ -10,7 +10,7 @@ An enterprise iOS template application showcasing - App architecture pattern(MVV
 ### Requirements
 * [Cocoapods](https://cocoapods.org/)
 * [Fastlane](https://fastlane.tools/)
-* [SwiftLinit]
+* [SwiftLint](https://github.com/realm/SwiftLint)
 ### Getting started
 * Clone Repo
 * Checkout `develop` brach
@@ -19,9 +19,9 @@ An enterprise iOS template application showcasing - App architecture pattern(MVV
 
 ### MVVM-Coordinator-RxSwift Architecture
 #### Resources
-* [Coordinator pattern](hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-in-ios-apps)
+* [Coordinator pattern](https://hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-in-ios-apps)
 * [MVVM-Coordinator-RxSwift](https://medium.com/hackernoon/how-to-use-mvvm-coordinators-and-rxswift-7364370b7b95)
-* [RxSwift](hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-in-ios-apps)
+* [RxSwift](https://hackingwithswift.com/articles/71/how-to-use-the-coordinator-pattern-in-ios-apps)
 
 This architecture is combination of best practices, which help to write code that is easier to read, reactive, testable and scalable.
 
