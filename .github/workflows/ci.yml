@@ -27,9 +27,9 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
       - uses: docker-practice/actions-setup-docker@master
       - run: |
-        set -x
-        docker version
-        docker run --rm hello-world
+          set -x
+          docker version
+          docker run --rm hello-world
       - name: Go to Vendor directory and start wiremock
         run: docker run -d --name wiremock-container \ -p 8080:8080 \ -v $PWD/Template/Vendor:/home/wiremock \ wiremock/wiremock
       - name: Run unit tests
