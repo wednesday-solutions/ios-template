@@ -25,7 +25,12 @@ jobs:
         run: ls /Applications | grep Xcode
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
+      - uses: docker-practice/actions-setup-docker@master
+      - run: |
+        set -x
+        docker version
+        docker run --rm hello-world
       - name: Go to Vendor directory and start wiremock
-        run: cd Template/Vendor && java -jar wiremock-jre8-standalone-2.31.0.jar --port 9999 --verbose
+        run: docker run -d --name wiremock-container \ -p 8080:8080 \ -v $PWD/Template/Vendor:/home/wiremock \ wiremock/wiremock
       - name: Run unit tests
         run: xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.2' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
