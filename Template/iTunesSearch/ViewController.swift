@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     var showDetail: ((ItunesResult) -> Void)?
     let searchViewModel: SearchViewModel
-    
     private lazy var songSearchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
