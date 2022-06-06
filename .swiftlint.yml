@@ -33,7 +33,7 @@ nesting:
     type_level:   
         warning: 4
         error: 10
-    statement_level:
+    function_level:
         warning: 5
         error: 10
 reporter: "xcode"
