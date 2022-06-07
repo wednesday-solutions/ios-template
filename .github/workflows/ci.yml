@@ -35,6 +35,6 @@ jobs:
       - name: Go to Vendor directory and start wiremock
         run: cd Template/Vendor && docker run -d --name wiremock-container -p 8080:8080 -v $PWD:/home/wiremock wiremock/wiremock
       - name: Install dependencies
-        run: echo `pwd` && cd ../.. && pod install
+        run: echo `pwd` && echo `ls` && cd ../.. && pod install
       - name: Run unit tests
         run: xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.2' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
