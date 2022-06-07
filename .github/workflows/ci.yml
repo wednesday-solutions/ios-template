@@ -25,6 +25,8 @@ jobs:
         run: ls /Applications | grep Xcode
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
+      - name: Remove docker deps
+        run: rm -rf ~/Library/Group\ Containers/group.com.docker && rm -rf ~/Library/Containers/com.docker.docker && rm -rf ~/.docker
       - uses: docker-practice/actions-setup-docker@master
       - run: |
           set -x
