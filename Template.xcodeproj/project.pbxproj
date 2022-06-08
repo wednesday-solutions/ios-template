@@ -88,7 +88,6 @@
 		5111C9862727004B0010D84B /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		5113A21F271EFCA000982852 /* ItunesSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchResult.swift; sourceTree = "<group>"; };
 		511D2F1D2721D30D002E9658 /* TestURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLProtocol.swift; sourceTree = "<group>"; };
-		514219DD272ED6BE00A382FF /* wiremock-jre8-standalone-2.31.0.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "wiremock-jre8-standalone-2.31.0.jar"; sourceTree = "<group>"; };
 		514219E8272ED8A900A382FF /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		514219F2272ED8B400A382FF /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		514EA8452715D89200BEAA43 /* SecretConfig.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
@@ -218,7 +217,6 @@
 		514219DB272ED6BE00A382FF /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				514219DD272ED6BE00A382FF /* wiremock-jre8-standalone-2.31.0.jar */,
 				514219DC272ED6BE00A382FF /* __files */,
 				514219DE272ED6BE00A382FF /* mappings */,
 			);

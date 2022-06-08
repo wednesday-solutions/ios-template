@@ -37,4 +37,6 @@ jobs:
       - name: Install dependencies
         run: echo `pwd` && echo `ls` && pod install
       - name: Run unit tests
+        env:
+          API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
         run: xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
