@@ -1,4 +1,5 @@
 *.xcworkspace
+xcov_output/
 Pods/
 secrets-vars.sh
 *.generated.swift
