@@ -39,6 +39,6 @@ jobs:
       - name: Run sourcery to generate secrets file
         env:
           API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
-        run:  echo ${PODS_ROOT} && ${PODS_ROOT}/Sourcery/bin/sourcery --templates ./Template/Helpers/ --output ./Template/Helpers/ --sources ./Template/ --args api_secret_key=$API_SECRET_KEY
+        run:  echo `ls` && ${PODS_ROOT}/Sourcery/bin/sourcery --templates ./Template/Helpers/ --output ./Template/Helpers/ --sources ./Template/ --args api_secret_key=$API_SECRET_KEY
       - name: Run unit tests
         run: xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
