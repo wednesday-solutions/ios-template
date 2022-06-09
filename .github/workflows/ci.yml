@@ -36,7 +36,9 @@ jobs:
         run: cd Template/Vendor && docker run -d --name wiremock-container -p 8080:8080 -v $PWD:/home/wiremock wiremock/wiremock
       - name: Install dependencies
         run: echo `pwd` && echo `ls` && pod install
-      - name: Run unit tests
+      - name: Run sourcery to generate secrets file
         env:
           API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
+        run:  echo ${PODS_ROOT} && ${PODS_ROOT}/Sourcery/bin/sourcery --templates ./Template/Helpers/ --output ./Template/Helpers/ --sources ./Template/ --args api_secret_key=$API_SECRET_KEY
+      - name: Run unit tests
         run: xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
