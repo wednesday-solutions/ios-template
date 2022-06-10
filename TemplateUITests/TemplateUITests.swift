@@ -49,9 +49,9 @@ class TemplateUITests: XCTestCase {
         app.searchFields.firstMatch.tap()
         
         app.searchFields.firstMatch.typeText("J")
+        
         let cell = songsTableViewTable.cells.firstMatch.label
-        print(cell)
-        XCTAssertGreaterThanOrEqual(songsTableViewTable.cells.count, 2 )
+        XCTAssertGreaterThanOrEqual(songsTableViewTable.cells.count, 2)
     }
     
     func testAfterSearchClickingOnCellShouldNavigateToDetailView() {
@@ -66,15 +66,5 @@ class TemplateUITests: XCTestCase {
         app.searchFields.firstMatch.typeText("J")
         songsTableViewTable.cells.firstMatch.tap()
        
-    }
-
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
     }
 }

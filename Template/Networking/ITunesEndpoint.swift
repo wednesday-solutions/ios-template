@@ -35,7 +35,7 @@ enum ITunesEndpoint: Endpoint {
     var port: Int? {
         switch self {
         default:
-            return CommandLine.arguments.contains("-debugServer") ? 9999 : nil
+            return CommandLine.arguments.contains("-debugServer") ? 8080 : nil
         }
     }
     
