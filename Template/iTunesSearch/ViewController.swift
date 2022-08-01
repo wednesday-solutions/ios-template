@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.description())
         return tableView
     }()
-    
+
     init(with viewModel: SearchViewModel) {
         self.searchViewModel = viewModel
         super.init(nibName: nil, bundle: nil)

@@ -19,15 +19,24 @@ jobs:
 
   Test:
     runs-on: macOS-latest
+
+    services: 
+      wiremock:
+        image: wiremock/wiremock:2.33.2
+        ports: 
+          - 8080:8080
+
     steps:
       - uses: actions/checkout@v1
       - name: List available Xcode versions
         run: ls /Applications | grep Xcode
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
-      - name: Go to Vendor directory, start wiremock and run tests
-        run: |
-          cd Template/Vendor &&
-          java -jar wiremock-jre8-standalone-2.31.0.jar --port 9999 --verbose &&
-          cd ../.. && 
-          xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.2' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
+      - name: Install dependencies
+        run: echo `pwd` && echo `ls` && pod install
+      - name: Run sourcery to generate secrets file
+        env:
+          API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
+        run: Pods/Sourcery/bin/sourcery --templates ./Template/Helpers/ --output ./Template/Helpers/ --sources ./Template/ --args api_secret_key=$API_SECRET_KEY
+      - name: Run unit tests
+        run: xcodebuild test -scheme Dev\ Template -workspace Template.xcworkspace  -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0' -enableCodeCoverage YES | xcpretty && exit ${PIPESTATUS[0]}
