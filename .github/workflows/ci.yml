@@ -32,15 +32,6 @@ jobs:
         run: ls /Applications | grep Xcode
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
-      # - name: Remove docker deps
-      #   run: rm -rf ~/Library/Group\ Containers/group.com.docker && rm -rf ~/Library/Containers/com.docker.docker && rm -rf ~/.docker
-      # - uses: docker-practice/actions-setup-docker@master
-      # - run: |
-      #     set -x
-      #     docker version
-      #     docker run --rm hello-world
-      # - name: Go to Vendor directory and start wiremock
-      #   run: cd Template/Vendor && docker run -d --name wiremock-container -p 8080:8080 -v $PWD:/home/wiremock wiremock/wiremock
       - name: Install dependencies
         run: echo `pwd` && echo `ls` && pod install
       - name: Run sourcery to generate secrets file
