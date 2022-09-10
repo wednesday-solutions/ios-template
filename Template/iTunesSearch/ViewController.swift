@@ -8,13 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: - Properties
     var showDetail: ((ItunesResult) -> Void)?
     let searchViewModel: SearchViewModel
     
+    //MARK: - Views
     private let userWelcomeMessage: UILabel = {
         let welcomeLabel = UILabel()
         welcomeLabel.isAccessibilityElement = true
         welcomeLabel.accessibilityIdentifier = "user-welcome-message-label"
+        welcomeLabel.font = FontFamily.Roboto.medium.font(size: 16)
         welcomeLabel.text = "Welcome Sandesh!"
         welcomeLabel.textColor = .white
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -26,10 +30,23 @@ class ViewController: UIViewController {
         headerLabel.isAccessibilityElement = true
         headerLabel.accessibilityIdentifier = "secondary-header-label"
         headerLabel.text = "What would you like to hear?"
-        headerLabel.font = .systemFont(ofSize: 12)
+        headerLabel.font = FontFamily.Roboto.regular.font(size: 14)
         headerLabel.textColor = .white
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
         return headerLabel
+    }()
+    
+    private lazy var resultsTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.accessibilityIdentifier = "songs-table-view"
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.backgroundColor = .appBackgroundColor
+        tableView.separatorStyle = .none
+        tableView.register(NoResultTableViewCell.self, forCellReuseIdentifier: NoResultTableViewCell.identifier)
+        tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.identifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
     }()
     
     private lazy var searchBar: UISearchBar = {
@@ -56,7 +73,7 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(userWelcomeMessage)
         stackView.addArrangedSubview(secondaryHeaderLabel)
         stackView.addArrangedSubview(searchBar)
-
+        
         NSLayoutConstraint.activate([
             userWelcomeMessage.heightAnchor.constraint(equalToConstant: 18),
             userWelcomeMessage.leftAnchor.constraint(equalTo: stackView.leftAnchor, constant: 8),
@@ -71,16 +88,8 @@ class ViewController: UIViewController {
         return stackView
     }()
     
-    let resultsTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.accessibilityIdentifier = "songs-table-view"
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .appBackgroundColor
-        tableView.register(NoResultTableViewCell.self, forCellReuseIdentifier: NoResultTableViewCell.description())
-        tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.description())
-        return tableView
-    }()
     
+    //MARK: - Lifecycle Methods
     init(with viewModel: SearchViewModel) {
         self.searchViewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -92,37 +101,10 @@ class ViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        // add localization for this
         addHeaderView()
         addTableView()
-        navigationItem.title = L10n.search
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        resultsTableView.dataSource = self
-        resultsTableView.delegate = self
     }
     
-    private func addHeaderView() {
-        view.addSubview(headerView)
-        NSLayoutConstraint.activate([
-            headerView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            headerView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            headerView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 76)
-        ])
-    }
-    
-    private func addTableView() {
-        view.addSubview(resultsTableView)
-        headerView.translatesAutoresizingMaskIntoConstraints =  false
-        NSLayoutConstraint.activate([
-            // tableview constraints
-            resultsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            resultsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            resultsTableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
-            resultsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -144,23 +126,32 @@ class ViewController: UIViewController {
         view.backgroundColor = .appBackgroundColor
     }
     
-    private func addSearchBarToNavBar() {
-        //navigationItem.searchController = songSearchController
+    //MARK: - Subview Setup
+    private func addHeaderView() {
+        view.addSubview(headerView)
+        NSLayoutConstraint.activate([
+            headerView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            headerView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            headerView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 76)
+        ])
     }
+    
+    private func addTableView() {
+        view.addSubview(resultsTableView)
+        headerView.translatesAutoresizingMaskIntoConstraints =  false
+        NSLayoutConstraint.activate([
+            // tableview constraints
+            resultsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            resultsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            resultsTableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 4),
+            resultsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+    
 }
 
-extension ViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        searchViewModel.searchedText = searchController.searchBar.text ?? ""
-        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-            searchViewModel.getSearchResult(searchText)
-        } else {
-            searchViewModel.itunesResult = []
-            resultsTableView.reloadData()
-        }
-    }
-}
-
+//MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchViewModel.itunesResult.isEmpty ? 1 : searchViewModel.itunesResult.count
@@ -168,13 +159,13 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchViewModel.itunesResult.isEmpty {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: NoResultTableViewCell.description())
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: NoResultTableViewCell.identifier)
                     as? NoResultTableViewCell else { return UITableViewCell() }
             let text = searchViewModel.searchedText.isEmpty ? L10n.youHavenTSearchedAnythingYet : L10n.noResultsFound
             cell.setTextForResult(text)
             return cell
         }
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.description())
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.identifier)
                 as? ResultTableViewCell else { return UITableViewCell() }
         cell.accessibilityIdentifier = "myCell_\(indexPath.row)"
         cell.setupSong(with: searchViewModel.itunesResult[indexPath.row], cache: searchViewModel.nsCache)
@@ -182,12 +173,13 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if searchViewModel.itunesResult.isEmpty {
             return tableView.frame.size.height
         }
-        return UITableView.automaticDimension
+        return ResultTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -198,7 +190,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-
+//MARK: - UISearchBarDelegate
 extension ViewController: UISearchBarDelegate {
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         return true

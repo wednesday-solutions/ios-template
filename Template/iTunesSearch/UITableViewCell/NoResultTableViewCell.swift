@@ -9,11 +9,14 @@ import UIKit
 
 class NoResultTableViewCell: UITableViewCell {
     
+    static let identifier = "NoResultTableViewCellIndetifier"
+    //MARK: - Views
     private let noResultLabel: UILabel = {
         let lbl = UILabel()
         lbl.numberOfLines = 0
         lbl.textAlignment = .center
         lbl.font = FontFamily.Roboto.black.font(size: 24.0)
+        lbl.textColor = .white
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -28,6 +31,8 @@ class NoResultTableViewCell: UITableViewCell {
     }
     
     private func setupView() {
+        backgroundColor = .appBackgroundColor
+        selectionStyle = .none
         addSubview(noResultLabel)
         NSLayoutConstraint.activate([
             noResultLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8.0),

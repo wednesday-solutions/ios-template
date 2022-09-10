@@ -9,6 +9,9 @@ import UIKit
 
 class ResultTableViewCell: UITableViewCell {
     
+    static let identifier = "ResultTableViewCellIndetifier"
+    static let cellHeight: CGFloat = 83 // 75 resultImage height + top & bottom padding of 4
+    //MARK: - Views
     private let resultImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,55 +22,73 @@ class ResultTableViewCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.numberOfLines = 0
         lbl.textAlignment = .left
-        lbl.font = FontFamily.Roboto.regular.font(size: 12.0)
+        lbl.font = FontFamily.Roboto.medium.font(size: 18.0)
+        lbl.numberOfLines = 1
+        lbl.lineBreakMode = .byTruncatingTail
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.isAccessibilityElement = true
         lbl.accessibilityLabel = "song-title"
         lbl.accessibilityIdentifier = "song-title"
+        lbl.textColor = .white
         return lbl
     }()
     
     private let descriptionLabel: UILabel = {
         let lbl = UILabel()
-        lbl.numberOfLines = 0
+        lbl.numberOfLines = 1
+        lbl.lineBreakMode = .byTruncatingTail
         lbl.textAlignment = .left
-        lbl.font = FontFamily.Roboto.regular.font(size: 10.0)
+        lbl.font = FontFamily.Roboto.regular.font(size: 18.0)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.isAccessibilityElement = true
         lbl.accessibilityLabel = "song-description"
         lbl.accessibilityIdentifier = "song-description"
+        lbl.textColor = .white
         return lbl
+    }()
+    
+    private lazy var resultTitleAndDescriptionView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.spacing = 4
+        stackView.distribution = .fill
+        stackView.axis = .vertical
+        
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(descriptionLabel)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupView()
+        backgroundColor = .appBackgroundColor
+        addResultImageView()
+        addResultTitleAndDescriptionView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupView() {
+    private func addResultImageView() {
         addSubview(resultImageView)
-        addSubview(titleLabel)
-        addSubview(descriptionLabel)
         NSLayoutConstraint.activate([
             // ImageView constraints
-            resultImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 4.0),
-            resultImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            resultImageView.heightAnchor.constraint(equalToConstant: 30.0),
-            resultImageView.widthAnchor.constraint(equalToConstant: 30.0),
-            // Title label constraints
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8.0),
-            titleLabel.leadingAnchor.constraint(equalTo: resultImageView.trailingAnchor, constant: 8.0),
-            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8.0),
-            // Description label constraints
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4.0),
-            descriptionLabel.leadingAnchor.constraint(equalTo: resultImageView.trailingAnchor, constant: 8.0),
-            descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8.0)
+            resultImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4.0),
+            resultImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            resultImageView.heightAnchor.constraint(equalToConstant: 75.0),
+            resultImageView.widthAnchor.constraint(equalToConstant: 75.0)
+        ])
+    }
+    
+    private func addResultTitleAndDescriptionView() {
+        addSubview(resultTitleAndDescriptionView)
+        NSLayoutConstraint.activate([
+            resultTitleAndDescriptionView.leadingAnchor.constraint(equalTo: resultImageView.trailingAnchor,constant: 8),
+            resultTitleAndDescriptionView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            resultTitleAndDescriptionView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -4)
         ])
     }
     
