@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         welcomeLabel.isAccessibilityElement = true
         welcomeLabel.accessibilityIdentifier = "user-welcome-message-label"
         welcomeLabel.font = FontFamily.Roboto.medium.font(size: 16)
-        welcomeLabel.text = "Welcome Sandesh!"
+        welcomeLabel.text = L10n.welcome + " Sandesh" //will be having changing username coming from view model
         welcomeLabel.textColor = .white
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         return welcomeLabel
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let headerLabel = UILabel()
         headerLabel.isAccessibilityElement = true
         headerLabel.accessibilityIdentifier = "secondary-header-label"
-        headerLabel.text = "What would you like to hear?"
+        headerLabel.text = L10n.whatWouldYouLikeToHear
         headerLabel.font = FontFamily.Roboto.regular.font(size: 14)
         headerLabel.textColor = .white
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         tableView.accessibilityIdentifier = "songs-table-view"
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = .appBackgroundColor
+        tableView.backgroundColor = Asset.Colors.appBackground.color
         tableView.separatorStyle = .none
         tableView.register(NoResultTableViewCell.self, forCellReuseIdentifier: NoResultTableViewCell.identifier)
         tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.identifier)
@@ -114,7 +114,6 @@ class ViewController: UIViewController {
         }
         print("itunes \(Environment.iTunesUrl)")
         searchViewModel.passError = { [weak self] error in
-            print("show error")
             DispatchQueue.main.async {
                 let label = UILabel()
                 label.text = "this is an error"
@@ -123,7 +122,7 @@ class ViewController: UIViewController {
         }
         //hide navigation controller
         self.navigationController?.isNavigationBarHidden = true
-        view.backgroundColor = .appBackgroundColor
+        view.backgroundColor = Asset.Colors.appBackground.color
     }
     
     //MARK: - Subview Setup

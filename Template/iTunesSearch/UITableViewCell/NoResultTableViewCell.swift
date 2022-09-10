@@ -31,7 +31,7 @@ class NoResultTableViewCell: UITableViewCell {
     }
     
     private func setupView() {
-        backgroundColor = .appBackgroundColor
+        backgroundColor = Asset.Colors.appBackground.color
         selectionStyle = .none
         addSubview(noResultLabel)
         NSLayoutConstraint.activate([

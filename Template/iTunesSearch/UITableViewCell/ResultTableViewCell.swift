@@ -63,7 +63,7 @@ class ResultTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .appBackgroundColor
+        backgroundColor = Asset.Colors.appBackground.color
         addResultImageView()
         addResultTitleAndDescriptionView()
     }

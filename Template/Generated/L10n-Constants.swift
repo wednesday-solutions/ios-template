@@ -18,6 +18,8 @@ internal enum L10n {
   internal static let searchSongs = L10n.tr("Localizable", "Search Songs")
   /// Welcome
   internal static let welcome = L10n.tr("Localizable", "Welcome")
+  /// What would you like to hear?
+  internal static let whatWouldYouLikeToHear = L10n.tr("Localizable", "What would you like to hear?")
   /// You haven't searched anything yet
   internal static let youHavenTSearchedAnythingYet = L10n.tr("Localizable", "You haven't searched anything yet")
 }
