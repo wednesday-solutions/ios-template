@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18AE868E28CCD6A4008CA28C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE868D28CCD6A4008CA28C /* UIColor+Extension.swift */; };
 		5111C93B272453770010D84B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5111C93A272453770010D84B /* SearchViewModel.swift */; };
 		5111C9822726F5EF0010D84B /* NoResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5111C9812726F5EE0010D84B /* NoResultTableViewCell.swift */; };
 		5111C9872727004C0010D84B /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5111C9862727004B0010D84B /* ResultTableViewCell.swift */; };
@@ -18,7 +19,6 @@
 		5113A237271F1A1300982852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518D51992715A36400DDF6D5 /* Assets.xcassets */; };
 		511D2F1E2721D30D002E9658 /* TestURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511D2F1D2721D30D002E9658 /* TestURLProtocol.swift */; };
 		512E86AD274E639800C08949 /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA986271825EE00BEAA43 /* L10n-Constants.swift */; };
-		514EA8B62716B18D00BEAA43 /* SecretConfig.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */; };
 		514EA8EB2716FAC600BEAA43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 514EA8E92716FAC600BEAA43 /* Localizable.strings */; };
 		514EA988271825EF00BEAA43 /* L10n-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA986271825EE00BEAA43 /* L10n-Constants.swift */; };
 		514EA989271825EF00BEAA43 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EA987271825EE00BEAA43 /* Assets.swift */; };
@@ -81,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		17E2F1FC442FE550F92E159A /* Pods-Template-TemplateUITests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template-TemplateUITests.dev release.xcconfig"; path = "Target Support Files/Pods-Template-TemplateUITests/Pods-Template-TemplateUITests.dev release.xcconfig"; sourceTree = "<group>"; };
+		18AE868D28CCD6A4008CA28C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3B3CDBAAB017BCF595321BDC /* Pods-Template.prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.prod debug.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.prod debug.xcconfig"; sourceTree = "<group>"; };
 		41A9F555498A2987B4C6B71A /* Pods-Template.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.dev release.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.dev release.xcconfig"; sourceTree = "<group>"; };
 		5111C93A272453770010D84B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		514219E8272ED8A900A382FF /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		514219F2272ED8B400A382FF /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		514EA8452715D89200BEAA43 /* SecretConfig.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SecretConfig.stencil; sourceTree = "<group>"; };
-		514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretConfig.generated.swift; sourceTree = "<group>"; };
 		514EA8DD2716F6C400BEAA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		514EA8EA2716FAC600BEAA43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		514EA8F02716FADB00BEAA43 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -188,6 +188,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18AE868C28CCD663008CA28C /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		5111C9802726F5C10010D84B /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,7 +251,6 @@
 		514EA89D2715E3CC00BEAA43 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				514EA8B52716B18D00BEAA43 /* SecretConfig.generated.swift */,
 				514EA8452715D89200BEAA43 /* SecretConfig.stencil */,
 			);
 			path = Helpers;
@@ -273,6 +279,7 @@
 		514EA9902718288D00BEAA43 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18AE868C28CCD663008CA28C /* Colors */,
 				514EA9912718289A00BEAA43 /* Fonts */,
 			);
 			path = Resources;
@@ -399,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				518D52862715BFF100DDF6D5 /* Environment.swift */,
+				18AE868D28CCD6A4008CA28C /* UIColor+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -715,6 +723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5113A220271EFCA000982852 /* ItunesSearchResult.swift in Sources */,
+				18AE868E28CCD6A4008CA28C /* UIColor+Extension.swift in Sources */,
 				514EAA4D271C7FE100BEAA43 /* Endpoint.swift in Sources */,
 				514EAA2B271A034E00BEAA43 /* AppCoordinator.swift in Sources */,
 				518D51922715A36100DDF6D5 /* ViewController.swift in Sources */,
@@ -727,7 +736,6 @@
 				518D51902715A36100DDF6D5 /* SceneDelegate.swift in Sources */,
 				514EA9F327186CFC00BEAA43 /* Coordinator.swift in Sources */,
 				514EAA55271C811D00BEAA43 /* ITunesEndpoint.swift in Sources */,
-				514EA8B62716B18D00BEAA43 /* SecretConfig.generated.swift in Sources */,
 				514EAA8B271C968A00BEAA43 /* NetworkEngine.swift in Sources */,
 				518D52872715BFF100DDF6D5 /* Environment.swift in Sources */,
 				514EA9B12718291C00BEAA43 /* Fonts.swift in Sources */,
