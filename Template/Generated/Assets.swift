@@ -27,6 +27,9 @@ internal enum Asset {
   }
   internal static let redColor = ColorAsset(name: "RedColor")
   internal static let wednesday = ImageAsset(name: "Wednesday")
+  internal static let nextTrack = ImageAsset(name: "next-track")
+  internal static let play = ImageAsset(name: "play")
+  internal static let previousTrack = ImageAsset(name: "previous-track")
   internal static let test = DataAsset(name: "test")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

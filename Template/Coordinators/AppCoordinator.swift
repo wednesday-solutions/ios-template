@@ -11,28 +11,24 @@ class AppCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var navigationController: UINavigationController
     var goToDetail: (() -> Void)?
 
+    private var tabBarController: UITabBarController
+    
     init(withNavigationController navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.tabBarController = HomeTabBarController()
     }
 
     func start() {
         navigationController.delegate = self
-        let itunesApiService = ItunesApiService()
-        let searchViewModel = SearchViewModel(with: itunesApiService)
-        let rootViewController = ViewController(with: searchViewModel)
-        // Create separate coordinators as the app grows
-        rootViewController.showDetail = { [weak self] result in
-            self?.showDetail(with: result)
-        }
+        
+        let homeCoordinator = HomeViewCoordinator()
+        homeCoordinator.start()
+        tabBarController.viewControllers = [homeCoordinator.navigationController]
+        childCoordinators.append(homeCoordinator)
         navigationController.navigationBar.barStyle = .black
-        navigationController.pushViewController(rootViewController, animated: false)
+        navigationController.pushViewController(tabBarController, animated: false)
     }
     
-    private func showDetail(with result: ItunesResult) {
-        // A new coordinator can be declared here which can take care of the flow 
-        let detailViewController = DetailViewController(with: result)
-        navigationController.pushViewController(detailViewController, animated: true)
-    }
     
     func childDidFinish(_ child: Coordinator?) {
         for(index, coordinator) in childCoordinators.enumerated() {

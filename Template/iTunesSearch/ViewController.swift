@@ -99,20 +99,24 @@ class ViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        super.loadView()
-        addHeaderView()
-        addTableView()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        navigationController?.navigationBar.accessibilityIdentifier = "songs-navigation-bar"
+        addHeaderView()
+        addTableView()
+        bindViewModel()
+        print("itunes \(Environment.iTunesUrl)")
+        view.backgroundColor = Asset.Colors.appBackground.color
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    private func bindViewModel() {
         searchViewModel.reloadData = { [weak self] in
             self?.resultsTableView.reloadData()
         }
-        print("itunes \(Environment.iTunesUrl)")
+        
         searchViewModel.passError = { [weak self] error in
             DispatchQueue.main.async {
                 let label = UILabel()
@@ -120,9 +124,6 @@ class ViewController: UIViewController {
                 self?.resultsTableView.backgroundView = label
             }
         }
-        //hide navigation controller
-        self.navigationController?.isNavigationBarHidden = true
-        view.backgroundColor = Asset.Colors.appBackground.color
     }
     
     //MARK: - Subview Setup
