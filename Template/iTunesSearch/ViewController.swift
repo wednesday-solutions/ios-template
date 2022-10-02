@@ -9,7 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    enum Section: Int {
+        case top10 = 0
+        case main = 1
+    }
     //MARK: - Properties
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, ItunesResult>
+    typealias SnapShot = NSDiffableDataSourceSnapshot<Section,ItunesResult>
+    private var dataSource: DataSource?
+    
     var showDetail: ((ItunesResult) -> Void)?
     let searchViewModel: SearchViewModel
     
@@ -36,17 +44,14 @@ class ViewController: UIViewController {
         return headerLabel
     }()
     
-    private lazy var resultsTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.accessibilityIdentifier = "songs-table-view"
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.backgroundColor = Asset.Colors.appBackground.color
-        tableView.separatorStyle = .none
-        tableView.register(NoResultTableViewCell.self, forCellReuseIdentifier: NoResultTableViewCell.identifier)
-        tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.identifier)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.accessibilityIdentifier = "songs-collection-view"
+        collectionView.backgroundColor = Asset.Colors.appBackground.color
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(ListItuneResultCell.self, forCellWithReuseIdentifier: ListItuneResultCell.identifier)
+        collectionView.collectionViewLayout = collectionViewLayout()
+        return collectionView
     }()
     
     private lazy var searchBar: UISearchBar = {
@@ -102,7 +107,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addHeaderView()
-        addTableView()
+        addCollectionView()
         bindViewModel()
         print("itunes \(Environment.iTunesUrl)")
         view.backgroundColor = Asset.Colors.appBackground.color
@@ -114,16 +119,17 @@ class ViewController: UIViewController {
     
     private func bindViewModel() {
         searchViewModel.reloadData = { [weak self] in
-            self?.resultsTableView.reloadData()
+            self?.applySnapShot(withAnimation: true)
         }
         
         searchViewModel.passError = { [weak self] error in
             DispatchQueue.main.async {
                 let label = UILabel()
                 label.text = "this is an error"
-                self?.resultsTableView.backgroundView = label
+                self?.collectionView.backgroundView = label
             }
         }
+        searchViewModel.fetchInitialResults()
     }
     
     //MARK: - Subview Setup
@@ -137,57 +143,75 @@ class ViewController: UIViewController {
         ])
     }
     
-    private func addTableView() {
-        view.addSubview(resultsTableView)
+    private func addCollectionView() {
+        view.addSubview(collectionView)
         headerView.translatesAutoresizingMaskIntoConstraints =  false
         NSLayoutConstraint.activate([
-            // tableview constraints
-            resultsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            resultsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            resultsTableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 4),
-            resultsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            // collection constraints
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 4),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+        dataSource = collectionViewDataSource()
+        collectionView.backgroundColor = .clear
+        collectionView.dataSource = dataSource
     }
     
-}
-
-//MARK: - UITableViewDataSource
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchViewModel.itunesResult.isEmpty ? 1 : searchViewModel.itunesResult.count
+    private func collectionViewLayout() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout { section, environment in
+            if section == 0 && self.searchViewModel.itunesResult.count > 1 {
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalHeight(1.0))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0 ), heightDimension: .absolute(150))
+                let group =  NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
+                section.orthogonalScrollingBehavior = .continuous
+                return section
+            }
+            
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0 ), heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0)
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0 ), heightDimension: .absolute(60))
+            let group =  NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+           
+            let section = NSCollectionLayoutSection(group: group)
+            return section
+        }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if searchViewModel.itunesResult.isEmpty {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: NoResultTableViewCell.identifier)
-                    as? NoResultTableViewCell else { return UITableViewCell() }
-            let text = searchViewModel.searchedText.isEmpty ? L10n.youHavenTSearchedAnythingYet : L10n.noResultsFound
-            cell.setTextForResult(text)
+    private func collectionViewDataSource() -> UICollectionViewDiffableDataSource<Section, ItunesResult> {
+        return UICollectionViewDiffableDataSource(collectionView: collectionView) { collectionView, indexPath, item in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListItuneResultCell.identifier, for: indexPath) as? ListItuneResultCell else {
+                return UICollectionViewCell()
+            }
+            cell.backgroundColor = .clear
+            cell.setupSong(with: item, cache: self.searchViewModel.nsCache)
             return cell
         }
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.identifier)
-                as? ResultTableViewCell else { return UITableViewCell() }
-        cell.accessibilityIdentifier = "myCell_\(indexPath.row)"
-        cell.setupSong(with: searchViewModel.itunesResult[indexPath.row], cache: searchViewModel.nsCache)
-        return cell
-    }
-}
-
-//MARK: - UITableViewDelegate
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if searchViewModel.itunesResult.isEmpty {
-            return tableView.frame.size.height
-        }
-        return ResultTableViewCell.cellHeight
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let showDetail = showDetail, !searchViewModel.itunesResult.isEmpty {
-            let result = searchViewModel.itunesResult[indexPath.row]
-            showDetail(result)
+    func applySnapShot(withAnimation: Bool = true) {
+        //TODO: - improve how section and data get liked togather
+        var snapShot = SnapShot()
+        if searchViewModel.itunesResult.count == 2 {
+            snapShot.appendSections([.top10, .main])
+            snapShot.appendItems(searchViewModel.itunesResult[Section.top10.rawValue].results, toSection: .top10)
+            snapShot.appendItems(searchViewModel.itunesResult[Section.main.rawValue].results, toSection: .main)
+        } else {
+            snapShot.appendSections([.main])
+            snapShot.appendItems(searchViewModel.itunesResult[0].results, toSection: .main)
         }
+        guard let dataSource = dataSource else {
+            fatalError("Datasource is not set")
+        }
+        dataSource.apply(snapShot, animatingDifferences: withAnimation)
     }
+    
 }
 
 //MARK: - UISearchBarDelegate
@@ -201,8 +225,7 @@ extension ViewController: UISearchBarDelegate {
         if let searchText = searchBar.text, !searchText.isEmpty {
             searchViewModel.getSearchResult(searchText)
         } else {
-            searchViewModel.itunesResult = []
-            resultsTableView.reloadData()
+            searchViewModel.fetchInitialResults()
         }
     }
     

@@ -22,12 +22,14 @@ struct ItunesApiService: ItunesApiServiceProtocol {
 }
 
 class SearchViewModel {
+    
     let itunes: ItunesApiService
-    var itunesResult = [ItunesResult]()
+    var itunesResult = [ItunesSearchResult]()
     var searchedText = ""
     var nsCache = NSCache<NSString, UIImage>()
     var reloadData: (() -> Void)?
     var passError: ((Error) -> Void)?
+    
     init(with itunesService: ItunesApiService) {
         self.itunes = itunesService
     }
@@ -42,8 +44,9 @@ class SearchViewModel {
                 }
             case .success(let searchResult):
                 print("result is \(searchResult?.resultCount)")
-                if let results = searchResult?.results, !results.isEmpty {
-                    self?.itunesResult += results
+                if let searchResult = searchResult,
+                   !searchResult.results.isEmpty {
+                    self?.itunesResult = [searchResult]
                 } else {
                     self?.itunesResult = []
                 }
@@ -51,6 +54,15 @@ class SearchViewModel {
                     reload()
                 }
             }
+        }
+    }
+    
+    
+    
+    func fetchInitialResults() {
+        itunesResult =  Bundle.main.decode("tracks.json")
+        if let reload = self.reloadData {
+            reload()
         }
     }
 }

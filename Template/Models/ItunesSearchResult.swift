@@ -15,7 +15,8 @@ struct ItunesSearchResult: Codable, Equatable {
     let results: [ItunesResult]
 }
 
-struct ItunesResult: Codable {
+struct ItunesResult: Codable, Hashable {
+    let id = UUID()
     let wrapperType: WrapperType?
     let kind: Kind?
     let artistID, collectionID: Int?
@@ -44,6 +45,10 @@ struct ItunesResult: Codable {
     let contentAdvisoryRating, shortDescription, longDescription: String?
     let hasITunesExtras: Bool?
     let collectionArtistName: String?
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 
     enum CodingKeys: String, CodingKey {
         case wrapperType, kind

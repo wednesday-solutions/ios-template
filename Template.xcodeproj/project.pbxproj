@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184C732628E94C9300284891 /* tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = 184C732528E94C9300284891 /* tracks.json */; };
+		184C732828E95AA800284891 /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C732728E95AA800284891 /* Bundle+Decodable.swift */; };
+		184C732A28E95B3A00284891 /* ListItuneResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C732928E95B3A00284891 /* ListItuneResultCell.swift */; };
 		18F9DC2B28DDB99D0014C7D8 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9DC2A28DDB99D0014C7D8 /* HomeTabBarController.swift */; };
 		18F9DC2D28DDBC090014C7D8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9DC2C28DDBC090014C7D8 /* HomeCoordinator.swift */; };
 		5111C93B272453770010D84B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5111C93A272453770010D84B /* SearchViewModel.swift */; };
@@ -82,6 +85,9 @@
 
 /* Begin PBXFileReference section */
 		17E2F1FC442FE550F92E159A /* Pods-Template-TemplateUITests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template-TemplateUITests.dev release.xcconfig"; path = "Target Support Files/Pods-Template-TemplateUITests/Pods-Template-TemplateUITests.dev release.xcconfig"; sourceTree = "<group>"; };
+		184C732528E94C9300284891 /* tracks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tracks.json; sourceTree = "<group>"; };
+		184C732728E95AA800284891 /* Bundle+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
+		184C732928E95B3A00284891 /* ListItuneResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItuneResultCell.swift; sourceTree = "<group>"; };
 		18F9DC2A28DDB99D0014C7D8 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		18F9DC2C28DDBC090014C7D8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3B3CDBAAB017BCF595321BDC /* Pods-Template.prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.prod debug.xcconfig"; path = "Target Support Files/Pods-Template/Pods-Template.prod debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +196,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184C732428E94C7A00284891 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				184C732528E94C9300284891 /* tracks.json */,
+			);
+			path = Tracks;
+			sourceTree = "<group>";
+		};
+		184C732B28E95B3F00284891 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				184C732928E95B3A00284891 /* ListItuneResultCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		18F9DC2928DDB5F30014C7D8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +243,7 @@
 				5111C9802726F5C10010D84B /* UITableViewCell */,
 				518D51912715A36100DDF6D5 /* ViewController.swift */,
 				5111C93A272453770010D84B /* SearchViewModel.swift */,
+				184C732B28E95B3F00284891 /* CollectionViewCell */,
 			);
 			path = iTunesSearch;
 			sourceTree = "<group>";
@@ -282,6 +305,7 @@
 		514EA9902718288D00BEAA43 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				184C732428E94C7A00284891 /* Tracks */,
 				514EA9912718289A00BEAA43 /* Fonts */,
 			);
 			path = Resources;
@@ -410,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				518D52862715BFF100DDF6D5 /* Environment.swift */,
+				184C732728E95AA800284891 /* Bundle+Decodable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -561,6 +586,7 @@
 				518D51EE2715B49A00DDF6D5 /* Prod.plist in Resources */,
 				514EA8EB2716FAC600BEAA43 /* Localizable.strings in Resources */,
 				514EA9A1271828BD00BEAA43 /* roboto_medium.ttf in Resources */,
+				184C732628E94C9300284891 /* tracks.json in Resources */,
 				514EA9A8271828BD00BEAA43 /* LICENSE.txt in Resources */,
 				514EA9A4271828BD00BEAA43 /* Roboto-ThinItalic.ttf in Resources */,
 				514EA9A6271828BD00BEAA43 /* Roboto-LightItalic.ttf in Resources */,
@@ -725,7 +751,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184C732A28E95B3A00284891 /* ListItuneResultCell.swift in Sources */,
 				5113A220271EFCA000982852 /* ItunesSearchResult.swift in Sources */,
+				184C732828E95AA800284891 /* Bundle+Decodable.swift in Sources */,
 				514EAA4D271C7FE100BEAA43 /* Endpoint.swift in Sources */,
 				514EAA2B271A034E00BEAA43 /* AppCoordinator.swift in Sources */,
 				518D51922715A36100DDF6D5 /* ViewController.swift in Sources */,
