@@ -3,7 +3,7 @@
         <img src="https://uploads-ssl.webflow.com/5ee36ce1473112550f1e1739/5f5879492fafecdb3e5b0e75_wednesday_logo.svg">
     </a>
 </div>
-# iOS Template
+iOS Template
 
 An enterprise iOS template application showcasing - App architecture pattern(MVVM-Coordinator-RxSwift), Testing stratergies, CI/CD pipeline using GitAction and fastlane, Localization, Code generation, Linting, Networking
 
